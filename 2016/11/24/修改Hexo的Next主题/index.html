@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-tw">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.css.network/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="NexT主题修改," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Hexo是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。 NexT主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩">
+<meta name="keywords" content="NexT主题修改">
+<meta property="og:type" content="article">
+<meta property="og:title" content="修改Hexo的Next主题">
+<meta property="og:url" content="http://zhouhuix.cn/2016/11/24/修改Hexo的Next主题/index.html">
+<meta property="og:site_name" content="晴天·Sunny">
+<meta property="og:description" content="Hexo是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。 NexT主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/395235/201611/395235-20161124141926112-883484784.png">
+<meta property="og:updated_time" content="2017-05-09T07:35:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="修改Hexo的Next主题">
+<meta name="twitter:description" content="Hexo是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。 NexT主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/395235/201611/395235-20161124141926112-883484784.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zhouhuix.cn/2016/11/24/修改Hexo的Next主题/"/>
+
+
+
+
+
+  <title>修改Hexo的Next主题 | 晴天·Sunny</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?38bc2fb39b270f309245c3ddc1b30ff9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">晴天·Sunny</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            關於
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2016/11/24/修改Hexo的Next主题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="周阳光">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="晴天·Sunny">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">修改Hexo的Next主题</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2016-11-24T10:13:27+08:00">
+                2016-11-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/网站建设/" itemprop="url" rel="index">
+                    <span itemprop="name">网站建设</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。</p>
+<p><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT</a>主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩过于单一，今天为大家介绍如何修改主题的颜色和增加背景图片。</p>
+<h3 id="主题颜色"><a href="#主题颜色" class="headerlink" title="主题颜色"></a>主题颜色</h3><p>打开<code>hexo/themes/next/source/css/_variables/base.styl</code>找到Colors代码段，如下：</p>
+<pre><code>// Colors
+// colors for use across theme.
+// --------------------------------------------------
+  $whitesmoke   = #f5f5f5
+  $gainsboro    = #eee  //这个是边栏头像外框的颜色，
+  $gray-lighter = #ddd  //文章中插入图片边框颜色
+  $grey-light   = #ccc  //文章之间分割线、下划线颜色
+  $grey         = #bbb  //页面选中圆点颜色
+  $grey-dark    = #999
+  $grey-dim     = #666 //侧边栏目录字体颜色
+  $black-light  = #555 //修改文章字体颜色
+  $black-dim    = #333
+  $black-deep   = #495a80  //修改主题的颜色，这里我已经改成老蓝色了。
+  $red          = #ff2a2a
+  $blue-bright  = #87daff
+  $blue         = #0684bd
+  $blue-deep    = #262a30
+  $orange       = #F39D01 //浏览文章时，目录选中的颜色
+</code></pre><p>其他的可以自行更改，看看效果，我这里只修改了black-deep和orange的颜色。<br><a id="more"></a></p>
+<h3 id="主题背景"><a href="#主题背景" class="headerlink" title="主题背景"></a>主题背景</h3><p>打开<code>hexo/themes/next/source/css/_schemes/Pisces/index.styl</code>(Pisces为NexT提供的三种主题之一，根据使用的主题选择）修改<code>body{}</code>内的值，如下：<br>背景颜色直接更改即可：<code>body { background: #F0F0F0; }</code><br>添加背景：<code>body { background: url（&#39;/images/background.jpg&#39;); }</code>(将背景图片放到<code>hexo/source/images</code>中即可。</p>
+<p>新版本主题背景修改文件改为<code>hexo/themes/next/source/css/_common/outline/outline.styl</code>中，在body中增加代码，如上。</p>
+<h3 id="隐藏网页底部powered-By-Hexo-强力驱动"><a href="#隐藏网页底部powered-By-Hexo-强力驱动" class="headerlink" title="隐藏网页底部powered By Hexo / 强力驱动"></a>隐藏网页底部powered By Hexo / 强力驱动</h3><p>打开<code>hexo/themes/next/layout/_partials/footer.swig</code>,使用”<code>&lt;!— —&gt;</code>”隐藏之间的代码即可（隐藏后代码如下），或者直接删除。
+
+	<br>这时，该行信息即被隐藏，但留有空白，如果你开启了网站流量统计，那么在统计和版权之间会有空行，很不美观，以下方法修改网站流量统计的位置。我这里使用的是不蒜子统计，其他统计类似。<br>打开<code>hexo/themes/next/layout/_scripts/third-party/analytics/busuanzi-counter.swig</code>将两个<code>&lt;span&gt;</code>标签的class属性改为“powered-by”和“theme-info”，对这里使用了刚才删除hexo和主题信息标签的CSS属性，修改后代码如下：</p>
+<pre><code>{% if theme.busuanzicount.enable %}
+	<div class="copyright">
+	  {% if theme.busuanzicount.siteuv %}
+		<span class="powered-by">{{ theme.busuanzicount.siteuvheader }}<span class="busuanzi-value" id="busuanzivaluesiteuv"></span>{{ theme.busuanzicount.siteuvfooter }}</span>
+	  {% endif %}
+  {% if theme.busuanzicount.sitepv %}
+		<span class="theme-info">{{ theme.busuanzicount.sitepvheader }}<span class="busuanzi-value" id="busuanzivaluesitepv"></span>{{ theme.busuanzicount.sitepvfooter }}</span>
+	  {% endif %}
+&lt;/div&gt;
+{% endif %}
+</div></code></pre><p>修改后效果如下：<br><img src="http://images2015.cnblogs.com/blog/395235/201611/395235-20161124141926112-883484784.png" alt=""></p>
+<p>最后，图上有没有发现我的是一个五角星，默认为心型，在刚才footer.swig文件中找到如下代码：</p>
+<pre><code>&lt;span class=&quot;with-love&quot;&gt;
+    &lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+</code></pre><p>修改<code>i</code>标签的class属性fa-love，我这里改成了fa-star，其他图形未测过，有兴趣的朋友可以试试。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打賞</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wx.jpeg" alt="周阳光 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="周阳光 支付寶"/>
+        <p>支付寶</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NexT主题修改/" rel="tag"># NexT主题修改</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="周阳光" />
+            
+              <p class="site-author-name" itemprop="name">周阳光</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">文章</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分類</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">標籤</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:zh12310@163.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/zh12310" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-weibo"></i>微博</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#主题颜色"><span class="nav-number">1.</span> <span class="nav-text">主题颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题背景"><span class="nav-number">2.</span> <span class="nav-text">主题背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏网页底部powered-By-Hexo-强力驱动"><span class="nav-number">3.</span> <span class="nav-text">隐藏网页底部powered By Hexo / 强力驱动</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">周阳光</span>
+
+  
+</div>
+
+
+
+
+
+  <!--<div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+-->
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-uv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+
+    <span class="site-pv">
+      <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+    </span>
+  
+
+
+</div>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=59613635";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
