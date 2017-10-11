@@ -114,7 +114,7 @@
 <meta property="og:description" content="Hexo是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。 NexT主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="http://images2015.cnblogs.com/blog/395235/201611/395235-20161124141926112-883484784.png">
-<meta property="og:updated_time" content="2017-05-09T07:35:21.000Z">
+<meta property="og:updated_time" content="2017-10-11T01:44:46.683Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="修改Hexo的Next主题">
 <meta name="twitter:description" content="Hexo是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。 NexT主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩">
@@ -423,7 +423,7 @@
 
 	<br>这时，该行信息即被隐藏，但留有空白，如果你开启了网站流量统计，那么在统计和版权之间会有空行，很不美观，以下方法修改网站流量统计的位置。我这里使用的是不蒜子统计，其他统计类似。<br>打开<code>hexo/themes/next/layout/_scripts/third-party/analytics/busuanzi-counter.swig</code>将两个<code>&lt;span&gt;</code>标签的class属性改为“powered-by”和“theme-info”，对这里使用了刚才删除hexo和主题信息标签的CSS属性，修改后代码如下：</p>
 <pre><code>{% if theme.busuanzicount.enable %}
-	<div class="copyright">
+	  <div class="copyright">
 	  {% if theme.busuanzicount.siteuv %}
 		<span class="powered-by">{{ theme.busuanzicount.siteuvheader }}<span class="busuanzi-value" id="busuanzivaluesiteuv"></span>{{ theme.busuanzicount.siteuvfooter }}</span>
 	  {% endif %}
