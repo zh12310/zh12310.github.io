@@ -393,25 +393,8 @@
           <p><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。</p>
 <p><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT</a>主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩过于单一，今天为大家介绍如何修改主题的颜色和增加背景图片。</p>
 <h3 id="主题颜色"><a href="#主题颜色" class="headerlink" title="主题颜色"></a>主题颜色</h3><p>打开<code>hexo/themes/next/source/css/_variables/base.styl</code>找到Colors代码段，如下：</p>
-<pre><code>// Colors
-// colors for use across theme.
-// --------------------------------------------------
-  $whitesmoke   = #f5f5f5
-  $gainsboro    = #eee  //这个是边栏头像外框的颜色，
-  $gray-lighter = #ddd  //文章中插入图片边框颜色
-  $grey-light   = #ccc  //文章之间分割线、下划线颜色
-  $grey         = #bbb  //页面选中圆点颜色
-  $grey-dark    = #999
-  $grey-dim     = #666 //侧边栏目录字体颜色
-  $black-light  = #555 //修改文章字体颜色
-  $black-dim    = #333
-  $black-deep   = #495a80  //修改主题的颜色，这里我已经改成老蓝色了。
-  $red          = #ff2a2a
-  $blue-bright  = #87daff
-  $blue         = #0684bd
-  $blue-deep    = #262a30
-  $orange       = #F39D01 //浏览文章时，目录选中的颜色
-</code></pre><p>其他的可以自行更改，看看效果，我这里只修改了black-deep和orange的颜色。<br>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">// Colors</div><div class="line">// colors for use across theme.</div><div class="line">// --------------------------------------------------</div><div class="line">  $whitesmoke   = #f5f5f5</div><div class="line">  $gainsboro    = #eee  //这个是边栏头像外框的颜色，</div><div class="line">  $gray-lighter = #ddd  //文章中插入图片边框颜色</div><div class="line">  $grey-light   = #ccc  //文章之间分割线、下划线颜色</div><div class="line">  $grey         = #bbb  //页面选中圆点颜色</div><div class="line">  $grey-dark    = #999</div><div class="line">  $grey-dim     = #666 //侧边栏目录字体颜色</div><div class="line">  $black-light  = #555 //修改文章字体颜色</div><div class="line">  $black-dim    = #333</div><div class="line">  $black-deep   = #495a80  //修改主题的颜色，这里我已经改成老蓝色了。</div><div class="line">  $red          = #ff2a2a</div><div class="line">  $blue-bright  = #87daff</div><div class="line">  $blue         = #0684bd</div><div class="line">  $blue-deep    = #262a30</div><div class="line">  $orange       = #F39D01 //浏览文章时，目录选中的颜色</div></pre></td></tr></table></figure>
+<p>其他的可以自行更改，看看效果，我这里只修改了black-deep和orange的颜色。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/11/24/修改Hexo的Next主题/#more" rel="contents">
