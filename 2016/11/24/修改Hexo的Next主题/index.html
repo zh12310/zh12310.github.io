@@ -113,12 +113,10 @@
 <meta property="og:site_name" content="晴天·Sunny">
 <meta property="og:description" content="Hexo是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。 NexT主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="http://images2015.cnblogs.com/blog/395235/201611/395235-20161124141926112-883484784.png">
-<meta property="og:updated_time" content="2017-10-11T01:44:46.683Z">
+<meta property="og:updated_time" content="2017-10-11T02:10:36.340Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="修改Hexo的Next主题">
 <meta name="twitter:description" content="Hexo是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。 NexT主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩">
-<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/395235/201611/395235-20161124141926112-883484784.png">
 
 
 
@@ -422,22 +420,12 @@
 <h3 id="隐藏网页底部powered-By-Hexo-强力驱动"><a href="#隐藏网页底部powered-By-Hexo-强力驱动" class="headerlink" title="隐藏网页底部powered By Hexo / 强力驱动"></a>隐藏网页底部powered By Hexo / 强力驱动</h3><p>打开<code>hexo/themes/next/layout/_partials/footer.swig</code>,使用”<code>&lt;!— —&gt;</code>”隐藏之间的代码即可（隐藏后代码如下），或者直接删除。
 
 	<br>这时，该行信息即被隐藏，但留有空白，如果你开启了网站流量统计，那么在统计和版权之间会有空行，很不美观，以下方法修改网站流量统计的位置。我这里使用的是不蒜子统计，其他统计类似。<br>打开<code>hexo/themes/next/layout/_scripts/third-party/analytics/busuanzi-counter.swig</code>将两个<code>&lt;span&gt;</code>标签的class属性改为“powered-by”和“theme-info”，对这里使用了刚才删除hexo和主题信息标签的CSS属性，修改后代码如下：</p>
-<pre><code>{% if theme.busuanzicount.enable %}
-	  <div class="copyright">
-	  {% if theme.busuanzicount.siteuv %}
-		<span class="powered-by">{{ theme.busuanzicount.siteuvheader }}<span class="busuanzi-value" id="busuanzivaluesiteuv"></span>{{ theme.busuanzicount.siteuvfooter }}</span>
-	  {% endif %}
-  {% if theme.busuanzicount.sitepv %}
-		<span class="theme-info">{{ theme.busuanzicount.sitepvheader }}<span class="busuanzi-value" id="busuanzivaluesitepv"></span>{{ theme.busuanzicount.sitepvfooter }}</span>
-	  {% endif %}
-&lt;/div&gt;
-{% endif %}
-</div></code></pre><p>修改后效果如下：<br><img src="http://images2015.cnblogs.com/blog/395235/201611/395235-20161124141926112-883484784.png" alt=""></p>
-<p>最后，图上有没有发现我的是一个五角星，默认为心型，在刚才footer.swig文件中找到如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&#123;% if theme.busuanzicount.enable %&#125;</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"copyright"</span>&gt;</span></div><div class="line">    &#123;% if theme.busuanzicount.siteuv %&#125;</div><div class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"powered-by"</span>&gt;</span></div><div class="line">      &#123;&#123; theme.busuanzicount.siteuvheader &#125;&#125;</div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"busuanzi-value"</span> <span class="attr">id</span>=<span class="string">"busuanzivaluesiteuv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        &#123;&#123; theme.busuanzicount.siteuvfooter &#125;&#125;</div><div class="line">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    &#123;% endif %&#125;</div><div class="line">    &#123;% if theme.busuanzicount.sitepv %&#125;</div><div class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"theme-info"</span>&gt;</span></div><div class="line">      &#123;&#123; theme.busuanzicount.sitepvheader &#125;&#125;</div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"busuanzi-value"</span> <span class="attr">id</span>=<span class="string">"busuanzivaluesitepv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">      &#123;&#123; theme.busuanzicount.sitepvfooter &#125;&#125;</div><div class="line">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    &#123;% endif %&#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
+<p>最后，有没有发现我的是一个五角星，默认为心型，在刚才footer.swig文件中找到如下代码：</p>
 <pre><code>&lt;span class=&quot;with-love&quot;&gt;
     &lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt;
 &lt;/span&gt;
-</code></pre><p>修改<code>i</code>标签的class属性fa-love，我这里改成了fa-star，其他图形未测过，有兴趣的朋友可以试试。</p>
+</code></pre><p>修改<code>i</code>标签的class属性fa-love，我这里改成了fa-star，其他图形未测过，有兴趣的朋友可以试试,新版本可以在config文件中直接设置了。</p>
 
       
     </div>
