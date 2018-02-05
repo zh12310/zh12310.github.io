@@ -113,7 +113,7 @@
 <meta property="og:site_name" content="晴天·Sunny">
 <meta property="og:description" content="需求 AppStore上的记账软件功能太过复杂，而且不单是记账功能，还附带其他理财等功能，不是我想要的； 一年来一直在用财禅记账，功能虽不多但记账还不错，但存在少部分bug，理财账户的转入转出有点儿问题； 断断续续的学习iOS开发，从iOS8到11一直都是学学停停，都没认真好好学，中间又跑去学了PHP，下定决心系统的学习一下； 手机可直接调试使用，暂不发布到AppStore，节省成本（=。=突然发">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2018-02-05T10:05:21.000Z">
+<meta property="og:updated_time" content="2018-02-05T10:08:37.441Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自己动手做一个记账APP">
 <meta name="twitter:description" content="需求 AppStore上的记账软件功能太过复杂，而且不单是记账功能，还附带其他理财等功能，不是我想要的； 一年来一直在用财禅记账，功能虽不多但记账还不错，但存在少部分bug，理财账户的转入转出有点儿问题； 断断续续的学习iOS开发，从iOS8到11一直都是学学停停，都没认真好好学，中间又跑去学了PHP，下定决心系统的学习一下； 手机可直接调试使用，暂不发布到AppStore，节省成本（=。=突然发">
@@ -397,14 +397,20 @@
 <li>AppStore上的记账软件功能太过复杂，而且不单是记账功能，还附带其他理财等功能，不是我想要的；</li>
 <li>一年来一直在用财禅记账，功能虽不多但记账还不错，但存在少部分bug，理财账户的转入转出有点儿问题；</li>
 <li>断断续续的学习iOS开发，从iOS8到11一直都是学学停停，都没认真好好学，中间又跑去学了PHP，下定决心系统的学习一下；</li>
-<li>手机可直接调试使用，暂不发布到AppStore，节省成本（=。=突然发现手机调试有7天有效期，后续办法再说吧）； <h3 id="软件名称"><a href="#软件名称" class="headerlink" title="软件名称"></a>软件名称</h3>&emsp;&emsp;巨无霸 Gigantique<br>&emsp;&emsp;本App只是希望实现记账功能，起名钱包、零钱等最直接，但是好多软件都是类似的名称，而且还有苹果官方的Wallet存在，那么为什么起这个名字呢，作为一名wower应该懂得，“我的背包是巨无霸”，So就用这个吧，愿我的钱包是巨无霸，可以装更多的钱。 <a id="more"></a>  
-<h3 id="开发平台及工具"><a href="#开发平台及工具" class="headerlink" title="开发平台及工具"></a>开发平台及工具</h3>&emsp;&emsp;iOS + Xcode + Swift<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3>&emsp;&emsp;记账<br>&emsp;&emsp;好吧，好像就这么一个功能，还是细分一下需要实现的功能点：</li>
+<li>手机可直接调试使用，暂不发布到AppStore，节省成本（=。=突然发现手机调试有7天有效期，后续办法再说吧）；</li>
+</ol>
+<h3 id="软件名称"><a href="#软件名称" class="headerlink" title="软件名称"></a>软件名称</h3><p>&emsp;&emsp;巨无霸 Gigantique<br>&emsp;&emsp;本App只是希望实现记账功能，起名钱包、零钱等最直接，但是好多软件都是类似的名称，而且还有苹果官方的Wallet存在，那么为什么起这个名字呢，作为一名wower应该懂得，“我的背包是巨无霸”，So就用这个吧，愿我的钱包是巨无霸，可以装更多的钱。<br><a id="more"></a>  </p>
+<h3 id="开发平台及工具"><a href="#开发平台及工具" class="headerlink" title="开发平台及工具"></a>开发平台及工具</h3><p>&emsp;&emsp;iOS + Xcode + Swift</p>
+<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3><p>&emsp;&emsp;记账<br>&emsp;&emsp;好吧，好像就这么一个功能，还是细分一下需要实现的功能点：</p>
+<ol>
 <li>总账户分为：零钱、理财、存款3个子账户，子账户之间可进行相互转账；</li>
 <li>交易明细（收支明细）：<br>（1）时间、地点、收入or支出、标签、金额、备注；<br>（2）收入：可选择资金分配到指定子账户（零钱或理财）；<br>（3）支出账户：默认选择零钱账户（可选理财账户）；<br>（4）存款账户不能直接转入转出，只可转入另外两个账户</li>
 <li>存款及理财账户：<br>（1）定期存款（包括理财产品的定期），金额，利息，存款日期，存款期限，预计到期利息，到期提醒；<br>（2）理财（活期），无法跟踪活期利息，需自行更新收益；</li>
 <li>数据备份，iCloud</li>
-<li>后续功能，自动记账（如果能实现银联卡、支付宝、微信等绑定，自动导入消费明细的话）。<h3 id="界面设计"><a href="#界面设计" class="headerlink" title="界面设计"></a>界面设计</h3>&emsp;&emsp;待更新<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3>&emsp;&emsp;待更新</li>
+<li>后续功能，自动记账（如果能实现银联卡、支付宝、微信等绑定，自动导入消费明细的话）。</li>
 </ol>
+<h3 id="界面设计"><a href="#界面设计" class="headerlink" title="界面设计"></a>界面设计</h3><p>&emsp;&emsp;待更新</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>&emsp;&emsp;待更新</p>
 
       
     </div>
