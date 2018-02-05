@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-tw">
+<html class="theme-next gemini use-motion" lang="zh-tw">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -113,13 +113,12 @@
 <meta property="og:site_name" content="晴天·Sunny">
 <meta property="og:description" content="今天是自己生日🎂，早起锻炼身体，一切都好！  &amp;emsp;&amp;emsp;寒假在家，照顾孩子有余，学习iOS，老婆马上要到财务上班，对新工作有所顾忌，好几年没有接触财务工作，说让我给她找一个可以自动转换金额大小写的App，搜索了一下App Store，已有许多apps，但是还是想自己做一个，可以加入一些自己想要的东西，比如老婆喜欢的Doraemon。 需求 实现金额大写转换； 加入Doraemon">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="http://o7et24ada.bkt.clouddn.com/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D1.png">
 <meta property="og:image" content="http://o7et24ada.bkt.clouddn.com/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D2.png">
-<meta property="og:updated_time" content="2018-02-05T09:32:06.178Z">
+<meta property="og:updated_time" content="2018-02-05T09:48:27.517Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="财务大写金额换算器">
 <meta name="twitter:description" content="今天是自己生日🎂，早起锻炼身体，一切都好！  &amp;emsp;&amp;emsp;寒假在家，照顾孩子有余，学习iOS，老婆马上要到财务上班，对新工作有所顾忌，好几年没有接触财务工作，说让我给她找一个可以自动转换金额大小写的App，搜索了一下App Store，已有许多apps，但是还是想自己做一个，可以加入一些自己想要的东西，比如老婆喜欢的Doraemon。 需求 实现金额大写转换； 加入Doraemon">
-<meta name="twitter:image" content="http://o7et24ada.bkt.clouddn.com/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D1.png">
+<meta name="twitter:image" content="http://o7et24ada.bkt.clouddn.com/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D2.png">
 
 
 
@@ -127,7 +126,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Gemini',
     version: '5.1.3',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -415,15 +414,15 @@
 </ol>
 <h3 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h3><ol>
 <li>定义一个栈来记录每次输入后显示的金额，然后从栈中读取最后一个值来更新显示到大小写Label；</li>
-<li>大写金额的转换算法：<ol>
+<li>大写金额的转换算法：</li>
+</ol>
+<ul>
 <li>定义3个数组，根据金额的位数来获取对应的单位，例如：1234，a[1]+b[3]+a[2]+b[2]+a[3]+b[1]+a[4]+b[0] = “壹仟贰佰叁拾肆元”;</li>
 <li>出现多个“0”时，加入判断，隐藏单位，在最后一个“0”时插入一个“零”，同时需要保证“亿、万、元”正常显示即可；</li>
 <li>后退时，清除栈中最后一个值，刷新结果显示（重新读取栈中的值来显示金额）。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">private let a: [String] = [&quot;零&quot;, &quot;壹&quot;, &quot;贰&quot;, &quot;叁&quot;, &quot;肆&quot;, &quot;伍&quot;, &quot;陆&quot;, &quot;柒&quot;, &quot;捌&quot;, &quot;玖&quot;];</div><div class="line">private let b: [String] = [&quot;元&quot;, &quot;拾&quot;, &quot;佰&quot;, &quot;仟&quot;, &quot;万&quot;, &quot;拾&quot;, &quot;佰&quot;, &quot;仟&quot;, &quot;亿&quot;, &quot;拾&quot;, &quot;佰&quot;, &quot;仟&quot;];</div><div class="line">private let c: [String] = [&quot;角&quot;, &quot;分&quot;,];</div></pre></td></tr></table></figure>
 </li>
-</ol>
-</li>
-</ol>
-<h3 id="界面设计"><a href="#界面设计" class="headerlink" title="界面设计"></a>界面设计</h3><p><img src="http://o7et24ada.bkt.clouddn.com/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D1.png" alt="初始界面" title="初始界面"><br><img src="http://o7et24ada.bkt.clouddn.com/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D2.png" alt="测试效果" title="测试效果"></p>
+</ul>
+<h3 id="界面设计"><a href="#界面设计" class="headerlink" title="界面设计"></a>界面设计</h3><p>&emsp;&emsp;iPhoneX的模拟器，截图有点儿长，下方也多了一款蓝色<br><img src="http://o7et24ada.bkt.clouddn.com/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D2.png" style="width: 50%"></p>
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>&emsp;&emsp;没有购买苹果开发者账号，而自己手机调试只能有7天有效期，暂时还在研究其他办法的可行性。</p>
 
       
@@ -683,7 +682,7 @@
 
 
 
-  <!--<div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+  <!--<div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
 -->
 
 
