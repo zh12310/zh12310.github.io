@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="NexT主题修改," />
+  <meta name="keywords" content="iOS,Swift,大写金额转换," />
 
 
 
@@ -105,18 +105,21 @@
 
 
 
-<meta name="description" content="Hexo是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。 NexT主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩">
-<meta name="keywords" content="NexT主题修改">
+<meta name="description" content="今天是自己生日🎂，早起锻炼身体，一切都好！  &amp;emsp;&amp;emsp;寒假在家，照顾孩子有余，学习iOS，老婆马上要到财务上班，对新工作有所顾忌，好几年没有接触财务工作，说让我给她找一个可以自动转换金额大小写的App，搜索了一下App Store，已有许多apps，但是还是想自己做一个，可以加入一些自己想要的东西，比如老婆喜欢的Doraemon。 需求 实现金额大写转换； 加入Doraemon">
+<meta name="keywords" content="iOS,Swift,大写金额转换">
 <meta property="og:type" content="article">
-<meta property="og:title" content="修改Hexo的Next主题">
-<meta property="og:url" content="http://zhouhuix.cn/2016/11/24/修改Hexo的Next主题/index.html">
+<meta property="og:title" content="财务大写金额换算器">
+<meta property="og:url" content="http://zhouhuix.cn/2018/02/05/财务金额大写换算器/index.html">
 <meta property="og:site_name" content="晴天·Sunny">
-<meta property="og:description" content="Hexo是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。 NexT主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩">
+<meta property="og:description" content="今天是自己生日🎂，早起锻炼身体，一切都好！  &amp;emsp;&amp;emsp;寒假在家，照顾孩子有余，学习iOS，老婆马上要到财务上班，对新工作有所顾忌，好几年没有接触财务工作，说让我给她找一个可以自动转换金额大小写的App，搜索了一下App Store，已有许多apps，但是还是想自己做一个，可以加入一些自己想要的东西，比如老婆喜欢的Doraemon。 需求 实现金额大写转换； 加入Doraemon">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2017-10-11T02:18:19.000Z">
+<meta property="og:image" content="http://o7et24ada.bkt.clouddn.com/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D1.png">
+<meta property="og:image" content="http://o7et24ada.bkt.clouddn.com/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D2.png">
+<meta property="og:updated_time" content="2018-02-05T09:32:06.178Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="修改Hexo的Next主题">
-<meta name="twitter:description" content="Hexo是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。 NexT主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩">
+<meta name="twitter:title" content="财务大写金额换算器">
+<meta name="twitter:description" content="今天是自己生日🎂，早起锻炼身体，一切都好！  &amp;emsp;&amp;emsp;寒假在家，照顾孩子有余，学习iOS，老婆马上要到财务上班，对新工作有所顾忌，好几年没有接触财务工作，说让我给她找一个可以自动转换金额大小写的App，搜索了一下App Store，已有许多apps，但是还是想自己做一个，可以加入一些自己想要的东西，比如老婆喜欢的Doraemon。 需求 实现金额大写转换； 加入Doraemon">
+<meta name="twitter:image" content="http://o7et24ada.bkt.clouddn.com/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D1.png">
 
 
 
@@ -146,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://zhouhuix.cn/2016/11/24/修改Hexo的Next主题/"/>
+  <link rel="canonical" href="http://zhouhuix.cn/2018/02/05/财务金额大写换算器/"/>
 
 
 
 
 
-  <title>修改Hexo的Next主题 | 晴天·Sunny</title>
+  <title>财务大写金额换算器 | 晴天·Sunny</title>
   
 
 
@@ -299,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2016/11/24/修改Hexo的Next主题/">
+    <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2018/02/05/财务金额大写换算器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="周阳光">
@@ -316,7 +319,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">修改Hexo的Next主题</h2>
+          <h2 class="post-title" itemprop="name headline">财务大写金额换算器</h2>
         
 
         <div class="post-meta">
@@ -328,8 +331,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2016-11-24T10:13:27+08:00">
-                2016-11-24
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-05T08:31:51+08:00">
+                2018-02-05
               </time>
             
 
@@ -351,8 +354,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/网站建设/" itemprop="url" rel="index">
-                    <span itemprop="name">网站建设</span>
+                  <a href="/categories/CodeStudio/" itemprop="url" rel="index">
+                    <span itemprop="name">CodeStudio</span>
                   </a>
                 </span>
 
@@ -393,19 +396,35 @@
       
 
       
-        <p><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。</p>
-<p><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT</a>主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩过于单一，今天为大家介绍如何修改主题的颜色和增加背景图片。</p>
-<h3 id="主题颜色"><a href="#主题颜色" class="headerlink" title="主题颜色"></a>主题颜色</h3><p>打开<code>hexo/themes/next/source/css/_variables/base.styl</code>找到Colors代码段，如下：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Colors</span></div><div class="line"><span class="comment">// colors for use across theme.</span></div><div class="line"><span class="comment">// --------------------------------------------------</span></div><div class="line">  $whitesmoke   = <span class="comment">#f5f5f5</span></div><div class="line">  $gainsboro    = <span class="comment">#eee  //这个是边栏头像外框的颜色，</span></div><div class="line">  $gray-lighter = <span class="comment">#ddd  //文章中插入图片边框颜色</span></div><div class="line">  $grey-light   = <span class="comment">#ccc  //文章之间分割线、下划线颜色</span></div><div class="line">  $grey         = <span class="comment">#bbb  //页面选中圆点颜色</span></div><div class="line">  $grey-dark    = <span class="comment">#999</span></div><div class="line">  $grey-dim     = <span class="comment">#666 //侧边栏目录字体颜色</span></div><div class="line">  $black-light  = <span class="comment">#555 //修改文章字体颜色</span></div><div class="line">  $black-dim    = <span class="comment">#333</span></div><div class="line">  $black-deep   = <span class="comment">#495a80  //修改主题的颜色，这里我已经改成老蓝色了。</span></div><div class="line">  $red          = <span class="comment">#ff2a2a</span></div><div class="line">  $blue-bright  = <span class="comment">#87daff</span></div><div class="line">  $blue         = <span class="comment">#0684bd</span></div><div class="line">  $blue-deep    = <span class="comment">#262a30</span></div><div class="line">  $orange       = <span class="comment">#F39D01 //浏览文章时，目录选中的颜色</span></div></pre></td></tr></table></figure>
-<p>其他的可以自行更改，看看效果，我这里只修改了black-deep和orange的颜色。<br><a id="more"></a></p>
-<h3 id="主题背景"><a href="#主题背景" class="headerlink" title="主题背景"></a>主题背景</h3><p>打开<code>hexo/themes/next/source/css/_schemes/Pisces/index.styl</code>(Pisces为NexT提供的三种主题之一，根据使用的主题选择）修改<code>body{}</code>内的值，如下：<br>背景颜色直接更改即可：<code>body { background: #F0F0F0; }</code><br>添加背景：<code>body { background: url（&#39;/images/background.jpg&#39;); }</code>(将背景图片放到<code>hexo/source/images</code>中即可。</p>
-<p>新版本主题背景修改文件改为<code>hexo/themes/next/source/css/_common/outline/outline.styl</code>中，在body中增加代码，如上。</p>
-<h3 id="隐藏网页底部powered-By-Hexo-强力驱动"><a href="#隐藏网页底部powered-By-Hexo-强力驱动" class="headerlink" title="隐藏网页底部powered By Hexo / 强力驱动"></a>隐藏网页底部powered By Hexo / 强力驱动</h3><p>打开<code>hexo/themes/next/layout/_partials/footer.swig</code>,使用”<code>&lt;!— —&gt;</code>”隐藏之间的代码即可（隐藏后代码如下），或者直接删除。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% if theme.copyright %&#125;</div><div class="line"><span class="comment">&lt;!--&lt;div class="powered-by"&gt;</span></div><div class="line"><span class="comment">  &#123;&#123; ('footer.powered', '&lt;a class="theme-link" href="https://hexo.io"&gt;Hexo&lt;/a&gt;') &#125;&#125;</span></div><div class="line"><span class="comment">&lt;/div&gt;</span></div><div class="line"><span class="comment">&lt;div class="theme-info"&gt;</span></div><div class="line"><span class="comment">  &#123;&#123; ('footer.theme') &#125;&#125; -</span></div><div class="line"><span class="comment">  &lt;a class="theme-link" href="https://github.com/iissnan/hexo-theme-next"&gt;</span></div><div class="line"><span class="comment">	NexT.&#123;&#123; theme.scheme &#125;&#125;</span></div><div class="line"><span class="comment">  &lt;/a&gt;</span></div><div class="line"><span class="comment">&lt;/div&gt;--&gt;</span></div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
-<p>这时，该行信息即被隐藏，但留有空白，如果你开启了网站流量统计，那么在统计和版权之间会有空行，很不美观，以下方法修改网站流量统计的位置。我这里使用的是不蒜子统计，其他统计类似。<br>打开<code>hexo/themes/next/layout/_scripts/third-party/analytics/busuanzi-counter.swig</code>将两个<code>&lt;span&gt;</code>标签的class属性改为“powered-by”和“theme-info”，对这里使用了刚才删除hexo和主题信息标签的CSS属性，修改后代码如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&#123;% if theme.busuanzicount.enable %&#125;</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"copyright"</span>&gt;</span></div><div class="line">    &#123;% if theme.busuanzicount.siteuv %&#125;</div><div class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"powered-by"</span>&gt;</span></div><div class="line">      &#123;&#123; theme.busuanzicount.siteuvheader &#125;&#125;</div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"busuanzi-value"</span> <span class="attr">id</span>=<span class="string">"busuanzivaluesiteuv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        &#123;&#123; theme.busuanzicount.siteuvfooter &#125;&#125;</div><div class="line">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    &#123;% endif %&#125;</div><div class="line">    &#123;% if theme.busuanzicount.sitepv %&#125;</div><div class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"theme-info"</span>&gt;</span></div><div class="line">      &#123;&#123; theme.busuanzicount.sitepvheader &#125;&#125;</div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"busuanzi-value"</span> <span class="attr">id</span>=<span class="string">"busuanzivaluesitepv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">      &#123;&#123; theme.busuanzicount.sitepvfooter &#125;&#125;</div><div class="line">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    &#123;% endif %&#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
-<p>最后，有没有发现我的是一个五角星，默认为心型，在刚才footer.swig文件中找到如下代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"with-love"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-star"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>修改<code>i</code>标签的class属性fa-love，我这里改成了fa-star，其他图形未测过，有兴趣的朋友可以试试,新版本可以在config文件中直接设置了。</p>
+        <blockquote>
+<p>今天是自己生日🎂，早起锻炼身体，一切都好！</p>
+</blockquote>
+<p>&emsp;&emsp;寒假在家，照顾孩子有余，学习iOS，老婆马上要到财务上班，对新工作有所顾忌，好几年没有接触财务工作，说让我给她找一个可以自动转换金额大小写的App，搜索了一下App Store，已有许多apps，但是还是想自己做一个，可以加入一些自己想要的东西，比如老婆喜欢的Doraemon。</p>
+<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><ol>
+<li>实现金额大写转换；</li>
+<li>加入Doraemon等美化一下。<a id="more"></a>  
+</li>
+</ol>
+<h3 id="软件名称"><a href="#软件名称" class="headerlink" title="软件名称"></a>软件名称</h3><p>&emsp;&emsp;暂且叫他：大写金额（想不出来好听的名字）</p>
+<h3 id="开发平台及工具"><a href="#开发平台及工具" class="headerlink" title="开发平台及工具"></a>开发平台及工具</h3><p>&emsp;&emsp;iOS + Xcode + Swift</p>
+<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3><ol>
+<li>输入金额自动转换成对应的大写金额；</li>
+<li>金额只有小数位只有角、分，所以这里数字小数位只能输入两位；</li>
+<li>金额太大（千亿以上）有点难处理，应该也用不了这么大金额，索性限制输入金额的大小，最大到千亿；</li>
+<li>模仿苹果自带计算机，在输入数字上向右滑动可以退格。</li>
+</ol>
+<h3 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h3><ol>
+<li>定义一个栈来记录每次输入后显示的金额，然后从栈中读取最后一个值来更新显示到大小写Label；</li>
+<li>大写金额的转换算法：<ol>
+<li>定义3个数组，根据金额的位数来获取对应的单位，例如：1234，a[1]+b[3]+a[2]+b[2]+a[3]+b[1]+a[4]+b[0] = “壹仟贰佰叁拾肆元”;</li>
+<li>出现多个“0”时，加入判断，隐藏单位，在最后一个“0”时插入一个“零”，同时需要保证“亿、万、元”正常显示即可；</li>
+<li>后退时，清除栈中最后一个值，刷新结果显示（重新读取栈中的值来显示金额）。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">private let a: [String] = [&quot;零&quot;, &quot;壹&quot;, &quot;贰&quot;, &quot;叁&quot;, &quot;肆&quot;, &quot;伍&quot;, &quot;陆&quot;, &quot;柒&quot;, &quot;捌&quot;, &quot;玖&quot;];</div><div class="line">private let b: [String] = [&quot;元&quot;, &quot;拾&quot;, &quot;佰&quot;, &quot;仟&quot;, &quot;万&quot;, &quot;拾&quot;, &quot;佰&quot;, &quot;仟&quot;, &quot;亿&quot;, &quot;拾&quot;, &quot;佰&quot;, &quot;仟&quot;];</div><div class="line">private let c: [String] = [&quot;角&quot;, &quot;分&quot;,];</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="界面设计"><a href="#界面设计" class="headerlink" title="界面设计"></a>界面设计</h3><p><img src="http://o7et24ada.bkt.clouddn.com/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D1.png" alt="初始界面" title="初始界面"><br><img src="http://o7et24ada.bkt.clouddn.com/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D2.png" alt="测试效果" title="测试效果"></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>&emsp;&emsp;没有购买苹果开发者账号，而自己手机调试只能有7天有效期，暂时还在研究其他办法的可行性。</p>
 
       
     </div>
@@ -452,7 +471,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/NexT主题修改/" rel="tag"># NexT主题修改</a>
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
+            <a href="/tags/Swift/" rel="tag"># Swift</a>
+          
+            <a href="/tags/大写金额转换/" rel="tag"># 大写金额转换</a>
           
         </div>
       
@@ -465,15 +488,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/11/23/自己做一个记账APP/" rel="next" title="自己动手做一个记账APP">
+                <i class="fa fa-chevron-left"></i> 自己动手做一个记账APP
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/23/自己做一个记账APP/" rel="prev" title="自己动手做一个记账APP">
-                自己动手做一个记账APP <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -627,7 +650,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#主题颜色"><span class="nav-number">1.</span> <span class="nav-text">主题颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题背景"><span class="nav-number">2.</span> <span class="nav-text">主题背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏网页底部powered-By-Hexo-强力驱动"><span class="nav-number">3.</span> <span class="nav-text">隐藏网页底部powered By Hexo / 强力驱动</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#需求"><span class="nav-number">1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件名称"><span class="nav-number">2.</span> <span class="nav-text">软件名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发平台及工具"><span class="nav-number">3.</span> <span class="nav-text">开发平台及工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主要功能"><span class="nav-number">4.</span> <span class="nav-text">主要功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计思路"><span class="nav-number">5.</span> <span class="nav-text">设计思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#界面设计"><span class="nav-number">6.</span> <span class="nav-text">界面设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">7.</span> <span class="nav-text">其他</span></a></li></ol></div>
             
 
           </div>
