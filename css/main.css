@@ -437,7 +437,6 @@ td {
 html,
 body {
   height: 100%;
-  background: #f0f0f0 url("/images/grid.png");
 }
 .container {
   position: relative;
@@ -1949,7 +1948,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8f4;
+  background: #c234d9;
 }
 .links-of-blogroll {
   font-size: 13px;
