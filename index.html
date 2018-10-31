@@ -298,6 +298,152 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2018/10/31/php加解密算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="周阳光">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="晴天·Sunny">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/31/php加解密算法/" itemprop="url">php数据加解密算法</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-10-31T18:00:00+08:00">
+                2018-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CodeStudio/" itemprop="url" rel="index">
+                    <span itemprop="name">CodeStudio</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="数据加解密"><a href="#数据加解密" class="headerlink" title="数据加解密"></a>数据加解密</h3><p>在开发过程中，因为涉及都学生的个人信息（身份证号码，电话，家庭住址等），我们需要对API提供的数据进行加密，提高信息的安全性，以免造成数据泄露。</p>
+<h3 id="加密算法"><a href="#加密算法" class="headerlink" title="加密算法"></a>加密算法</h3><p>使用加密算法，将API提供的Json数据进行加密，再手机App上再进行解密。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">encrypt</span><span class="params">($data)</span></span>&#123;</div><div class="line">      $key = md5(<span class="string">"123abc"</span>);<span class="comment">//设置一个秘钥，保存好，作为获取明文的关键</span></div><div class="line">      $x = <span class="number">0</span>;</div><div class="line">      $len = strlen($data);</div><div class="line">      $l = strlen($key);</div><div class="line">      <span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; $len; $i++)&#123;</div><div class="line">          <span class="keyword">if</span> ($x == $l)&#123;</div><div class="line">              $x = <span class="number">0</span>;</div><div class="line">          &#125;</div><div class="line">          $char .= $key&#123;$x&#125;;</div><div class="line">          $x++;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; $len; $i++)&#123;</div><div class="line">          $str .= chr(ord($data&#123;$i&#125;) + (ord($char&#123;$i&#125;)) % <span class="number">256</span>);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> base64_encode($str); <span class="comment">//将密文转成Base64格式输出</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="解密算法"><a href="#解密算法" class="headerlink" title="解密算法"></a>解密算法</h3><p>利用密码进行密文解密，获取明文<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">decrypt</span><span class="params">($data)</span></span>&#123;</div><div class="line">    $key = md5(<span class="string">"123abc"</span>);</div><div class="line">    $x = <span class="number">0</span>;</div><div class="line">    $data = base64_decode($data);</div><div class="line">    $len = strlen($data);</div><div class="line">    $l = strlen($key);</div><div class="line">    <span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; $len; $i++)&#123;</div><div class="line">        <span class="keyword">if</span> ($x == $l)&#123;</div><div class="line">            $x = <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        $char .= substr($key, $x, <span class="number">1</span>);</div><div class="line">        $x++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; $len; $i++)&#123;</div><div class="line">        <span class="keyword">if</span> (ord(substr($data, $i, <span class="number">1</span>)) &lt; ord(substr($char, $i, <span class="number">1</span>)))&#123;</div><div class="line">            $str .= chr((ord(substr($data, $i, <span class="number">1</span>)) + <span class="number">256</span>) - ord(substr($char, $i, <span class="number">1</span>)));</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            $str .= chr(ord(substr($data, $i, <span class="number">1</span>)) - ord(substr($char, $i, <span class="number">1</span>)));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> $str;<span class="comment">//得到明文</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>iOS开发中，使用swift进行解密，代码如下：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">func</span> <span class="title">decrypt</span><span class="params">(data: String)</span></span> -&gt; <span class="type">String</span>&#123;</div><div class="line">    <span class="keyword">let</span> key = <span class="string">"123abc"</span>.md5()</div><div class="line">    <span class="keyword">var</span> x = <span class="number">0</span></div><div class="line">    <span class="keyword">let</span> dataBase64 = base64Decoding(encodedStr: data)</div><div class="line">    <span class="keyword">let</span> len = dataBase64.<span class="built_in">count</span></div><div class="line">    <span class="keyword">let</span> l = key.lengthOfBytes(using: <span class="type">String</span>.<span class="type">Encoding</span>.utf8)</div><div class="line">    <span class="keyword">var</span> char = <span class="string">""</span></div><div class="line">    <span class="keyword">var</span> result = <span class="string">""</span></div><div class="line">    <span class="keyword">for</span> <span class="number">_</span> <span class="keyword">in</span> <span class="number">0</span>..&lt;len &#123;</div><div class="line">        <span class="keyword">if</span> x == l &#123;</div><div class="line">            x = <span class="number">0</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">let</span> startIndex = <span class="type">String</span>.<span class="type">Index</span>.<span class="keyword">init</span>(encodedOffset: x)</div><div class="line">        char.append(key[startIndex])</div><div class="line">        x = x + <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..&lt;len&#123;</div><div class="line">        <span class="keyword">if</span> getASCIIByChar(<span class="built_in">c</span>: dataBase64[<span class="type">String</span>.<span class="type">Index</span>.<span class="keyword">init</span>(encodedOffset: i)]) &lt; getASCIIByChar(<span class="built_in">c</span>: char[<span class="type">String</span>.<span class="type">Index</span>.<span class="keyword">init</span>(encodedOffset: i)])&#123;</div><div class="line">            <span class="comment">//result.append</span></div><div class="line">            result.append(getCharByASCII(n: (getASCIIByChar(<span class="built_in">c</span>: dataBase64[<span class="type">String</span>.<span class="type">Index</span>.<span class="keyword">init</span>(encodedOffset: i)]) + <span class="number">256</span>) - getASCIIByChar(<span class="built_in">c</span>: char[<span class="type">String</span>.<span class="type">Index</span>.<span class="keyword">init</span>(encodedOffset: i)])))</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            result.append(getCharByASCII(n: getASCIIByChar(<span class="built_in">c</span>: dataBase64[<span class="type">String</span>.<span class="type">Index</span>.<span class="keyword">init</span>(encodedOffset: i)]) - getASCIIByChar(<span class="built_in">c</span>: char[<span class="type">String</span>.<span class="type">Index</span>.<span class="keyword">init</span>(encodedOffset: i)])))</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> result</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>获取明文后再进行相应的数据解析工作。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2018/02/05/财务金额大写换算器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -792,7 +938,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -814,7 +960,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
