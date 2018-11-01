@@ -2,6 +2,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
@@ -9,8 +18,11 @@
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,36 +50,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.css.network/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -76,49 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=6.4.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=6.4.2">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="iOS,Swift,强智,教务系统,模拟登陆," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="需求因为学校的教务系统版本比较老旧，XX领导也不重视这个，现在的系统只能勉强运行，兼容性问题很多，随着Win10系统IE11的更新，随之而来的问题将会越来越多。一直想做一款适合在学校范围内使用，但功能又不局限于查课表（区别于超级课程表）的一款App，毕竟作为系统管理员，可以直接对数据库进行操作，可实现的功能也很多。 思路做App的第一步就是要如何进行登陆验证，教务系统的数据库上密码是密文保存的，教">
-<meta name="keywords" content="iOS,Swift,强智,教务系统,模拟登陆">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Swift模拟强智教务系统登录">
-<meta property="og:url" content="http://zhouhuix.cn/2018/11/01/swift模拟强智教务系统登录/index.html">
-<meta property="og:site_name" content="晴天·Sunny">
-<meta property="og:description" content="需求因为学校的教务系统版本比较老旧，XX领导也不重视这个，现在的系统只能勉强运行，兼容性问题很多，随着Win10系统IE11的更新，随之而来的问题将会越来越多。一直想做一款适合在学校范围内使用，但功能又不局限于查课表（区别于超级课程表）的一款App，毕竟作为系统管理员，可以直接对数据库进行操作，可实现的功能也很多。 思路做App的第一步就是要如何进行登陆验证，教务系统的数据库上密码是密文保存的，教">
-<meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="http://zhouhuix.cn/2018/11/01/images/imgs/monidenglu.png">
-<meta property="og:updated_time" content="2018-10-31T11:42:05.992Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swift模拟强智教务系统登录">
-<meta name="twitter:description" content="需求因为学校的教务系统版本比较老旧，XX领导也不重视这个，现在的系统只能勉强运行，兼容性问题很多，随着Win10系统IE11的更新，随之而来的问题将会越来越多。一直想做一款适合在学校范围内使用，但功能又不局限于查课表（区别于超级课程表）的一款App，毕竟作为系统管理员，可以直接对数据库进行操作，可实现的功能也很多。 思路做App的第一步就是要如何进行登陆验证，教务系统的数据库上密码是密文保存的，教">
-<meta name="twitter:image" content="http://zhouhuix.cn/2018/11/01/images/imgs/monidenglu.png">
 
 
 
@@ -127,15 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '5.1.3',
+    version: '6.4.2',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -147,15 +103,44 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="需求因为学校的教务系统版本比较老旧，XX领导也不重视这个，现在的系统只能勉强运行，兼容性问题很多，随着Win10系统IE11的更新，随之而来的问题将会越来越多。一直想做一款适合在学校范围内使用，但功能又不局限于查课表（区别于超级课程表）的一款App，毕竟作为系统管理员，可以直接对数据库进行操作，可实现的功能也很多。 思路做App的第一步就是要如何进行登陆验证，教务系统的数据库上密码是密文保存的，教">
+<meta name="keywords" content="iOS,Swift,强智,教务系统,模拟登陆">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift模拟强智教务系统登录">
+<meta property="og:url" content="http://zhouhuix.cn/2018/11/01/swift模拟强智教务系统登录/index.html">
+<meta property="og:site_name" content="晴天·Sunny">
+<meta property="og:description" content="需求因为学校的教务系统版本比较老旧，XX领导也不重视这个，现在的系统只能勉强运行，兼容性问题很多，随着Win10系统IE11的更新，随之而来的问题将会越来越多。一直想做一款适合在学校范围内使用，但功能又不局限于查课表（区别于超级课程表）的一款App，毕竟作为系统管理员，可以直接对数据库进行操作，可实现的功能也很多。 思路做App的第一步就是要如何进行登陆验证，教务系统的数据库上密码是密文保存的，教">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://i.zhouhuix.cn/images/imgs/monidenglu.png">
+<meta property="og:updated_time" content="2018-10-31T11:44:06.042Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift模拟强智教务系统登录">
+<meta name="twitter:description" content="需求因为学校的教务系统版本比较老旧，XX领导也不重视这个，现在的系统只能勉强运行，兼容性问题很多，随着Win10系统IE11的更新，随之而来的问题将会越来越多。一直想做一款适合在学校范围内使用，但功能又不局限于查课表（区别于超级课程表）的一款App，毕竟作为系统管理员，可以直接对数据库进行操作，可实现的功能也很多。 思路做App的第一步就是要如何进行登陆验证，教务系统的数据库上密码是密文保存的，教">
+<meta name="twitter:image" content="https://i.zhouhuix.cn/images/imgs/monidenglu.png">
+
+
+
+
+
 
   <link rel="canonical" href="http://zhouhuix.cn/2018/11/01/swift模拟强智教务系统登录/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>Swift模拟强智教务系统登录 | 晴天·Sunny</title>
   
+
 
 
 
@@ -173,6 +158,33 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
@@ -192,19 +204,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">晴天·Sunny</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <h1 class="site-subtitle" itemprop="description"></h1>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -212,65 +222,58 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首頁
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分類
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            歸檔
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
+  </li>
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            標籤
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            關於
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Kategorien</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archiv</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />Über</a>
+  </li>
 
       
+      
     </ul>
+  
+
   
 
   
@@ -278,12 +281,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -296,6 +310,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -305,7 +321,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="周阳光">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="This is a personal web.">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -318,25 +334,50 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Swift模拟强智教务系统登录</h2>
+          <h1 class="post-title" itemprop="name headline">Swift模拟强智教务系统登录
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">發表於</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-11-01T18:00:00+08:00">
-                2018-11-01
-              </time>
+
+              
+                
+              
+
+              <time title="Post created: 2018-11-01 18:00:00" itemprop="dateCreated datePublished" datetime="2018-11-01T18:00:00+08:00">2018-11-01</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-10-31 19:44:06" itemprop="dateModified" datetime="2018-10-31T19:44:06+08:00">2018-10-31</time>
+              
             
           </span>
 
@@ -349,14 +390,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分類於</span>
+                <span class="post-meta-item-text">in</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CodeStudio/" itemprop="url" rel="index">
-                    <span itemprop="name">CodeStudio</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CodeStudio/" itemprop="url" rel="index"><span itemprop="name">CodeStudio</span></a></span>
 
                 
                 
@@ -373,7 +410,10 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             Views:  
             <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
             </span>
           
@@ -398,7 +438,7 @@
         <h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>因为学校的教务系统版本比较老旧，XX领导也不重视这个，现在的系统只能勉强运行，兼容性问题很多，随着Win10系统IE11的更新，随之而来的问题将会越来越多。<br>一直想做一款适合在学校范围内使用，但功能又不局限于查课表（区别于超级课程表）的一款App，毕竟作为系统管理员，可以直接对数据库进行操作，可实现的功能也很多。</p>
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>做App的第一步就是要如何进行登陆验证，教务系统的数据库上密码是密文保存的，教务系统提供找回密码的功能可以将密码（明文）发送至绑定邮箱，但暂时不知道密码的加密方式及密钥，对密码直接进行解密无从下手，另外一种发放是通过其他方式完成验证，学院的微信平台就是这样，在进行身份绑定时，利用用户提供的姓名、身份证号、学号等个人信息进行身份绑定。<br><a id="more"></a></p>
 <h3 id="新途径"><a href="#新途径" class="headerlink" title="新途径"></a>新途径</h3><p>起初我也是按照上面的思路进行构想的，但App不同于微信，总要有登录名和密码进行登陆，让学生先注册账号再进行身份绑定显得有些多余（这个想法我也已经写好代码，并且功能基本实现了=。=），最近突发奇想，超级课程表是怎么完成验证，从而获得学生课表的，意思顺着这个思路，找到了新的登陆验证方法，模拟教务系统登录进行身份验证，这种方法去除了注册账号的麻烦，对学生来说在学校一个账号就最够了，多了显然很麻烦，也不是好事儿。</p>
-<h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><p>借助第三方<a href="https://github.com/Alamofire/Alamofire" target="_blank" rel="external">Alamofire</a>的强大功能，来进行HTTP请求，模拟教务系统的登陆。Alamofire的具体配置请参照Github上的介绍，网上也有很多。<br>首先使用Chrome登陆教务系统，通过开发者工具我们可以看到在登录时向服务器发送了哪些请求,如下图：<br><img src="../images/imgs/monidenglu.png"><br>在发送用户名和密码的同时，也向服务器发送了另外3个参数，在打开登陆页面时，这三个参数就已经隐藏在网页中了，第一步我们要做的就是获取这3个参数及值，通过Alamofire请求网页，然后对HTML代码进行解析，获取我们需要的内容。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> jwURL = <span class="string">"http://kwjw.jsnu.edu.cn/jwgl/Login.aspx"</span></div><div class="line"><span class="type">Alamofire</span>.request(<span class="keyword">self</span>.jwURL).responseString&#123; response <span class="keyword">in</span></div><div class="line">    <span class="keyword">let</span> html = response.result.value <span class="comment">//获取网页内容html文本</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">let</span> doc = <span class="keyword">try</span>? <span class="type">HTML</span>(html: html!, encoding: .utf8) &#123; <span class="comment">//将Html文本抓换成Html代码进行解析</span></div><div class="line">        <span class="keyword">for</span> link <span class="keyword">in</span> doc.css(<span class="string">"input[type='hidden']"</span>) &#123; <span class="comment">//通过Html元素来获取值，类似于JQuery的方法</span></div><div class="line">            <span class="keyword">self</span>.parameters[link[<span class="string">"id"</span>]!] = link[<span class="string">"value"</span>]! <span class="comment">//将获取的key和value保存到数组中，后面使用</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><p>借助第三方<a href="https://github.com/Alamofire/Alamofire" target="_blank" rel="external">Alamofire</a>的强大功能，来进行HTTP请求，模拟教务系统的登陆。Alamofire的具体配置请参照Github上的介绍，网上也有很多。<br>首先使用Chrome登陆教务系统，通过开发者工具我们可以看到在登录时向服务器发送了哪些请求,如下图：<br><img src="https://i.zhouhuix.cn/images/imgs/monidenglu.png"><br>在发送用户名和密码的同时，也向服务器发送了另外3个参数，在打开登陆页面时，这三个参数就已经隐藏在网页中了，第一步我们要做的就是获取这3个参数及值，通过Alamofire请求网页，然后对HTML代码进行解析，获取我们需要的内容。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> jwURL = <span class="string">"http://kwjw.jsnu.edu.cn/jwgl/Login.aspx"</span></div><div class="line"><span class="type">Alamofire</span>.request(<span class="keyword">self</span>.jwURL).responseString&#123; response <span class="keyword">in</span></div><div class="line">    <span class="keyword">let</span> html = response.result.value <span class="comment">//获取网页内容html文本</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">let</span> doc = <span class="keyword">try</span>? <span class="type">HTML</span>(html: html!, encoding: .utf8) &#123; <span class="comment">//将Html文本抓换成Html代码进行解析</span></div><div class="line">        <span class="keyword">for</span> link <span class="keyword">in</span> doc.css(<span class="string">"input[type='hidden']"</span>) &#123; <span class="comment">//通过Html元素来获取值，类似于JQuery的方法</span></div><div class="line">            <span class="keyword">self</span>.parameters[link[<span class="string">"id"</span>]!] = link[<span class="string">"value"</span>]! <span class="comment">//将获取的key和value保存到数组中，后面使用</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>获取到这个后，用户名和密码可以通过用户输入，而最麻烦的是验证码，在网上查了好多方法，有的提供的解决办法是，在请求过程中，将进程暂停几秒中，让用户将验证码保存到指定的文件内，来通过验证，另外一种方法就是通过图片识别验证码，完成自动输入。两种方法都可行，但是在测试过程中，我发现我们的系统不需要验证验证码，就可以成功登陆了，不知道其他的教务系统是否可以。<br>知道这个重大利好后，后面的工作就容易多了，再次通过Alamofire请求登陆页面，这次发送数据给服务器，<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="type">Alamofire</span>.request(jwURL, method: .post, parameters: parameters).responseString&#123; response <span class="keyword">in</span></div><div class="line">    <span class="comment">//parameters为上一步获取的数据，及用户输入的用户名和密码</span></div><div class="line">    <span class="keyword">let</span> html = response.result.value</div><div class="line">    <span class="keyword">if</span> <span class="keyword">let</span> doc = <span class="keyword">try</span>? <span class="type">HTML</span>(html: html! <span class="keyword">as</span> <span class="type">String</span>, encoding: .utf8) &#123;</div><div class="line">        <span class="built_in">print</span>(doc.title!) <span class="comment">//通过获取登陆后的一些网页内容，来确认学生是否登陆成功</span></div><div class="line">        <span class="comment">//do something...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过以上方法即可模拟强智教务系统的登陆，继而可以继续开发其他功能。<br>不知其他版本的系统是否需要完善验证码这一步骤，待验证。</p>
 <h3 id="Some-Bugs"><a href="#Some-Bugs" class="headerlink" title="Some Bugs"></a>Some Bugs</h3><p>开发过程中发现发现有个学生的账号登陆就闪退，调试后发现通过Alamofire获取的内容为nil，而报错，仔细分析后发现，学生名字中海油生僻字，也许是因为编码方式的原因，Alamofire使用UTF8编码，而教务系统使用GB2312编码方式，从而造成报错，因此修改代码如下：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="type">Alamofire</span>.request(<span class="keyword">self</span>.jwURL, method: .post, parameters: parameters).response&#123; response <span class="keyword">in</span> <span class="comment">//修改请求方式</span></div><div class="line">    <span class="keyword">let</span> html = <span class="type">NSString</span>(data: response.data!, encoding: <span class="type">CFStringConvertEncodingToNSStringEncoding</span>(<span class="type">UInt32</span>(<span class="type">CFStringEncodings</span>.<span class="type">GB_18030_2000</span>.rawValue))) <span class="comment">//将请求结果通过GB方式编码</span></div><div class="line">    <span class="keyword">if</span> ... <span class="comment">//后续步骤</span></div></pre></td></tr></table></figure></p>
@@ -406,41 +446,15 @@
 
       
     </div>
+
+    
+
     
     
     
 
     
 
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打賞</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wx.jpeg" alt="周阳光 微信支付"/>
-        <p>微信支付</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="周阳光 支付寶"/>
-        <p>支付寶</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
     
 
     
@@ -494,23 +508,14 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
           
 
+  
 
-          
-  
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTk3OC84NTQy"></div>
-    </div>
-  
 
 
         </div>
@@ -534,10 +539,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            本站概覽
+            Übersicht
           </li>
         </ul>
       
@@ -551,72 +556,103 @@
                 alt="周阳光" />
             
               <p class="site-author-name" itemprop="name">周阳光</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">文章</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">分類</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
-                  <span class="site-state-item-name">標籤</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-
-          <div class="links-of-author motion-element">
-            
-              
-                <span class="links-of-author-item">
-                  <a href="mailto:im@zhouhuix.cn" target="_blank" title="E-Mail">
-                    
-                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="http://weibo.com/zh12310" target="_blank" title="微博">
-                    
-                      <i class="fa fa-fw fa-weibo"></i>微博</a>
-                </span>
-              
-            
+              <p class="site-description motion-element" itemprop="description">This is a personal web.</p>
           </div>
 
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">Kategorien</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">Tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:im@zhouhuix.cn" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/zh12310" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  
+                </span>
+              
+            </div>
           
 
           
           
 
+          
+          
+
+          
+            
+          
           
 
         </div>
@@ -652,49 +688,48 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2012 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-star"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">周阳光</span>
 
   
+
+  
 </div>
 
 
 
 
 
-  <!--<div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
--->
+
+
+
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
+
 
 
 
         
 <div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">
+    <span class="site-uv" title="Total Visitors">
       <i class="fa fa-user"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
     </span>
   
 
   
-    <span class="site-uv">
+    <span class="site-pv" title="Total Views">
       <i class="fa fa-eye"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
     </span>
   
-  
-    <span class="site_pv">Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
-    </span>
-  
-
 </div>
+
 
 
 
@@ -723,6 +758,11 @@
       </div>
     
 
+    
+	
+    
+
+    
   </div>
 
   
@@ -741,7 +781,6 @@
 
 
 
-  
 
 
 
@@ -754,68 +793,56 @@
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
-
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
-
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
 
   
 
 
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
 
 
-	
+
+  
+  
 
 
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
 
 
 
@@ -823,20 +850,9 @@
 
 
 
+  
 
 
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
 
 
 
@@ -851,6 +867,15 @@
 
 
 
+  
+
+  
+
+  
+
+  
+
+  
   
 
   
