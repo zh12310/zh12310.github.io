@@ -189,7 +189,7 @@ body {
   font-size: 14px;
   line-height: 2;
   color: #555;
-  background: #f5f7f9;
+  background: #eceef2;
 }
 @media (max-width: 767px) {
   body {
@@ -1849,7 +1849,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff;
+  background: #ffffd9;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2611,7 +2611,7 @@ ul.breadcrumb li+li:last-child {
   float: left;
   margin-top: 300px;
   width: 240px;
-  background: #f5f7f9;
+  background: #eceef2;
   box-shadow: none;
 }
 @media (min-width: 768px) and (max-width: 991px) {
