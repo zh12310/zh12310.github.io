@@ -1,112 +1,49 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
-
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=6.4.2">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=6.4.2">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=6.4.2">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    hostname: new URL('http://zhouhuix.cn').hostname,
     root: '/',
     scheme: 'Pisces',
-    version: '6.4.2',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
 </script>
-
-
-  
-
-
-
 
   <meta name="description" content="This is a personal web.">
 <meta property="og:type" content="website">
@@ -119,18 +56,17 @@
 <meta name="twitter:title" content="晴天·Sunny">
 <meta name="twitter:description" content="This is a personal web.">
 
+<link rel="canonical" href="http://zhouhuix.cn/">
 
 
-
-
-
-  <link rel="canonical" href="http://zhouhuix.cn/">
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
@@ -138,11 +74,7 @@
   
 
 
-
-
-
-
-  <script type="text/javascript">
+  <script>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -156,268 +88,160 @@
 
 
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">晴天·Sunny</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home menu-item-active">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
-  </li>
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-      
-      
-    </ul>
-  
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
-  
+  </li>
+        <li class="menu-item menu-item-categories">
 
-  
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+  </ul>
+
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
+
+          <div class="content">
             
 
-          
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
+  <div class="posts-expand">
+        
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="周阳光">
       <meta itemprop="description" content="This is a personal web.">
-      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="晴天·Sunny">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/" itemprop="url">
-                  后台定时执行php爬虫抓取学院内外网新闻
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/" class="post-title-link" itemprop="url">后台定时执行php爬虫抓取学院内外网新闻</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-11-30 20:45:02" itemprop="dateCreated datePublished" datetime="2019-11-30T20:45:02+08:00">2019-11-30</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-12-03 12:06:40" itemprop="dateModified" datetime="2019-12-03T12:06:40+08:00">2019-12-03</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CodeStudio/" itemprop="url" rel="index"><span itemprop="name">CodeStudio</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CodeStudio/" itemprop="url" rel="index">
+                    <span itemprop="name">CodeStudio</span>
+                  </a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -425,10 +249,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;年初在Appstore发布了一个科文学院的app<a href="https://itunes.apple.com/cn/app/id1455808774" target="_blank" rel="noopener">[科文教务]</a>，下载量不大，也一直未推广，因为Android版的没做好，毕竟学生还是使用安卓手机的居多，<del>（使用Apple的大部分都是不好好学习的）</del>。</p>
 <p>&emsp;&emsp;毕竟丰富的App功能离不开强大的后台数据支持，起初做的教务App中新闻主要抓取学院主页上的通知公告，一方面内容太少，另一方面每次运行后抓取数据都需要等待，尤其图片新闻，图片加载太慢。所以，想改用服务器后台整合数据，通过JSON将整合好的数据统一反馈给app。</p>
 <h2 id="运行环境-Windows-Server-IIS-php"><a href="#运行环境-Windows-Server-IIS-php" class="headerlink" title="运行环境 Windows Server + IIS + php"></a>运行环境 Windows Server + IIS + php</h2><ol>
@@ -441,167 +261,80 @@
 </ol>
 <h2 id="网页代码分析"><a href="#网页代码分析" class="headerlink" title="网页代码分析"></a>网页代码分析</h2><p>&emsp;&emsp;学院内往外网页代码不同，需分开分析，主要用到工具Chrome浏览器。<br></p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2018/11/01/swift模拟登陆强智教务系统/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="周阳光">
       <meta itemprop="description" content="This is a personal web.">
-      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="晴天·Sunny">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/01/swift模拟登陆强智教务系统/" itemprop="url">
-                  iOS模拟登录强智教务管理系统[Swift]
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/11/01/swift模拟登陆强智教务系统/" class="post-title-link" itemprop="url">iOS模拟登录强智教务管理系统[Swift]</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-11-01 18:00:00" itemprop="dateCreated datePublished" datetime="2018-11-01T18:00:00+08:00">2018-11-01</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-12-03 12:06:40" itemprop="dateModified" datetime="2019-12-03T12:06:40+08:00">2019-12-03</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CodeStudio/" itemprop="url" rel="index"><span itemprop="name">CodeStudio</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CodeStudio/" itemprop="url" rel="index">
+                    <span itemprop="name">CodeStudio</span>
+                  </a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -609,350 +342,83 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>因为学校的教务系统版本比较老旧，XX领导也不重视这个，现在的系统只能勉强运行，兼容性问题很多，随着Win10系统IE11的更新，随之而来的问题将会越来越多。<br>一直想做一款适合在学校范围内使用，但功能又不局限于查课表（区别于超级课程表）的一款App，毕竟作为系统管理员，可以直接对数据库进行操作，可实现的功能也很多。</p>
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>做App的第一步就是要如何进行登陆验证，教务系统的数据库上密码是密文保存的，教务系统提供找回密码的功能可以将密码（明文）发送至绑定邮箱，但暂时不知道密码的加密方式及密钥，对密码直接进行解密无从下手，另外一种发放是通过其他方式完成验证，学院的微信平台就是这样，在进行身份绑定时，利用用户提供的姓名、身份证号、学号等个人信息进行身份绑定。<br></p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/01/swift模拟登陆强智教务系统/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/11/01/swift模拟登陆强智教务系统/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2018/10/31/php-swift加解密算法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="周阳光">
-      <meta itemprop="description" content="This is a personal web.">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="晴天·Sunny">
-    </span>
-
-    
-      <header class="post-header">
 
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/31/php-swift加解密算法/" itemprop="url">
-                  php&swift加解密算法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-10-31 18:00:00" itemprop="dateCreated datePublished" datetime="2018-10-31T18:00:00+08:00">2018-10-31</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-12-03 12:06:40" itemprop="dateModified" datetime="2019-12-03T12:06:40+08:00">2019-12-03</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CodeStudio/" itemprop="url" rel="index"><span itemprop="name">CodeStudio</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="数据加解密"><a href="#数据加解密" class="headerlink" title="数据加解密"></a>数据加解密</h3><p>在开发过程中，因为涉及都学生的个人信息（身份证号码，电话，家庭住址等），我们需要对API提供的数据进行加密，提高信息的安全性，以免造成数据泄露。</p>
-<h3 id="加密算法"><a href="#加密算法" class="headerlink" title="加密算法"></a>加密算法</h3><p>使用加密算法，将API提供的Json数据进行加密，再手机App上再进行解密。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encrypt</span><span class="params">($data)</span></span>&#123;</span><br><span class="line">      $key = md5(<span class="string">"123abc"</span>);<span class="comment">//设置一个秘钥，保存好，作为获取明文的关键</span></span><br><span class="line">      $x = <span class="number">0</span>;</span><br><span class="line">      $len = strlen($data);</span><br><span class="line">      $l = strlen($key);</span><br><span class="line">      <span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; $len; $i++)&#123;</span><br><span class="line">          <span class="keyword">if</span> ($x == $l)&#123;</span><br><span class="line">              $x = <span class="number">0</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          $char .= $key&#123;$x&#125;;</span><br><span class="line">          $x++;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; $len; $i++)&#123;</span><br><span class="line">          $str .= chr(ord($data&#123;$i&#125;) + (ord($char&#123;$i&#125;)) % <span class="number">256</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> base64_encode($str); <span class="comment">//将密文转成Base64格式输出</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="解密算法"><a href="#解密算法" class="headerlink" title="解密算法"></a>解密算法</h3><p>利用密码进行密文解密，获取明文<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/31/php-swift加解密算法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
   
   
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2018/10/31/php加解密算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="周阳光">
       <meta itemprop="description" content="This is a personal web.">
-      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="晴天·Sunny">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/31/php加解密算法/" itemprop="url">
-                  php数据加解密算法
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/10/31/php加解密算法/" class="post-title-link" itemprop="url">php数据加解密算法</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2018-10-31 18:00:00" itemprop="dateCreated datePublished" datetime="2018-10-31T18:00:00+08:00">2018-10-31</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-12-03 12:06:40" itemprop="dateModified" datetime="2019-12-03T12:06:40+08:00">2019-12-03</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CodeStudio/" itemprop="url" rel="index"><span itemprop="name">CodeStudio</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CodeStudio/" itemprop="url" rel="index">
+                    <span itemprop="name">CodeStudio</span>
+                  </a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -960,175 +426,84 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h3 id="数据加解密"><a href="#数据加解密" class="headerlink" title="数据加解密"></a>数据加解密</h3><p>在开发过程中，因为涉及都学生的个人信息（身份证号码，电话，家庭住址等），我们需要对API提供的数据进行加密，提高信息的安全性，以免造成数据泄露。</p>
 <h3 id="加密算法"><a href="#加密算法" class="headerlink" title="加密算法"></a>加密算法</h3><p>使用加密算法，将API提供的Json数据进行加密，再手机App上再进行解密。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encrypt</span><span class="params">($data)</span></span>&#123;</span><br><span class="line">      $key = md5(<span class="string">"123abc"</span>);<span class="comment">//设置一个秘钥，保存好，作为获取明文的关键</span></span><br><span class="line">      $x = <span class="number">0</span>;</span><br><span class="line">      $len = strlen($data);</span><br><span class="line">      $l = strlen($key);</span><br><span class="line">      <span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; $len; $i++)&#123;</span><br><span class="line">          <span class="keyword">if</span> ($x == $l)&#123;</span><br><span class="line">              $x = <span class="number">0</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          $char .= $key&#123;$x&#125;;</span><br><span class="line">          $x++;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; $len; $i++)&#123;</span><br><span class="line">          $str .= chr(ord($data&#123;$i&#125;) + (ord($char&#123;$i&#125;)) % <span class="number">256</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> base64_encode($str); <span class="comment">//将密文转成Base64格式输出</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="解密算法"><a href="#解密算法" class="headerlink" title="解密算法"></a>解密算法</h3><p>利用密码进行密文解密，获取明文<br></p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/31/php加解密算法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/10/31/php加解密算法/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2018/02/05/财务金额大写换算器/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2018/10/31/php-swift加解密算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="周阳光">
       <meta itemprop="description" content="This is a personal web.">
-      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="晴天·Sunny">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/05/财务金额大写换算器/" itemprop="url">
-                  财务大写金额换算器
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/10/31/php-swift加解密算法/" class="post-title-link" itemprop="url">php&swift加解密算法</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2018-02-05 08:31:51" itemprop="dateCreated datePublished" datetime="2018-02-05T08:31:51+08:00">2018-02-05</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <time title="创建时间：2018-10-31 18:00:00" itemprop="dateCreated datePublished" datetime="2018-10-31T18:00:00+08:00">2018-10-31</time>
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-12-03 12:06:40" itemprop="dateModified" datetime="2019-12-03T12:06:40+08:00">2019-12-03</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CodeStudio/" itemprop="url" rel="index"><span itemprop="name">CodeStudio</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CodeStudio/" itemprop="url" rel="index">
+                    <span itemprop="name">CodeStudio</span>
+                  </a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1136,10 +511,91 @@
     <div class="post-body" itemprop="articleBody">
 
       
+          <h3 id="数据加解密"><a href="#数据加解密" class="headerlink" title="数据加解密"></a>数据加解密</h3><p>在开发过程中，因为涉及都学生的个人信息（身份证号码，电话，家庭住址等），我们需要对API提供的数据进行加密，提高信息的安全性，以免造成数据泄露。</p>
+<h3 id="加密算法"><a href="#加密算法" class="headerlink" title="加密算法"></a>加密算法</h3><p>使用加密算法，将API提供的Json数据进行加密，再手机App上再进行解密。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encrypt</span><span class="params">($data)</span></span>&#123;</span><br><span class="line">      $key = md5(<span class="string">"123abc"</span>);<span class="comment">//设置一个秘钥，保存好，作为获取明文的关键</span></span><br><span class="line">      $x = <span class="number">0</span>;</span><br><span class="line">      $len = strlen($data);</span><br><span class="line">      $l = strlen($key);</span><br><span class="line">      <span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; $len; $i++)&#123;</span><br><span class="line">          <span class="keyword">if</span> ($x == $l)&#123;</span><br><span class="line">              $x = <span class="number">0</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          $char .= $key&#123;$x&#125;;</span><br><span class="line">          $x++;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; $len; $i++)&#123;</span><br><span class="line">          $str .= chr(ord($data&#123;$i&#125;) + (ord($char&#123;$i&#125;)) % <span class="number">256</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> base64_encode($str); <span class="comment">//将密文转成Base64格式输出</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="解密算法"><a href="#解密算法" class="headerlink" title="解密算法"></a>解密算法</h3><p>利用密码进行密文解密，获取明文<br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/10/31/php-swift加解密算法/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2018/02/05/财务金额大写换算器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="周阳光">
+      <meta itemprop="description" content="This is a personal web.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="晴天·Sunny">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/05/财务金额大写换算器/" class="post-title-link" itemprop="url">财务大写金额换算器</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-02-05 08:31:51" itemprop="dateCreated datePublished" datetime="2018-02-05T08:31:51+08:00">2018-02-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-03 12:06:40" itemprop="dateModified" datetime="2019-12-03T12:06:40+08:00">2019-12-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CodeStudio/" itemprop="url" rel="index">
+                    <span itemprop="name">CodeStudio</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
           <blockquote>
 <p>今天是自己生日🎂，早起锻炼身体，一切都好！</p>
 </blockquote>
@@ -1151,167 +607,80 @@
 <h3 id="软件名称"><a href="#软件名称" class="headerlink" title="软件名称"></a>软件名称</h3><p>&emsp;&emsp;壹圆整（对应转换后的大写金额，同时打算做无广告的收费版本定价1元）</p>
 <h3 id="开发平台及工具"><a href="#开发平台及工具" class="headerlink" title="开发平台及工具"></a>开发平台及工具</h3><p>&emsp;&emsp;iOS + Xcode + Swift<br></p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/05/财务金额大写换算器/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/02/05/财务金额大写换算器/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2017/11/23/自己做一个记账APP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="周阳光">
       <meta itemprop="description" content="This is a personal web.">
-      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="晴天·Sunny">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/23/自己做一个记账APP/" itemprop="url">
-                  自己动手做一个记账APP
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/11/23/自己做一个记账APP/" class="post-title-link" itemprop="url">自己动手做一个记账APP</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2017-11-23 09:04:57" itemprop="dateCreated datePublished" datetime="2017-11-23T09:04:57+08:00">2017-11-23</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-12-03 12:06:40" itemprop="dateModified" datetime="2019-12-03T12:06:40+08:00">2019-12-03</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CodeStudio/" itemprop="url" rel="index"><span itemprop="name">CodeStudio</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CodeStudio/" itemprop="url" rel="index">
+                    <span itemprop="name">CodeStudio</span>
+                  </a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1319,10 +688,6 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><ol>
 <li>AppStore上的记账软件功能太过复杂，而且不单是记账功能，还附带其他理财等功能，不是我想要的；</li>
 <li>一年来一直在用财禅记账，功能虽不多但记账还不错，但存在少部分bug，理财账户的转入转出有点儿问题；</li>
@@ -1331,167 +696,80 @@
 </ol>
 <h3 id="软件名称"><a href="#软件名称" class="headerlink" title="软件名称"></a>软件名称</h3><p>&emsp;&emsp;巨无霸 Gigantique<br>&emsp;&emsp;本App只是希望实现记账功能，起名钱包、零钱等最直接，但是好多软件都是类似的名称，而且还有苹果官方的Wallet存在，那么为什么起这个名字呢，作为一名wower应该懂得，“我的背包是巨无霸”，So就用这个吧，愿我的钱包是巨无霸，可以装更多的钱。<br></p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/23/自己做一个记账APP/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2017/11/23/自己做一个记账APP/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2016/11/24/修改Hexo的Next主题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="周阳光">
       <meta itemprop="description" content="This is a personal web.">
-      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="晴天·Sunny">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/11/24/修改Hexo的Next主题/" itemprop="url">
-                  修改Hexo的Next主题
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/11/24/修改Hexo的Next主题/" class="post-title-link" itemprop="url">修改Hexo的Next主题</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2016-11-24 10:13:27" itemprop="dateCreated datePublished" datetime="2016-11-24T10:13:27+08:00">2016-11-24</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-12-03 12:06:40" itemprop="dateModified" datetime="2019-12-03T12:06:40+08:00">2019-12-03</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/网站建设/" itemprop="url" rel="index"><span itemprop="name">网站建设</span></a></span>
-
-                
-                
-              
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/网站建设/" itemprop="url" rel="index">
+                    <span itemprop="name">网站建设</span>
+                  </a>
+                </span>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1499,253 +777,153 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           <p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并且使用的是NexT主题（其他主题仅做参考）。</p>
 <p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT</a>主旨在于简洁优雅且易于使用，主题本身提供了三种样式供用户选择，但色彩过于单一，今天为大家介绍如何修改主题的颜色和增加背景图片。</p>
 <h3 id="主题颜色"><a href="#主题颜色" class="headerlink" title="主题颜色"></a>主题颜色</h3><p>打开<code>hexo/themes/next/source/css/_variables/base.styl</code>找到Colors代码段，如下：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Colors</span></span><br><span class="line"><span class="comment">// colors for use across theme.</span></span><br><span class="line"><span class="comment">// --------------------------------------------------</span></span><br><span class="line">  $whitesmoke   = <span class="comment">#f5f5f5</span></span><br><span class="line">  $gainsboro    = <span class="comment">#eee  //这个是边栏头像外框的颜色，</span></span><br><span class="line">  $gray-lighter = <span class="comment">#ddd  //文章中插入图片边框颜色</span></span><br><span class="line">  $grey-light   = <span class="comment">#ccc  //文章之间分割线、下划线颜色</span></span><br><span class="line">  $grey         = <span class="comment">#bbb  //页面选中圆点颜色</span></span><br><span class="line">  $grey-dark    = <span class="comment">#999</span></span><br><span class="line">  $grey-dim     = <span class="comment">#666 //侧边栏目录字体颜色</span></span><br><span class="line">  $black-light  = <span class="comment">#555 //修改文章字体颜色</span></span><br><span class="line">  $black-dim    = <span class="comment">#333</span></span><br><span class="line">  $black-deep   = <span class="comment">#495a80  //修改主题的颜色，这里我已经改成老蓝色了。</span></span><br><span class="line">  $red          = <span class="comment">#ff2a2a</span></span><br><span class="line">  $blue-bright  = <span class="comment">#87daff</span></span><br><span class="line">  $blue         = <span class="comment">#0684bd</span></span><br><span class="line">  $blue-deep    = <span class="comment">#262a30</span></span><br><span class="line">  $orange       = <span class="comment">#F39D01 //浏览文章时，目录选中的颜色</span></span><br></pre></td></tr></table></figure>
 <p>其他的可以自行更改，看看效果，我这里只修改了black-deep和orange的颜色。<br></p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/11/24/修改Hexo的Next主题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2016/11/24/修改Hexo的Next主题/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
-  </section>
+  </div>
 
   
+
 
 
           </div>
           
 
         </div>
-        
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="周阳光">
-            
-              <p class="site-author-name" itemprop="name">周阳光</p>
-              <p class="site-description motion-element" itemprop="description">This is a personal web.</p>
-          </div>
-
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="周阳光"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">周阳光</p>
+  <div class="site-description" itemprop="description">This is a personal web.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
           
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:im@zhouhuix.cn" title="E-Mail → mailto:im@zhouhuix.cn"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/zh12310" title="Weibo → http://weibo.com/zh12310" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
 
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
 
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">14</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
 
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  <a href="mailto:im@zhouhuix.cn" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="http://weibo.com/zh12310" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
-                  
-                </span>
-              
-            </div>
-          
-
-          
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-
-      
+      </div>
 
     </div>
   </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2012 – <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
+        
+
+<div class="copyright">
+  
+  &copy; 2012 – 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
     <i class="fa fa-star"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">周阳光</span>
-
-  
-
-  
+  <span class="author" itemprop="copyrightHolder">Bill Chou</span>
 </div>
-
-
-
-
-
-
-
-
-
-
 
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv" title="总访客量">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
     </span>
-  
-
-  
-    <span class="site-pv" title="总访问量">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
     </span>
-  
 </div>
 
 
@@ -1753,114 +931,20 @@
 
 
 
-  <script type="text/javascript">
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//tajs.qq.com/stats?sId=59613635";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
 
 
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-	
-    
-
-    
   </div>
 
   
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
-
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
-
-
-
-  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -1875,28 +959,11 @@
 
 
 
-  
 
 
 
 
 
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
   
 
