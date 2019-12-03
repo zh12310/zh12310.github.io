@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="前言&amp;emsp;&amp;emsp;年初在Appstore发布了一个科文学院的app[科文教务]，下载量不大，也一直未推广，因为Android版的没做好，毕竟学生还是使用安卓手机的居多，（使用Apple的大部分都是不好好学习的）。 &amp;emsp;&amp;emsp;毕竟丰富的App功能离不开强大的后台数据支持，起初做的教务App中新闻主要抓取学院主页上的通知公告，一方面内容太少，另一方面每次运行后抓取数据都需要等待">
+<meta name="keywords" content="php,爬虫,后台定时执行php脚本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="后台定时执行php爬虫抓取学院内外网新闻">
+<meta property="og:url" content="http://zhouhuix.cn/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/index.html">
+<meta property="og:site_name" content="晴天·Sunny">
+<meta property="og:description" content="前言&amp;emsp;&amp;emsp;年初在Appstore发布了一个科文学院的app[科文教务]，下载量不大，也一直未推广，因为Android版的没做好，毕竟学生还是使用安卓手机的居多，（使用Apple的大部分都是不好好学习的）。 &amp;emsp;&amp;emsp;毕竟丰富的App功能离不开强大的后台数据支持，起初做的教务App中新闻主要抓取学院主页上的通知公告，一方面内容太少，另一方面每次运行后抓取数据都需要等待">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://zhouhuix.cn/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/wangyefenxi.png">
+<meta property="og:image" content="http://zhouhuix.cn/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/dingshirenwu1.png">
+<meta property="og:image" content="http://zhouhuix.cn/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/dingshirenwu2.png">
+<meta property="og:updated_time" content="2019-12-03T04:06:40.202Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="后台定时执行php爬虫抓取学院内外网新闻">
+<meta name="twitter:description" content="前言&amp;emsp;&amp;emsp;年初在Appstore发布了一个科文学院的app[科文教务]，下载量不大，也一直未推广，因为Android版的没做好，毕竟学生还是使用安卓手机的居多，（使用Apple的大部分都是不好好学习的）。 &amp;emsp;&amp;emsp;毕竟丰富的App功能离不开强大的后台数据支持，起初做的教务App中新闻主要抓取学院主页上的通知公告，一方面内容太少，另一方面每次运行后抓取数据都需要等待">
+<meta name="twitter:image" content="http://zhouhuix.cn/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/wangyefenxi.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://zhouhuix.cn/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>后台定时执行php爬虫抓取学院内外网新闻 | 晴天·Sunny</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?38bc2fb39b270f309245c3ddc1b30ff9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">晴天·Sunny</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhouhuix.cn/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="周阳光">
+      <meta itemprop="description" content="This is a personal web.">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="晴天·Sunny">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">后台定时执行php爬虫抓取学院内外网新闻
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-30 20:45:02" itemprop="dateCreated datePublished" datetime="2019-11-30T20:45:02+08:00">2019-11-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-03 12:06:40" itemprop="dateModified" datetime="2019-12-03T12:06:40+08:00">2019-12-03</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CodeStudio/" itemprop="url" rel="index"><span itemprop="name">CodeStudio</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;年初在Appstore发布了一个科文学院的app<a href="https://itunes.apple.com/cn/app/id1455808774" target="_blank" rel="noopener">[科文教务]</a>，下载量不大，也一直未推广，因为Android版的没做好，毕竟学生还是使用安卓手机的居多，<del>（使用Apple的大部分都是不好好学习的）</del>。</p>
+<p>&emsp;&emsp;毕竟丰富的App功能离不开强大的后台数据支持，起初做的教务App中新闻主要抓取学院主页上的通知公告，一方面内容太少，另一方面每次运行后抓取数据都需要等待，尤其图片新闻，图片加载太慢。所以，想改用服务器后台整合数据，通过JSON将整合好的数据统一反馈给app。</p>
+<h2 id="运行环境-Windows-Server-IIS-php"><a href="#运行环境-Windows-Server-IIS-php" class="headerlink" title="运行环境 Windows Server + IIS + php"></a>运行环境 Windows Server + IIS + php</h2><ol>
+<li><p>windows server 服务器用于定时执行php脚本；</p>
+</li>
+<li><p>SQL server 用于存储整合后的数据；</p>
+</li>
+<li><p>IIS下的php运行环境，提供返回Json数据；</p>
+</li>
+</ol>
+<h2 id="网页代码分析"><a href="#网页代码分析" class="headerlink" title="网页代码分析"></a>网页代码分析</h2><p>&emsp;&emsp;学院内往外网页代码不同，需分开分析，主要用到工具Chrome浏览器。<br><a id="more"></a></p>
+<h3 id="分析学院主页"><a href="#分析学院主页" class="headerlink" title="分析学院主页"></a>分析学院主页</h3><h4 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h4><p>&emsp;&emsp;首先分析浏览器的网址，不同的新闻分类有不同的网址，需要找到网址的相同部分，和不同的地方。<code>http://kwxy.jsnu.edu.cn/***/list.htm</code> 这是网页的共同点，***为不同分类对应不同的数字。</p>
+<h4 id="网页代码"><a href="#网页代码" class="headerlink" title="网页代码"></a>网页代码</h4><p>&emsp;&emsp;利用Chrome浏览器右击检查，查看网页源代码，定位到需要抓取的内容，分析我们需要的HTML标签、CSS等代码。如下图：</p>
+<p><img src="/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/wangyefenxi.png" alt="网页分析1"></p>
+<p>可以发现我们需要获取的内容，共有的标签是 <code>&lt;a class=&quot;column-news-item item-1 ...</code>，因此把这个HTML标签的class作为我们分析网页文本抓取数据的关键。</p>
+<h3 id="分析院内办公网"><a href="#分析院内办公网" class="headerlink" title="分析院内办公网"></a>分析院内办公网</h3><p>&emsp;&emsp;内网分析使用相同的方法，此处不再累赘，结果详见下面的代码。</p>
+<h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2><h3 id="目标地址数组"><a href="#目标地址数组" class="headerlink" title="目标地址数组"></a>目标地址数组</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//网页跟目录</span></span><br><span class="line">$url = [<span class="string">'kwxy'</span> =&gt; <span class="string">"http://kwxy.jsnu.edu.cn/"</span>, <span class="string">'office'</span> =&gt; <span class="string">"http://219.230.252.17/list.asp?id="</span>];</span><br><span class="line">$tag = [<span class="string">'kwxy'</span> =&gt; <span class="string">"/list"</span>, <span class="string">'office'</span> =&gt; <span class="string">"&amp;PageNo="</span>];</span><br><span class="line">$html = [<span class="string">'kwxy'</span> =&gt; <span class="string">".htm"</span>, <span class="string">'office'</span> =&gt; <span class="string">""</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">//读取目录   http://kwxy.jsnu.edu.cn/7154/list.htm</span></span><br><span class="line">$category = [<span class="string">'kwxy'</span> =&gt; [<span class="string">'学务通知'</span> =&gt; <span class="string">'7154'</span>, <span class="string">'教务通知'</span> =&gt; <span class="string">'7153'</span>, <span class="string">'学院要闻'</span> =&gt; <span class="string">'7165'</span>, <span class="string">'校园活动'</span> =&gt; <span class="string">'7398'</span>, <span class="string">'招生快讯'</span> =&gt; <span class="string">'10048'</span>, <span class="string">'通知公告'</span> =&gt; <span class="string">'7151'</span>],</span><br><span class="line"><span class="string">'office'</span> =&gt; [<span class="string">'通知公告'</span> =&gt; <span class="string">'6'</span>, <span class="string">'党委文件'</span> =&gt; <span class="string">'3'</span>, <span class="string">'部门文件'</span> =&gt; <span class="string">'4'</span>]];</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp; 以上代码为分析后的网址及我们需要的几个分类对应的编号，使用数组存储方便后期增加其他分类。</p>
+<h3 id="爬虫代码"><a href="#爬虫代码" class="headerlink" title="爬虫代码"></a>爬虫代码</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//目标网址</span></span><br><span class="line">$target_url = $value.$cate_value.$tag[$key].$page.$html[$key];</span><br><span class="line"><span class="comment">//爬虫开始 ...............</span></span><br><span class="line">$che = curl_init();</span><br><span class="line">curl_setopt($che, CURLOPT_URL, $target_url);</span><br><span class="line">curl_setopt($che, CURLOPT_RETURNTRANSFER, <span class="number">1</span>);</span><br><span class="line">curl_setopt($che, CURLOPT_CONNECTTIMEOUT, $timeout);</span><br><span class="line"><span class="comment">//读取内容               </span></span><br><span class="line">$content = curl_exec($che);</span><br><span class="line"><span class="comment">//爬虫结束 ...............</span></span><br><span class="line">curl_close($che);</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;目标网址根据上面的数组循环生成相应的访问网址。在循环中每次抓取后分析网页内容，根据前面分析的HTML代码提取需要的数据。</p>
+<h3 id="解析Html网页代码"><a href="#解析Html网页代码" class="headerlink" title="解析Html网页代码"></a>解析Html网页代码</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//解析HTML</span></span><br><span class="line">$htmls = <span class="keyword">new</span> simple_html_dom();</span><br><span class="line">$htmls -&gt; load($content);</span><br><span class="line"><span class="keyword">if</span>($key == <span class="string">'office'</span>)&#123;</span><br><span class="line">    $news =  $htmls -&gt; find(<span class="string">'.newstitle'</span>);</span><br><span class="line">    <span class="keyword">for</span>($i = <span class="number">0</span>; $i &lt; count($news); $i++)&#123;</span><br><span class="line">        $href = $news[$i] -&gt; children(<span class="number">0</span>) -&gt; href;</span><br><span class="line">        <span class="comment">//提取文章ID</span></span><br><span class="line">        $article_id = explode(<span class="string">'='</span>, $href)[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span>($article_id != <span class="keyword">null</span>)&#123;</span><br><span class="line">            array_push($all_news, <span class="keyword">array</span>(</span><br><span class="line">                <span class="string">"article"</span> =&gt; $article_id,</span><br><span class="line">                <span class="string">"category"</span> =&gt; $cate_key,</span><br><span class="line">                <span class="string">"href"</span> =&gt; <span class="string">'/'</span>.explode(<span class="string">'/'</span>, $href)[<span class="number">1</span>],</span><br><span class="line">                <span class="string">"title"</span> =&gt; strtr(enc($news[$i] -&gt; children(<span class="number">0</span>) -&gt; innertext), $special_char),</span><br><span class="line">                <span class="string">"date"</span> =&gt; $news[$i] -&gt; next_sibling() -&gt; innertext,</span><br><span class="line">                <span class="string">"image"</span> =&gt; <span class="string">""</span>,</span><br><span class="line">                <span class="string">"kwxy"</span> =&gt; <span class="number">0</span></span><br><span class="line">            ));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="comment">//外网解析代码类似，此处省略</span></span><br><span class="line">&#125;</span><br><span class="line">$htmls -&gt; clear();</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;内外网解析代码类似，利用前面分析的Class值，区别在于再获取对应html的文本时，使用不同的代码<code>children(0) -&gt; innertext</code>，外网根据html结构再做调整。</p>
+<h3 id="储存数据"><a href="#储存数据" class="headerlink" title="储存数据"></a>储存数据</h3><p>&emsp;&emsp;使用SQL Server储存整合后的数据，代码省略。</p>
+<h2 id="后台定时执行php文件"><a href="#后台定时执行php文件" class="headerlink" title="后台定时执行php文件"></a>后台定时执行php文件</h2><p>&emsp;&emsp;php有自带的方法可以在后台无限次执行，在本地测试一切正常，但是放到服务器上就会执行中断，不知道问题出在什么地方，好在Windows上有[任务计划程序]也可以定时执行。<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"G:\php_7.<span class="number">1</span>.<span class="number">9</span>\php.exe" -f "G:\jwb\myjw\services\get_all_news_in_background.php"</span><br></pre></td></tr></table></figure></p>
+<p>将文本保存为bat文件，在[任务计划程序]中创建基本任务，分别设置触发器和操作。</p>
+<p><img src="/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/dingshirenwu1.png" alt="触发器设置"></p>
+<p>设置每两小时执行一次。</p>
+<p><img src="/2019/11/30/后台定时执行php爬虫抓取学院内外网新闻/dingshirenwu2.png" alt="操作"></p>
+<p>设置需要执行的程序，此处为bat文件，需要值得注意的是，一定要在”起始于（可选）”这一栏中填入bat文件的存放目录，不然任务不能执行。</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><h3 id="需要注意点问题"><a href="#需要注意点问题" class="headerlink" title="需要注意点问题"></a>需要注意点问题</h3><ol>
+<li><p>设置定时执行任务时的起始于目录，上面一提到；</p>
+</li>
+<li><p>测试代码过程中，当读取的网页较多时（网页分类或者读取的页数），可能会出现网页响应超时的问题。</p>
+<ul>
+<li>php文件中加入<code>set_time_limit(0); // run script forever</code>，可使脚本持续执行；</li>
+<li>IIS中设置网页的超时时间，默认只有120s。</li>
+</ul>
+</li>
+</ol>
+<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>&emsp;&emsp;整合好数据再写一个php文件读取返回Json数据，就可以应用到各个app中去了。</p>
+<p><a href="http://kwjw.jsnu.edu.cn/myjw/api/get_news_from_db.php" target="_blank" rel="noopener">获取新闻API</a></p>
+<hr>
+<p>&emsp;&emsp;好久没有更新，解决了好几个问题。</p>
+<ol>
+<li>没想到现在可以使用相对路径调用本地图片啦！！！😸</li>
+<li>把Hexo文件放到Coding.net上了，可以在办公室电脑上写文章了，<del>还是有点懒呢。</del></li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag"># php</a>
+          
+            <a href="/tags/爬虫/" rel="tag"># 爬虫</a>
+          
+            <a href="/tags/后台定时执行php脚本/" rel="tag"># 后台定时执行php脚本</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/01/swift模拟登陆强智教务系统/" rel="next" title="iOS模拟登录强智教务管理系统[Swift]">
+                <i class="fa fa-chevron-left"></i> iOS模拟登录强智教务管理系统[Swift]
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="周阳光">
+            
+              <p class="site-author-name" itemprop="name">周阳光</p>
+              <p class="site-description motion-element" itemprop="description">This is a personal web.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:im@zhouhuix.cn" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/zh12310" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行环境-Windows-Server-IIS-php"><span class="nav-number">2.</span> <span class="nav-text">运行环境 Windows Server + IIS + php</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页代码分析"><span class="nav-number">3.</span> <span class="nav-text">网页代码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析学院主页"><span class="nav-number">3.1.</span> <span class="nav-text">分析学院主页</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#网址"><span class="nav-number">3.1.1.</span> <span class="nav-text">网址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网页代码"><span class="nav-number">3.1.2.</span> <span class="nav-text">网页代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析院内办公网"><span class="nav-number">3.2.</span> <span class="nav-text">分析院内办公网</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现代码"><span class="nav-number">4.</span> <span class="nav-text">实现代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标地址数组"><span class="nav-number">4.1.</span> <span class="nav-text">目标地址数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#爬虫代码"><span class="nav-number">4.2.</span> <span class="nav-text">爬虫代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析Html网页代码"><span class="nav-number">4.3.</span> <span class="nav-text">解析Html网页代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#储存数据"><span class="nav-number">4.4.</span> <span class="nav-text">储存数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后台定时执行php文件"><span class="nav-number">5.</span> <span class="nav-text">后台定时执行php文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写在最后"><span class="nav-number">6.</span> <span class="nav-text">写在最后</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#需要注意点问题"><span class="nav-number">6.1.</span> <span class="nav-text">需要注意点问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后续"><span class="nav-number">6.2.</span> <span class="nav-text">后续</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2012 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">周阳光</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=59613635";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
