@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#495a80"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#495a80">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="/fonts/newKlee/result.css"/>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.dtxyz.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言程序设计实验课参考答案(实验五：分支结构2)">
+<meta property="og:url" content="https://blog.dtxyz.cn/2024/11/21/c-shiyan-5/index.html">
+<meta property="og:site_name" content="TongYi">
+<meta property="og:description" content="江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-11-21T01:41:17.408Z">
+<meta property="article:modified_time" content="2024-11-21T01:41:17.408Z">
+<meta property="article:author" content="大同小異">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.dtxyz.cn/2024/11/21/c-shiyan-5/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.dtxyz.cn/2024/11/21/c-shiyan-5/","path":"2024/11/21/c-shiyan-5/","title":"C语言程序设计实验课参考答案(实验五：分支结构2)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>C语言程序设计实验课参考答案(实验五：分支结构2) | TongYi</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">TongYi</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">D T X Y Z . C N</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">10</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">4</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE-%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88"><span class="nav-number">1.</span> <span class="nav-text">C语言程序设计 实验课 参考答案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E4%BA%94-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.</span> <span class="nav-text">实验五  分支结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%99%AB%E5%AD%90%E5%90%83%E8%8B%B9%E6%9E%9C"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 虫子吃苹果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%AE%A1%E7%AE%97%E9%82%AE%E8%B5%84"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.计算邮资</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-1"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%AA%91%E8%BD%A6%E4%B8%8E%E8%B5%B0%E8%B7%AF"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 骑车与走路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-2"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-2"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-2"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E7%82%B9%E5%92%8C%E6%AD%A3%E6%96%B9%E5%BD%A2%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.4.</span> <span class="nav-text">4. 点和正方形的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-3"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-3"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-3"><span class="nav-number">1.1.4.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD"><span class="nav-number">1.1.5.</span> <span class="nav-text">5. 字符类型判断</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-4"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-4"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-4"><span class="nav-number">1.1.5.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E9%82%AE%E5%AF%84%E5%8C%85%E8%A3%B9"><span class="nav-number">1.1.6.</span> <span class="nav-text">6. 邮寄包裹</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-5"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-5"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-5"><span class="nav-number">1.1.6.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%9C%89%E4%B8%80%E9%97%A8%E8%AF%BE%E4%B8%8D%E5%8F%8A%E6%A0%BC%E7%9A%84%E5%AD%A6%E7%94%9F"><span class="nav-number">1.1.7.</span> <span class="nav-text">7. 有一门课不及格的学生</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-6"><span class="nav-number">1.1.7.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-6"><span class="nav-number">1.1.7.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-6"><span class="nav-number">1.1.7.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E9%97%B0%E5%B9%B4%E4%B8%8E%E5%B9%B3%E5%B9%B4"><span class="nav-number">1.1.8.</span> <span class="nav-text">8. 闰年与平年</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-7"><span class="nav-number">1.1.8.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-7"><span class="nav-number">1.1.8.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-7"><span class="nav-number">1.1.8.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%9B%9E%E6%96%87%E6%95%B0"><span class="nav-number">1.1.9.</span> <span class="nav-text">9. 回文数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-8"><span class="nav-number">1.1.9.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-8"><span class="nav-number">1.1.9.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-8"><span class="nav-number">1.1.9.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E8%BF%99%E4%B8%AA%E6%9C%88%E6%9C%89%E5%87%A0%E5%A4%A9"><span class="nav-number">1.1.10.</span> <span class="nav-text">10.这个月有几天</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-9"><span class="nav-number">1.1.10.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-9"><span class="nav-number">1.1.10.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-9"><span class="nav-number">1.1.10.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E7%AE%80%E5%8D%95%E8%AE%A1%E7%AE%97%E5%99%A8"><span class="nav-number">1.1.11.</span> <span class="nav-text">11. 简单计算器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-10"><span class="nav-number">1.1.11.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-10"><span class="nav-number">1.1.11.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-10"><span class="nav-number">1.1.11.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E6%88%90%E7%BB%A9%E7%AD%89%E7%BA%A7"><span class="nav-number">1.1.12.</span> <span class="nav-text">12. 成绩等级</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-11"><span class="nav-number">1.1.12.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-11"><span class="nav-number">1.1.12.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-11"><span class="nav-number">1.1.12.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E6%99%B6%E6%99%B6%E8%B5%B4%E7%BA%A6%E4%BC%9A"><span class="nav-number">1.1.13.</span> <span class="nav-text">13. 晶晶赴约会</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-12"><span class="nav-number">1.1.13.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-12"><span class="nav-number">1.1.13.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-12"><span class="nav-number">1.1.13.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E5%B0%8FJ%E7%9A%84%E6%97%85%E6%B8%B8%E8%AE%A1%E5%88%92"><span class="nav-number">1.1.14.</span> <span class="nav-text">14. 小J的旅游计划</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-13"><span class="nav-number">1.1.14.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-13"><span class="nav-number">1.1.14.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-13"><span class="nav-number">1.1.14.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E6%B7%B1%E6%B7%B1%E7%9A%84%E7%94%9F%E6%B4%BB"><span class="nav-number">1.1.15.</span> <span class="nav-text">15. 深深的生活</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-14"><span class="nav-number">1.1.15.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-14"><span class="nav-number">1.1.15.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-14"><span class="nav-number">1.1.15.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E8%87%AA%E5%8A%A8%E6%89%BE%E4%BA%BA%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.1.16.</span> <span class="nav-text">16. 自动找人系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-15"><span class="nav-number">1.1.16.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-15"><span class="nav-number">1.1.16.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-15"><span class="nav-number">1.1.16.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="大同小異"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">大同小異</p>
+  <div class="site-description" itemprop="description">噓···我還要不斷地學習</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:zh12310@qq.com" title="E-Mail → mailto:zh12310@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.dtxyz.cn/2024/11/21/c-shiyan-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="大同小異">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TongYi">
+      <meta itemprop="description" content="噓···我還要不斷地學習">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C语言程序设计实验课参考答案(实验五：分支结构2) | TongYi">
+      <meta itemprop="description" content="江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言程序设计实验课参考答案(实验五：分支结构2)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-11-21 09:41:17" itemprop="dateCreated datePublished" datetime="2024-11-21T09:41:17+08:00">2024-11-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">C语言程序设计</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+            <div class="post-description">江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="C语言程序设计-实验课-参考答案"><a href="#C语言程序设计-实验课-参考答案" class="headerlink" title="C语言程序设计 实验课 参考答案"></a>C语言程序设计 实验课 参考答案</h1><pre><code>For：江苏师范大学科文学院2024秋季学期C语言程序设计
+On：头歌教学平台
+date：2024.11.21
+by: Bill Chou
+</code></pre>
+<h2 id="实验五-分支结构"><a href="#实验五-分支结构" class="headerlink" title="实验五  分支结构"></a>实验五  分支结构</h2><h3 id="1-虫子吃苹果"><a href="#1-虫子吃苹果" class="headerlink" title="1. 虫子吃苹果"></a>1. 虫子吃苹果</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>你买了一箱n个苹果，很不幸的是买完时箱子里混进了一条虫子。虫子每x小时能吃掉一个苹果，假设虫子在吃完一个苹果之前不会吃另一个，那么经过y小时你还有多少个完整的苹果？</p>
+<h4 id="输入输出格式及样例"><a href="#输入输出格式及样例" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（输入仅一行，包括n，x和y（均为整数））：<code>10 4 9</code></p>
+<p>输出数据（输出也仅一行，剩下的苹果个数）：<code>7</code></p>
+<h4 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n, x, y, eat;<span class="comment">//定义四个变量</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;n, &amp;x, &amp;y);<span class="comment">//获取输入的三个数</span></span><br><span class="line">    eat = y%x ? y/x + <span class="number">1</span>: y/x;<span class="comment">//首先判断虫子吃了多少个苹果</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, eat &lt; n ? n - eat : <span class="number">0</span>);<span class="comment">//再判断还剩下多少个，并输出结果</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-计算邮资"><a href="#2-计算邮资" class="headerlink" title="2.计算邮资"></a>2.计算邮资</h3><h4 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h4><p>根据邮件的重量和用户是否选择加急计算邮费。计算规则：重量在1000克以内(包括1000克), 基本费8元。超过1000克的部分，每500克加收超重费4元，不足500克部分按500克计算；如果用户选择加急，多收5元。</p>
+<h4 id="输入输出格式及样例-1"><a href="#输入输出格式及样例-1" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（输入一行，包含整数和一个字符，以一个空格分开，分别表示重量（单位为克）和是否加急。如果字符是y，说明选择加急；如果字符是n，说明不加急。）</p>
+<p><code>1200 y</code></p>
+<p>输出数据（输出一行，包含一个整数，表示邮费）</p>
+<p><code>17</code></p>
+<h4 id="参考答案-1"><a href="#参考答案-1" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> a, price = <span class="number">8</span>;<span class="comment">//定义变量，初始化基本价格为8，</span></span><br><span class="line">    <span class="type">char</span> b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %c&quot;</span>, &amp;a, &amp;b);<span class="comment">//获取输入的重量及是否加急字符</span></span><br><span class="line">    <span class="keyword">if</span>(a &gt; <span class="number">1000</span>)&#123;<span class="comment">//大于1000时，需计算1000以外重量的费用，</span></span><br><span class="line">        <span class="comment">//这里判断重量超出1000的部分是否能整除500，不能整除商+1，用商乘以单价，累加至总价格上</span></span><br><span class="line">        price = price + ((a - <span class="number">1000</span>) % <span class="number">500</span> ? ((a - <span class="number">1000</span>) / <span class="number">500</span> + <span class="number">1</span>) * <span class="number">4</span> : ((a - <span class="number">1000</span>) / <span class="number">500</span>) * <span class="number">4</span>);<span class="comment">//可以使用math.h中的ceil()向上取整函数</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(b == <span class="string">&#x27;y&#x27;</span>)&#123;<span class="comment">//在判断是否加急，加急费用+5</span></span><br><span class="line">        price += <span class="number">5</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, price);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-骑车与走路"><a href="#3-骑车与走路" class="headerlink" title="3. 骑车与走路"></a>3. 骑车与走路</h3><h4 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h4><p>在清华校园里，没有自行车，上课办事会很不方便。但实际上。并非去办任何事情都是骑车快,因为骑车总要找车、开锁、停车、锁车等,这要耽误一些时间。假设找到自行车，开锁并骑上自行车的时间为27秒；停车锁车的时间为23秒；步行每秒行走1.2米，骑车每秒行走3.0米。请判断走不同的距离去办事,是骑车快还是走路快。如果骑车快，输出一行”Bike”；如果走路快，输出一行”Walk”；如果一样快，输出一行”All”。</p>
+<h4 id="输入输出格式及样例-2"><a href="#输入输出格式及样例-2" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（输入一行，包含一个整数，表示一次办事要行走的距离,单位为米）</p>
+<p><code>120</code></p>
+<p>输出数据（输出一行,如果骑车快,输出一行”Bike”;如果走路快,输出一行”Walk”;如果一样快,输出一行”All”）</p>
+<p><code>Bike</code></p>
+<h4 id="参考答案-2"><a href="#参考答案-2" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> a;<span class="comment">//定义变量a，存储输入的距离</span></span><br><span class="line">    <span class="type">double</span>  x, y;<span class="comment">//x,y分别表示骑车和走路的时间</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a);</span><br><span class="line">    <span class="comment">//分别计算两种方式的用时</span></span><br><span class="line">    x = <span class="number">27</span> + <span class="number">23</span> + a / <span class="number">3.0</span>;</span><br><span class="line">    y = a / <span class="number">1.2</span>;</span><br><span class="line">    <span class="comment">//比较大小 输出最快的交通方式</span></span><br><span class="line">    <span class="keyword">if</span>(x&gt;y)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Walk&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(x==y)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;All&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Bike&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-点和正方形的关系"><a href="#4-点和正方形的关系" class="headerlink" title="4. 点和正方形的关系"></a>4. 点和正方形的关系</h3><h4 id="说明-3"><a href="#说明-3" class="headerlink" title="说明"></a>说明</h4><p>有一个正方形，四个角的坐标 (x,y) 分别是 (1,-1),(1,1),(-1,-1),(-1,1)，x 是横轴，y 是纵轴。请你写一个程序，判断一个给定的点是否在这个正方形内（包括正方形边界）。</p>
+<h4 id="输入输出格式及样例-3"><a href="#输入输出格式及样例-3" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（输入一行，包括两个整数 x、y，以一个空格分开，表示坐标 (x,y)(−10≤x,y≤10)）：</p>
+<p><code>1 1</code></p>
+<p>输出数据（输出一行，如果点在正方形内，则输出”yes”，否则输出 “no”）：</p>
+<p><code>yes</code></p>
+<h4 id="参考答案-3"><a href="#参考答案-3" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> x, y;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;x, &amp;y);</span><br><span class="line">    <span class="keyword">if</span>(x&lt;=<span class="number">1</span> &amp;&amp; x &gt;=<span class="number">-1</span> &amp;&amp; y &gt;= <span class="number">-1</span> &amp;&amp; y &lt;= <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;yes&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;no&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-字符类型判断"><a href="#5-字符类型判断" class="headerlink" title="5. 字符类型判断"></a>5. 字符类型判断</h3><h4 id="说明-4"><a href="#说明-4" class="headerlink" title="说明"></a>说明</h4><p>输入一个字符，判断该字符是否大写字母、小写字母、数字字符或其他字符。分别输出对应的提示信息。</p>
+<h4 id="输入输出格式及样例-4"><a href="#输入输出格式及样例-4" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（输入为一个字符）：</p>
+<p><code>1</code></p>
+<p>输出数据（如果该字符是大写字母，则输出”upper”；若是小写字母，则输出”lower”；若是数字字符，则输出”digit”；若是其他字符，则输出”other”。（输出不含双引号））：</p>
+<p><code>digit</code></p>
+<h4 id="参考答案-4"><a href="#参考答案-4" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">char</span> a;</span><br><span class="line">    a = getchar();</span><br><span class="line">    <span class="keyword">if</span>(a&lt;=<span class="string">&#x27;z&#x27;</span> &amp;&amp; a&gt;= <span class="string">&#x27;a&#x27;</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;lower&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(a&lt;= <span class="string">&#x27;Z&#x27;</span> &amp;&amp; a&gt;= <span class="string">&#x27;A&#x27;</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;upper&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(a&gt;=<span class="string">&#x27;0&#x27;</span> &amp;&amp; a&lt;=<span class="string">&#x27;9&#x27;</span>)&#123;        </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;digit&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;        </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;other&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-邮寄包裹"><a href="#6-邮寄包裹" class="headerlink" title="6. 邮寄包裹"></a>6. 邮寄包裹</h3><h4 id="说明-5"><a href="#说明-5" class="headerlink" title="说明"></a>说明</h4><p>邮局对邮寄包裹有如下规定：若包裹的重量超过 30 千克，不予邮寄，对可以邮寄的包裹每件收手续费 0.2 元，再加上根据下表按重量 x 计算的结果(不同重量段相应的收费不同)。</p>
+<table>
+<thead>
+<tr>
+<th align="center">重量(千克)</th>
+<th align="center">收费标准(元&#x2F;公斤)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">x&lt;&#x3D;10</td>
+<td align="center">0.80</td>
+</tr>
+<tr>
+<td align="center">10&lt;x&lt;&#x3D;20</td>
+<td align="center">0.75</td>
+</tr>
+<tr>
+<td align="center">20&lt;x&lt;&#x3D;30</td>
+<td align="center">0.70</td>
+</tr>
+</tbody></table>
+<p>请你编写一个程序，输入包裹重量，输出所需费用或”Fail”表示无法邮寄。</p>
+<h4 id="输入输出格式及样例-5"><a href="#输入输出格式及样例-5" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（输入一个整数 x，表示包裹的重量（单位：千克）。(0&lt;x≤100)）：</p>
+<p><code>7</code></p>
+<p>输出数据（输出对应的费用（答案保留 2 位小数）或”Fail”表示无法邮寄。）：</p>
+<p><code>5.80</code></p>
+<h4 id="参考答案-5"><a href="#参考答案-5" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="type">double</span> price = <span class="number">0.2</span>;<span class="comment">//初始价格</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;x);</span><br><span class="line">    <span class="comment">//根据不同重量进行计算价格</span></span><br><span class="line">    <span class="keyword">if</span>(x&gt;<span class="number">30</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Fail&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//大于30时，通过return结束主函数</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(x&gt;<span class="number">20</span>)&#123;</span><br><span class="line">        price += <span class="number">8.0</span> + <span class="number">7.5</span> + (x - <span class="number">20</span>) * <span class="number">0.7</span>;<span class="comment">//分段收费</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(x&gt;<span class="number">10</span>)&#123;</span><br><span class="line">        price += <span class="number">8.0</span> + (x - <span class="number">10</span>) * <span class="number">0.75</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        price += <span class="number">0.2</span> + x*<span class="number">0.80</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.2f&quot;</span>, price);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7-有一门课不及格的学生"><a href="#7-有一门课不及格的学生" class="headerlink" title="7. 有一门课不及格的学生"></a>7. 有一门课不及格的学生</h3><h4 id="说明-6"><a href="#说明-6" class="headerlink" title="说明"></a>说明</h4><p>给出一名学生的语文和数学成绩，判断他是否恰好有一门课不及格(成绩小于60分)。若该生恰好有一门课不及格，输出1；否则输出0。</p>
+<h4 id="输入输出格式及样例-6"><a href="#输入输出格式及样例-6" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（一行，包含两个在0到100之间的整数，分别是该生的语文成绩和数学成绩）：</p>
+<p><code>50 80</code></p>
+<p>输出数据（若该生恰好有一门课不及格，输出1；否则输出0）：</p>
+<p><code>1</code></p>
+<h4 id="参考答案-6"><a href="#参考答案-6" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> a, b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">    <span class="comment">//判断只有1门课不及格的情况，两种情况，用或||来表示</span></span><br><span class="line">    <span class="keyword">if</span>((a&lt;<span class="number">60</span>&amp;&amp;b&gt;=<span class="number">60</span>)||(a&gt;=<span class="number">60</span>&amp;&amp;b&lt;<span class="number">60</span>))&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-闰年与平年"><a href="#8-闰年与平年" class="headerlink" title="8. 闰年与平年"></a>8. 闰年与平年</h3><h4 id="说明-7"><a href="#说明-7" class="headerlink" title="说明"></a>说明</h4><p>大家都知道，每四年一个闰年。按照每四年一个闰年计算，过四百年就会多出大约3.12天，因此规定整百数的年份必须是400的倍数才是闰年，这就是通常所说的：四年一闰，百年不闰，四百年再闰。</p>
+<p>试编一个程序，输入一个年份，判断是平年还是闰年。</p>
+<h4 id="输入输出格式及样例-7"><a href="#输入输出格式及样例-7" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（一行一个年份）：</p>
+<p><code>2020</code></p>
+<p>输出数据（输出是平年还是闰年，详情见“样例输出”）：</p>
+<p><code>2020是闰年</code></p>
+<h4 id="参考答案-7"><a href="#参考答案-7" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//参考书上示例代码</span></span><br></pre></td></tr></table></figure>
+<h3 id="9-回文数"><a href="#9-回文数" class="headerlink" title="9. 回文数"></a>9. 回文数</h3><h4 id="说明-8"><a href="#说明-8" class="headerlink" title="说明"></a>说明</h4><p>先计算出两个正整数 a+b 的结果 sum，然后要判断 sum 是不是回文数。</p>
+<p>回文数：设 n 是一任意自然数。若将 n 的各位数字反向排列所得自然数 n1 与 n 相等，则称 n 为回文数。例如 121 是回文数，而 123 不是回文数。</p>
+<h4 id="输入输出格式及样例-8"><a href="#输入输出格式及样例-8" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（输入共一行，两个以空格隔开的正整数 a,b（1≤a,b≤100））：</p>
+<p><code>80 41</code></p>
+<p>输出数据（输出共两行，第一行一个正整数 sum，表示 a,b 的和。<br>如果 sum 是回文数，则第二行输出 “Yes”，否则第二行输出 “No”。输出不带引号。）：</p>
+<p><code>121</code></p>
+<p><code>Yes</code></p>
+<h4 id="参考答案-8"><a href="#参考答案-8" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//参考书上示例代码</span></span><br></pre></td></tr></table></figure>
+<h3 id="10-这个月有几天"><a href="#10-这个月有几天" class="headerlink" title="10.这个月有几天"></a>10.这个月有几天</h3><h4 id="说明-9"><a href="#说明-9" class="headerlink" title="说明"></a>说明</h4><p>输入一个年份和一个月份，输出该月的天数。</p>
+<h4 id="输入输出格式及样例-9"><a href="#输入输出格式及样例-9" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（两个整数y(1600≤y≤3000)和m (1≤m≤12)，分别表示年份和月份）：</p>
+<p><code>1900 2</code></p>
+<p>输出数据（一个整数，表示该月的天数）：</p>
+<p><code>28</code></p>
+<h4 id="参考答案-9"><a href="#参考答案-9" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//参考书上示例代码</span></span><br></pre></td></tr></table></figure>
+<h3 id="11-简单计算器"><a href="#11-简单计算器" class="headerlink" title="11. 简单计算器"></a>11. 简单计算器</h3><h4 id="说明-10"><a href="#说明-10" class="headerlink" title="说明"></a>说明</h4><p>设计一个最简单的计算器，支持’+’、’-‘、’’、’&#x2F;‘四种运算。</p>
+<p>仅需考虑输入输出为整数的情况，数据和运算结果不会超过 int 表示的范围。</p>
+<h4 id="输入输出格式及样例-10"><a href="#输入输出格式及样例-10" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（输入只有一行，共有三个参数，其中第 1、2 个参数为整数，第 3 个参数为操作符（’+’、’-‘、’’、’&#x2F;‘或其它符号））：</p>
+<p><code>1 2 +</code></p>
+<p>输出数据（输出只有一行，一个整数，为运算结果。然而：<br>如果出现除数为 0 的情况，则输出：”Divided by zero!”；<br>如果出现无效的操作符(即不为’+’、’-‘、’*’、’&#x2F;‘之一），则输出：”Invalid operator!”。）：</p>
+<p><code>3</code></p>
+<h4 id="参考答案-10"><a href="#参考答案-10" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用switch语句判断运算符</span></span><br></pre></td></tr></table></figure>
+<h3 id="12-成绩等级"><a href="#12-成绩等级" class="headerlink" title="12. 成绩等级"></a>12. 成绩等级</h3><h4 id="说明-11"><a href="#说明-11" class="headerlink" title="说明"></a>说明</h4><p>风之巅小学规定，若测试成绩大于或等于90分为“A”，大于或等于70分小于90分为“B”，大于或等于60分小于70分为“C”，60分以下为“D”。现在输入一个成绩，输出它的等级。</p>
+<h4 id="输入输出格式及样例-11"><a href="#输入输出格式及样例-11" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（一个整数，表示成绩）：</p>
+<p><code>99</code></p>
+<p>输出数据（输出等级）：</p>
+<p><code>A</code></p>
+<h4 id="参考答案-11"><a href="#参考答案-11" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure>
+<h3 id="13-晶晶赴约会"><a href="#13-晶晶赴约会" class="headerlink" title="13. 晶晶赴约会"></a>13. 晶晶赴约会</h3><h4 id="说明-12"><a href="#说明-12" class="headerlink" title="说明"></a>说明</h4><p>晶晶的朋友贝贝约晶晶下周一起去看展览，但晶晶每周的 1、3、5 必须上课，请帮晶晶判断他能否接受贝贝的邀请，如果能输出”YES”；如果不能则输出”NO”。</p>
+<h4 id="输入输出格式及样例-12"><a href="#输入输出格式及样例-12" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（输入为一行，贝贝邀请晶晶去看展览的日期，用数字 1 到 7 表示从星期一到星期日）：</p>
+<p><code>2</code></p>
+<p>输出数据（输出为一行，如果晶晶可以接受贝贝的邀请，输出”YES”；否则，输出”NO”）：</p>
+<p><code>YES</code></p>
+<h4 id="参考答案-12"><a href="#参考答案-12" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 求模，判断除以7的余数</span></span><br></pre></td></tr></table></figure>
+<h3 id="14-小J的旅游计划"><a href="#14-小J的旅游计划" class="headerlink" title="14. 小J的旅游计划"></a>14. 小J的旅游计划</h3><h4 id="说明-13"><a href="#说明-13" class="headerlink" title="说明"></a>说明</h4><p>寒假小J计划去海南旅游，他发现：</p>
+<p>1、如果早上11点以前（不包含11点）出发，可以做汽车去；</p>
+<p>2、如果6～15点出发，可以坐高铁；</p>
+<p>3、如果9～24点（不包含24点）出发，可以坐飞机。</p>
+<p>现在给你一个小J打算出发的时间，请你给出他共有几种去海南的方法。</p>
+<h4 id="输入输出格式及样例-13"><a href="#输入输出格式及样例-13" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>数据1</th>
+<th>数据2</th>
+<th>数据3</th>
+<th>数据4</th>
+<th>数据5</th>
+<th>数据6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入数据（一个正整数,t(0≤t&lt;24)，表示小,J打算出发的时间）</td>
+<td><code>5</code></td>
+<td><code>6</code></td>
+<td><code>9</code></td>
+<td><code>10</code></td>
+<td><code>11</code></td>
+<td><code>23</code></td>
+</tr>
+<tr>
+<td>输出数据（一个正整数，表示在这个出发时间，小J可以选择的乘坐方法数）</td>
+<td><code>1</code></td>
+<td><code>2</code></td>
+<td><code>3</code></td>
+<td><code>3</code></td>
+<td><code>2</code></td>
+<td><code>1</code></td>
+</tr>
+</tbody></table>
+<pre><code>Hint
+1、若5点出发，只能乘坐汽车；   
+2、若6点出发，既可以乘坐汽车，又可以乘坐高铁；
+3、若10点出发，既可以乘坐汽车、高铁，又可以乘坐飞机；
+4、若11点出发，既可以乘坐高铁，又可以乘坐飞机；
+5、若23点出发，只能乘坐飞机。
+</code></pre>
+<h4 id="参考答案-13"><a href="#参考答案-13" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//分段判断</span></span><br></pre></td></tr></table></figure>
+<h3 id="15-深深的生活"><a href="#15-深深的生活" class="headerlink" title="15. 深深的生活"></a>15. 深深的生活</h3><h4 id="说明-14"><a href="#说明-14" class="headerlink" title="说明"></a>说明</h4><p>深深是一个非常懂生活的男孩，他给自己一周 7 天的衣服搭配了 7 种不同的色系，从周日到周六依次是：red, orange, yellow, green, indigo, blue, violet。</p>
+<p>现在请你编写一个程序，通过输入周几，输出对应的深深那天应该穿的衣服的色系。</p>
+<h4 id="输入输出格式及样例-14"><a href="#输入输出格式及样例-14" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>数据1</th>
+<th>数据2</th>
+<th>数据3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入数据（一个整数n(1≤n≤10^9)，代表周几）</td>
+<td><code>1</code></td>
+<td><code>7</code></td>
+<td><code>10000</code></td>
+</tr>
+<tr>
+<td>输出数据（如果1≤n≤7，输出一个全小写的英文字符串，代表对应的色系；否则，输出 error）</td>
+<td><code>orange</code></td>
+<td><code>red</code></td>
+<td><code>error</code></td>
+</tr>
+</tbody></table>
+<h4 id="参考答案-14"><a href="#参考答案-14" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//switch</span></span><br></pre></td></tr></table></figure>
+<h3 id="16-自动找人系统"><a href="#16-自动找人系统" class="headerlink" title="16. 自动找人系统"></a>16. 自动找人系统</h3><h4 id="说明-15"><a href="#说明-15" class="headerlink" title="说明"></a>说明</h4><p>maoge 现在转到了警局工作，现在他被要求开发一个找人系统。给定三个参数 a,b,c，表示年，月，日，表示一个时间节点。他要找出在两个时间节点之间的时间（两个时间节点本身也包括在内）。现在给定两个时间节点和1个事件发生的时间，他要判断这个时间是否在这个时间段之中。</p>
+<p>maoge 又双叒叕找到了你来帮忙。</p>
+<h4 id="输入输出格式及样例-15"><a href="#输入输出格式及样例-15" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据（输入三行，三个时间，每行有三个数，表示年月日。前两行表示两个时间节点（不一定按照第一个小于第二个的顺序给出），最后一行是这个事件发生的时间。年份是小于 10000 的正整数。）：</p>
+<p><code>2007 1 1</code><br><code>2007 12 31</code><br><code>2007 3 22</code></p>
+<p>输出数据（输出一个 Yes 或者 No 表示是否在这个时间段之中）：</p>
+<p><code>Yes</code></p>
+<h4 id="参考答案-15"><a href="#参考答案-15" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> a1, a2, a3;</span><br><span class="line">    <span class="type">int</span> b1, b2, b3;</span><br><span class="line">    <span class="type">int</span> c1, c2, c3;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;a1, &amp;a2, &amp;a3);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;b1, &amp;b2, &amp;b3);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;c1, &amp;c2, &amp;c3);</span><br><span class="line">    <span class="comment">//读取到的年月日组合成一个8位的整数</span></span><br><span class="line">    <span class="type">int</span> a, b, c;<span class="comment">//a, b, c分别表示3个日期的年月日</span></span><br><span class="line">    a = a1*<span class="number">10000</span>+a2*<span class="number">100</span>+a3;</span><br><span class="line">    b = b1*<span class="number">10000</span>+b2*<span class="number">100</span>+b3;</span><br><span class="line">    c = c1*<span class="number">10000</span>+c2*<span class="number">100</span>+c3;</span><br><span class="line">    <span class="type">int</span> flag = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//只需判断日期值的大小</span></span><br><span class="line">    <span class="keyword">if</span>(a&lt;b)&#123;</span><br><span class="line">        <span class="keyword">if</span>(c&gt;=a &amp;&amp; c&lt;=b)</span><br><span class="line">            flag = <span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(c&gt;=b &amp;&amp; c&lt;=a)</span><br><span class="line">            flag = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(flag == <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Yes&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;No&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechat.png" alt="大同小異 WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="大同小異 Alipay">
+        <span>Alipay</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/04/12/after-domain-registered/" rel="prev" title="域名注册后的那些事">
+                  <i class="fa fa-angle-left"></i> 域名注册后的那些事
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2012 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-star"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Bill Chou</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
