@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#495a80"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#495a80">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="/fonts/newKlee/result.css"/>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.dtxyz.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言程序设计实验课参考答案(实验七：循环结构2)">
+<meta property="og:url" content="https://blog.dtxyz.cn/2024/11/28/c-shiyan-7/index.html">
+<meta property="og:site_name" content="TongYi">
+<meta property="og:description" content="江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-11-28T05:06:43.256Z">
+<meta property="article:modified_time" content="2024-11-28T06:35:00.405Z">
+<meta property="article:author" content="大同小異">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.dtxyz.cn/2024/11/28/c-shiyan-7/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.dtxyz.cn/2024/11/28/c-shiyan-7/","path":"2024/11/28/c-shiyan-7/","title":"C语言程序设计实验课参考答案(实验七：循环结构2)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>C语言程序设计实验课参考答案(实验七：循环结构2) | TongYi</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">TongYi</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">D T X Y Z . C N</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">10</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">6</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E4%B8%83-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%842"><span class="nav-number">1.</span> <span class="nav-text">实验七  循环结构2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%95%B0%E5%AD%97%E6%BB%91%E6%BB%91%E6%A2%AF2"><span class="nav-number">1.1.</span> <span class="nav-text">1. 数字滑滑梯2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">1.1.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88"><span class="nav-number">1.1.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%90%AB%E6%9C%897%E7%9A%84%E7%B4%A0%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">2.含有7的素数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%BB%9F%E8%AE%A1%E6%95%B0%E5%AD%97%E5%AD%97%E7%AC%A6%E4%B8%AA%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">3. 统计数字字符个数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%AE%A1%E7%AE%97%E7%9F%A9%E9%98%B5%E8%BE%B9%E7%BC%98%E5%85%83%E7%B4%A0%E4%B9%8B%E5%92%8C"><span class="nav-number">1.4.</span> <span class="nav-text">4. 计算矩阵边缘元素之和</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-3"><span class="nav-number">1.4.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-3"><span class="nav-number">1.4.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-3"><span class="nav-number">1.4.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8"><span class="nav-number">1.5.</span> <span class="nav-text">5. 九九乘法表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-4"><span class="nav-number">1.5.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-4"><span class="nav-number">1.5.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-4"><span class="nav-number">1.5.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Fibonacci-%E6%95%B0%E5%88%97"><span class="nav-number">1.6.</span> <span class="nav-text">6. Fibonacci 数列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-5"><span class="nav-number">1.6.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-5"><span class="nav-number">1.6.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA"><span class="nav-number">1.6.3.</span> <span class="nav-text">提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-5"><span class="nav-number">1.6.4.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%B1%82-Fibonacci-%E5%89%8D-n-%E9%A1%B9%E5%92%8C"><span class="nav-number">1.7.</span> <span class="nav-text">7. 求 Fibonacci 前 n 项和</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-6"><span class="nav-number">1.7.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-6"><span class="nav-number">1.7.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA-1"><span class="nav-number">1.7.3.</span> <span class="nav-text">提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-6"><span class="nav-number">1.7.4.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%9B%9E%E6%96%87%E6%95%B0"><span class="nav-number">1.8.</span> <span class="nav-text">8. 回文数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-7"><span class="nav-number">1.8.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-7"><span class="nav-number">1.8.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-7"><span class="nav-number">1.8.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E6%B1%82e%E7%9A%84%E8%BF%91%E4%BC%BC%E5%80%BC"><span class="nav-number">1.9.</span> <span class="nav-text">9. 求e的近似值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-8"><span class="nav-number">1.9.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-8"><span class="nav-number">1.9.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-8"><span class="nav-number">1.9.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E6%B1%82%E4%B8%A4%E4%B8%AA%E6%AD%A3%E6%95%B4%E6%95%B0%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0"><span class="nav-number">1.10.</span> <span class="nav-text">10.求两个正整数的最大公约数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-9"><span class="nav-number">1.10.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-9"><span class="nav-number">1.10.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-9"><span class="nav-number">1.10.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.11.</span> <span class="nav-text">11. 进制转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-10"><span class="nav-number">1.11.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-10"><span class="nav-number">1.11.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-10"><span class="nav-number">1.11.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E5%BC%80%E5%85%B3%E7%81%AF"><span class="nav-number">1.12.</span> <span class="nav-text">12. 开关灯</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-11"><span class="nav-number">1.12.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-11"><span class="nav-number">1.12.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-11"><span class="nav-number">1.12.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E5%85%AB%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%8D%81%E8%BF%9B%E5%88%B6"><span class="nav-number">1.13.</span> <span class="nav-text">13. 八进制转十进制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-12"><span class="nav-number">1.13.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-12"><span class="nav-number">1.13.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA-2"><span class="nav-number">1.13.3.</span> <span class="nav-text">提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-12"><span class="nav-number">1.13.4.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E7%9F%AD%E4%BF%A1%E8%AE%A1"><span class="nav-number">1.14.</span> <span class="nav-text">14. 短信计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-13"><span class="nav-number">1.14.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-13"><span class="nav-number">1.14.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-13"><span class="nav-number">1.14.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E5%9B%BE%E5%BD%A2%E8%BE%93%E5%87%BA"><span class="nav-number">1.15.</span> <span class="nav-text">15. 图形输出</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-14"><span class="nav-number">1.15.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-14"><span class="nav-number">1.15.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-14"><span class="nav-number">1.15.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E5%88%86%E8%A7%A3%E8%B4%A8%E5%9B%A0%E6%95%B0%EF%BC%88factor%EF%BC%89"><span class="nav-number">1.16.</span> <span class="nav-text">16. 分解质因数（factor）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-15"><span class="nav-number">1.16.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-15"><span class="nav-number">1.16.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA-3"><span class="nav-number">1.16.3.</span> <span class="nav-text">提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-15"><span class="nav-number">1.16.4.</span> <span class="nav-text">参考答案</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="大同小異"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">大同小異</p>
+  <div class="site-description" itemprop="description">噓···我還要不斷地學習</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:zh12310@qq.com" title="E-Mail → mailto:zh12310@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.dtxyz.cn/2024/11/28/c-shiyan-7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="大同小異">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TongYi">
+      <meta itemprop="description" content="噓···我還要不斷地學習">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C语言程序设计实验课参考答案(实验七：循环结构2) | TongYi">
+      <meta itemprop="description" content="江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言程序设计实验课参考答案(实验七：循环结构2)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-11-28 13:06:43 / Modified: 14:35:00" itemprop="dateCreated datePublished" datetime="2024-11-28T13:06:43+08:00">2024-11-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">C语言程序设计</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+            <div class="post-description">江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="实验七-循环结构2"><a href="#实验七-循环结构2" class="headerlink" title="实验七  循环结构2"></a>实验七  循环结构2</h2><h3 id="1-数字滑滑梯2"><a href="#1-数字滑滑梯2" class="headerlink" title="1. 数字滑滑梯2"></a>1. 数字滑滑梯2</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>在学习编程的过程中，小 J 发现有一种求模运算的符号“%”，于是小 J 完成了一个让数字玩“滑滑梯”游戏的小程序。今天，小 J 想换个方向再来玩一把，例如输入：12345，则会依次输出：51234，45123，34512，23451，12345。</p>
+<p>你也来写一个一起玩玩吧！</p>
+<h4 id="输入输出格式及样例"><a href="#输入输出格式及样例" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>一个正整数 n（0&lt;n&lt;2^31 ），任何位上都不为 0，且每个数字只出现一次。</p>
+<p>输出数据：</p>
+<p>输出这个数字“滑滑梯”的结果，用一个空格隔开。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>数据1</th>
+<th>数据2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入数据</td>
+<td><code>6</code></td>
+<td><code>573</code></td>
+</tr>
+<tr>
+<td>输出数据</td>
+<td><code>6</code></td>
+<td><code>357 735 573</code></td>
+</tr>
+</tbody></table>
+<h4 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> i, j, n, k, nums[<span class="number">10</span>], m=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="comment">//获取数字位数</span></span><br><span class="line">	k = n;</span><br><span class="line">	<span class="keyword">while</span>(k&gt;<span class="number">0</span>)&#123;</span><br><span class="line">		k = k /<span class="number">10</span>;</span><br><span class="line">		m++;</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="comment">//读取每个位置上的数字  这两步可以合在一起，</span></span><br><span class="line">	k = n;</span><br><span class="line">	<span class="keyword">for</span>(i=m<span class="number">-1</span>; i&gt;=<span class="number">0</span>; i--)&#123;</span><br><span class="line">		nums[i] = k % <span class="number">10</span>;</span><br><span class="line">		k = k / <span class="number">10</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 每次把num[0],移至num[m-1]处；其他位置前移1位 </span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;m; i++)&#123;</span><br><span class="line">		<span class="type">int</span> t = nums[m<span class="number">-1</span>];</span><br><span class="line">		<span class="keyword">for</span>(j=m<span class="number">-1</span>; j&gt;=<span class="number">0</span>; j--)&#123;</span><br><span class="line">			nums[j+<span class="number">1</span>] = nums[j];</span><br><span class="line">		&#125;</span><br><span class="line">		nums[<span class="number">0</span>] = t;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>; j&lt;m; j++)&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, nums[j]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-含有7的素数"><a href="#2-含有7的素数" class="headerlink" title="2.含有7的素数"></a>2.含有7的素数</h3><h4 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h4><p>小 J 昨天学习了素数，他觉得素数非常好玩，想找一找一些特殊的素数，因为他的幸运数字是 7，所以，他想知道在一个范围里，某一位上含有 7 的素数有哪些。你来告诉他吧！</p>
+<h4 id="输入输出格式及样例-1"><a href="#输入输出格式及样例-1" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>输入两个整数m,n(0≤m≤n≤10^7 )</p>
+<p>输出数据：</p>
+<p>请按从小到大的顺序输出区间[m,n]内所有的某一位上包含 7 的素数。</p>
+<p>如果这个区间内没有符合要求的素数，输出none</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>数据1</th>
+<th>数据2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入数据</td>
+<td><code>1 20</code></td>
+<td><code>20 30</code></td>
+</tr>
+<tr>
+<td>输出数据</td>
+<td><code>7 17</code></td>
+<td><code>none</code></td>
+</tr>
+</tbody></table>
+<h4 id="参考答案-1"><a href="#参考答案-1" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">//判断素数</span></span><br><span class="line">    <span class="type">int</span> <span class="title function_">isPrime</span><span class="params">(<span class="type">int</span> x)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(x&lt;<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(x ==<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(x%<span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">3</span>; i&lt;= <span class="built_in">sqrt</span>(x); i=i+<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(x%i==<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> k, n, m, flag=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;m, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(; m&lt;=n; m++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(isPrime(m))&#123;</span><br><span class="line">            k = m;</span><br><span class="line">            <span class="keyword">while</span>(k&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(k%<span class="number">10</span>==<span class="number">7</span>)&#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, m);</span><br><span class="line">                    flag=<span class="number">1</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                k = k/<span class="number">10</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!flag)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;none&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-统计数字字符个数"><a href="#3-统计数字字符个数" class="headerlink" title="3. 统计数字字符个数"></a>3. 统计数字字符个数</h3><h4 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h4><p>输入一行字符，统计出其中数字字符的个数。</p>
+<h4 id="输入输出格式及样例-2"><a href="#输入输出格式及样例-2" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>一行字符串，总长度不超过 255。</p>
+<p><code>Peking University is set up at 1898.</code></p>
+<p>输出数据：</p>
+<p><code>4</code></p>
+<h4 id="参考答案-2"><a href="#参考答案-2" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> count=<span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> x;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    while((x=getchar())!=&#x27;\n&#x27; || x!=&#x27; &#x27;)&#123; 这里使用getchar的方法，判断结束条件应该是 判断x = ’\n‘ 或者 EOF 来结束循环</span></span><br><span class="line"><span class="comment">        if(x&gt;=&#x27;0&#x27;&amp;&amp; x&lt;=&#x27;9&#x27;)&#123;</span></span><br><span class="line"><span class="comment">            count++;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">    &#125;*/</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i&lt;<span class="number">255</span>; i++)&#123;</span><br><span class="line">        x=getchar();</span><br><span class="line">        <span class="keyword">if</span>(x&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp; x&lt;=<span class="string">&#x27;9&#x27;</span>)&#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, count);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-计算矩阵边缘元素之和"><a href="#4-计算矩阵边缘元素之和" class="headerlink" title="4. 计算矩阵边缘元素之和"></a>4. 计算矩阵边缘元素之和</h3><h4 id="说明-3"><a href="#说明-3" class="headerlink" title="说明"></a>说明</h4><p>输入一个整数矩阵，计算位于矩阵边缘的元素之和。所谓矩阵边缘的元素，就是第一行和最后一行的元素以及第一列和最后一列的元素。</p>
+<h4 id="输入输出格式及样例-3"><a href="#输入输出格式及样例-3" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>第一行分别为矩阵的行数 m 和列数 n(m&lt;100, n&lt;100），两者之间以一个空格分开;</p>
+<p>接下来输入的m行数据中，每行包含n个整数（取值范围为 [0, 9]），整数之间以一个空格分开。</p>
+<p><code>3 3</code></p>
+<p><code>3 4 1</code></p>
+<p><code>3 7 1</code></p>
+<p><code>2 0 1</code></p>
+<p>输出数据：</p>
+<p>输出对应矩阵的边缘元素和。</p>
+<p><code>15</code></p>
+<h4 id="参考答案-3"><a href="#参考答案-3" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> sum=<span class="number">0</span>, m, n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;m, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=m; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>; j&lt;=n; j++)&#123;</span><br><span class="line">            <span class="type">int</span> t;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;t);</span><br><span class="line">            <span class="keyword">if</span>(i==<span class="number">1</span> || i==m || j==<span class="number">1</span> || j==n)&#123;</span><br><span class="line">                sum += t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-九九乘法表"><a href="#5-九九乘法表" class="headerlink" title="5. 九九乘法表"></a>5. 九九乘法表</h3><h4 id="说明-4"><a href="#说明-4" class="headerlink" title="说明"></a>说明</h4><p>试编一个程序，输出如图所示的九九乘法表。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1*1= 1 </span><br><span class="line">2*1= 2 2*2= 4 </span><br><span class="line">3*1= 3 3*2= 6 3*3= 9 </span><br><span class="line">4*1= 4 4*2= 8 4*3=12 4*4=16 </span><br><span class="line">5*1= 5 5*2=10 5*3=15 5*4=20 5*5=25 </span><br><span class="line">6*1= 6 6*2=12 6*3=18 6*4=24 6*5=30 6*6=36 </span><br><span class="line">7*1= 7 7*2=14 7*3=21 7*4=28 7*5=35 7*6=42 7*7=49 </span><br><span class="line">8*1= 8 8*2=16 8*3=24 8*4=32 8*5=40 8*6=48 8*7=56 8*8=64 </span><br><span class="line">9*1= 9 9*2=18 9*3=27 9*4=36 9*5=45 9*6=54 9*7=63 9*8=72 9*9=81 </span><br></pre></td></tr></table></figure>
+<h4 id="输入输出格式及样例-4"><a href="#输入输出格式及样例-4" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:</p>
+<p>无</p>
+<p>输出数据：</p>
+<p>如上文所示的乘法表。注意等号右则的数据占2列右对齐，各公式格式间用1个空格隔开</p>
+<h4 id="参考答案-4"><a href="#参考答案-4" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> m, n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">9</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>; j&lt;=i; j++)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d*%d=%2d &quot;</span>,i,j,i*j);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-Fibonacci-数列"><a href="#6-Fibonacci-数列" class="headerlink" title="6. Fibonacci 数列"></a>6. Fibonacci 数列</h3><h4 id="说明-5"><a href="#说明-5" class="headerlink" title="说明"></a>说明</h4><p>Fibonacci数列的递推公式为：</p>
+<p>Fn &#x3D; Fn−1+Fn−2，其中 F1&#x3D;F2&#x3D;1。</p>
+<p>当n比较大时，Fn 也非常大，现在我们想知道，Fn 除以10007的余数是多少。</p>
+<h4 id="输入输出格式及样例-5"><a href="#输入输出格式及样例-5" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:</p>
+<p>输入包含一个整数 n(1≤n≤10^6 )。</p>
+<p>输出数据：</p>
+<p>输出一行，包含一个整数，表示Fn 除以10007的余数。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>数据1</th>
+<th>数据2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入数据</td>
+<td><code>10</code></td>
+<td><code>22</code></td>
+</tr>
+<tr>
+<td>输出数据</td>
+<td><code>55</code></td>
+<td><code>7704</code></td>
+</tr>
+</tbody></table>
+<h4 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h4><p>在本题中，答案是要求Fn除以10007的余数，因此我们只要能算出这个余数即可，而不需要先计算出 Fn的准确值，再将计算的结果除以10007取余数，直接计算余数往往比先算出原数再取余简单。</p>
+<h4 id="参考答案-5"><a href="#参考答案-5" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> m;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;m);</span><br><span class="line">    <span class="type">int</span> f1=<span class="number">1</span>, f2=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">3</span>; i&lt;=m; i++)&#123;</span><br><span class="line">        f2 = f1 + f2;</span><br><span class="line">        f1 = f2 - f1;</span><br><span class="line">        f2 = f2 % <span class="number">10007</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, f2);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7-求-Fibonacci-前-n-项和"><a href="#7-求-Fibonacci-前-n-项和" class="headerlink" title="7. 求 Fibonacci 前 n 项和"></a>7. 求 Fibonacci 前 n 项和</h3><h4 id="说明-6"><a href="#说明-6" class="headerlink" title="说明"></a>说明</h4><p>Fibonacci数列的递推公式为：</p>
+<p>Fn&#x3D;Fn−1+Fn−2，其中F1&#x3D;F2&#x3D;1。</p>
+<p>当n比较大时,Fn也非常大，现在我们想知道，F1 +F2 +⋯+Fn 的和除以10007的余数是多少。</p>
+<h4 id="输入输出格式及样例-6"><a href="#输入输出格式及样例-6" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>输入包含一个整数 n(1≤n≤10^6 )。</p>
+<p>输出数据：</p>
+<p>输出一行，包含一个整数，表示F1+F2 +⋯+Fn 的和除以10007的余数。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>数据1</th>
+<th>数据2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入数据</td>
+<td><code>5</code></td>
+<td><code>100</code></td>
+</tr>
+<tr>
+<td>输出数据</td>
+<td><code>12</code></td>
+<td><code>1492</code></td>
+</tr>
+</tbody></table>
+<h4 id="提示-1"><a href="#提示-1" class="headerlink" title="提示"></a>提示</h4><p>n&#x3D;5时，F1+F2+F3+F4+F5 &#x3D;1+1+2+3+5&#x3D;12。</p>
+<h4 id="参考答案-6"><a href="#参考答案-6" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> m, sum=<span class="number">2</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;m);</span><br><span class="line">    <span class="type">int</span> f1=<span class="number">1</span>, f2=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(m==<span class="number">1</span>)&#123;</span><br><span class="line">        sum = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(m==<span class="number">2</span>)&#123;</span><br><span class="line">        sum = <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">3</span>; i&lt;=m; i++)&#123;</span><br><span class="line">        f2 = f1 + f2;</span><br><span class="line">        f1 = f2 - f1;</span><br><span class="line">        sum += f2;</span><br><span class="line">        sum = sum % <span class="number">10007</span>;</span><br><span class="line">        f2 = f2 % <span class="number">10007</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-回文数"><a href="#8-回文数" class="headerlink" title="8. 回文数"></a>8. 回文数</h3><h4 id="说明-7"><a href="#说明-7" class="headerlink" title="说明"></a>说明</h4><p>1221 是一个非常特殊的数，它从左边读和从右边读是一样的，编程求所有这样的 4 位十进制数。</p>
+<h4 id="输入输出格式及样例-7"><a href="#输入输出格式及样例-7" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>无</p>
+<p>输出数据：</p>
+<p>按从小到大的顺序输出满足条件的 4 位十进制数。</p>
+<p><code>1001</code></p>
+<p><code>1111</code></p>
+<p><code>1221</code></p>
+<p><code>。。。</code></p>
+<h4 id="参考答案-7"><a href="#参考答案-7" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1000</span>; i&lt;<span class="number">10000</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(i/<span class="number">1000</span> == i%<span class="number">10</span> &amp;&amp; (i/<span class="number">100</span>)%<span class="number">10</span> == (i/<span class="number">10</span>)%<span class="number">10</span>)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="9-求e的近似值"><a href="#9-求e的近似值" class="headerlink" title="9. 求e的近似值"></a>9. 求e的近似值</h3><h4 id="说明-8"><a href="#说明-8" class="headerlink" title="说明"></a>说明</h4><p>自然常数e &#x3D; 1&#x2F;0! + 1&#x2F;1! + 1&#x2F;2! + 1&#x2F;3! + &#96;&#96;&#96; + 1&#x2F;n! (0&lt;&#x3D; n &lt;&#x3D;50, 0! &#x3D; 1)</p>
+<p>给定一个正整数n，求出对应e的值，结果保留8位小数。</p>
+<h4 id="输入输出格式及样例-8"><a href="#输入输出格式及样例-8" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>输入一个正整数n。</p>
+<p><code>13</code></p>
+<p>输出数据：</p>
+<p>输出e的近似值</p>
+<p><code>2.71828183</code></p>
+<h4 id="参考答案-8"><a href="#参考答案-8" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> m;</span><br><span class="line">    <span class="type">double</span> e;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">jiecheng</span><span class="params">(<span class="type">int</span> a)</span>&#123;</span><br><span class="line">        <span class="type">int</span> ji = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i&lt;=a; i++)&#123;</span><br><span class="line">            ji = ji * i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ji;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">0</span>; i&lt;=m; i++)&#123;</span><br><span class="line">        e = e + <span class="number">1.0</span> /jiecheng(i); </span><br><span class="line">        <span class="keyword">if</span>(i&gt;=<span class="number">12</span>)&#123;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.8f&quot;</span>, e);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="10-求两个正整数的最大公约数"><a href="#10-求两个正整数的最大公约数" class="headerlink" title="10.求两个正整数的最大公约数"></a>10.求两个正整数的最大公约数</h3><h4 id="说明-9"><a href="#说明-9" class="headerlink" title="说明"></a>说明</h4><p>输入两个正整数a,b(1&lt;a,b≤10^9 )，请输出它们的最大公约数。</p>
+<h4 id="输入输出格式及样例-9"><a href="#输入输出格式及样例-9" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:</p>
+<p>两个正整数a,b(1&lt;a,b≤10^9 )。</p>
+<p><code>30 50</code></p>
+<p>输出数据:</p>
+<p>它们的最大公约数。</p>
+<p><code>10</code></p>
+<h4 id="参考答案-9"><a href="#参考答案-9" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> a,b,r;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">		r = a%b;</span><br><span class="line">		a = b;</span><br><span class="line">		b = r;</span><br><span class="line">	&#125;<span class="keyword">while</span>(r!=<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="11-进制转换"><a href="#11-进制转换" class="headerlink" title="11. 进制转换"></a>11. 进制转换</h3><h4 id="说明-10"><a href="#说明-10" class="headerlink" title="说明"></a>说明</h4><p>任意给出一个数，将此数转换为 r 进制(1&lt;r≤9)。</p>
+<h4 id="输入输出格式及样例-10"><a href="#输入输出格式及样例-10" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>一行，两个整数n,r(n&lt;10000)。</p>
+<p><code>100 2</code></p>
+<p>输出数据：</p>
+<p>一行，一个整数，即题目的正确答案。</p>
+<p><code>1100100</code></p>
+<h4 id="参考答案-10"><a href="#参考答案-10" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n,m,r;</span><br><span class="line">	<span class="type">double</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;n, &amp;r);</span><br><span class="line">    m = n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; m&gt;<span class="number">0</span>; i++)&#123;</span><br><span class="line">		sum = sum + m % r * <span class="built_in">pow</span>(<span class="number">10</span>, i); </span><br><span class="line">		m = m / r;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%.f&quot;</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="12-开关灯"><a href="#12-开关灯" class="headerlink" title="12. 开关灯"></a>12. 开关灯</h3><h4 id="说明-11"><a href="#说明-11" class="headerlink" title="说明"></a>说明</h4><p>假设有N盏灯(N为不大于5000的正整数)，从 1 到N按顺序依次编号，初始时全部处于开启状态；有M个人(M为不大于N的正整数)也从 1 到M依次编号。第一个人（1 号）将灯全部关闭，第二个人（2 号）将编号为 2 的倍数的灯打开，第三个人（3 号）将编号为 3 的倍数的灯做相反处理（即：将打开的灯关闭，将关闭的灯打开）。依照编号递增顺序，以后的人都和 3 号一样，将所有自己编号倍数的灯做相反处理。</p>
+<p>请问：当第M个人操作之后，哪几盏灯是关闭的，按从小到大输出其编号，其间用逗号间隔。</p>
+<h4 id="输入输出格式及样例-11"><a href="#输入输出格式及样例-11" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:</p>
+<p>输入正整数N和M，以单个空格隔开。</p>
+<p><code>10 10</code></p>
+<p>输出数据:</p>
+<p>顺次输出关闭的灯的编号，其间用逗号间隔。</p>
+<p><code>1,4,9</code></p>
+<h4 id="参考答案-11"><a href="#参考答案-11" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n,m,flag;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">    <span class="comment">//-1 关  1 开</span></span><br><span class="line">    <span class="comment">//从3开始检查每个灯的状态</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">3</span>; i&lt;=n; i++)&#123;</span><br><span class="line">        <span class="comment">//初始化灯的状态，</span></span><br><span class="line">        <span class="keyword">if</span>(i%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">            flag = <span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			flag = <span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="comment">//判断每个人是否可以控制开关</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">3</span>; j&lt;=m; j++)&#123;</span><br><span class="line">            <span class="comment">//灯的编号是人的编号的整数倍才可以操作</span></span><br><span class="line">			<span class="keyword">if</span>(i%j==<span class="number">0</span>)&#123;</span><br><span class="line">				flag = -flag;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="comment">//每次结束 输出</span></span><br><span class="line">		<span class="keyword">if</span>(flag == <span class="number">-1</span>)&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;,%d&quot;</span>, i);</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="13-八进制转十进制"><a href="#13-八进制转十进制" class="headerlink" title="13. 八进制转十进制"></a>13. 八进制转十进制</h3><h4 id="说明-12"><a href="#说明-12" class="headerlink" title="说明"></a>说明</h4><p>把一个八进制数转变为十进制数。</p>
+<h4 id="输入输出格式及样例-12"><a href="#输入输出格式及样例-12" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:</p>
+<p>一行，仅含一个八进制表示的正整数 n(1≤n≤10^9 )。</p>
+<p><code>11</code></p>
+<p>输出数据:</p>
+<p>一个整数，表示对应的十进制数。</p>
+<p><code>9</code></p>
+<h4 id="提示-2"><a href="#提示-2" class="headerlink" title="提示"></a>提示</h4><p>转十进制:<br>11 &#x3D; 1 * 8^1 + 1 * 8^0 &#x3D; 9</p>
+<h4 id="参考答案-12"><a href="#参考答案-12" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> x,sum=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;x);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; x&gt;<span class="number">0</span> ;i++)&#123;</span><br><span class="line">        sum = sum + x%<span class="number">10</span>*<span class="built_in">pow</span>(<span class="number">8</span>,i);</span><br><span class="line">        x = x/<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="14-短信计"><a href="#14-短信计" class="headerlink" title="14. 短信计"></a>14. 短信计</h3><h4 id="说明-13"><a href="#说明-13" class="headerlink" title="说明"></a>说明</h4><p>用手机发短信，一条短信资费为 0.1元，但限定一条短信的内容在 70 个字以内（包括 70 个字）。如果一次所发送的短信超过了 70 个字，则会按照每 70 个字一条短信的限制把它分割成多条短信发送。假设已经知道某人当月所发送的短信的字数，试统计一下他当月短信的总资费。</p>
+<h4 id="输入输出格式及样例-13"><a href="#输入输出格式及样例-13" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:</p>
+<p>第一行是整数 n(1≤n≤100)，表示当月发送短信的总次数，接着 n 行每行一个整数(不超过 1000)，表示每次短信的字数。</p>
+<p><code>10</code></p>
+<p><code>39</code></p>
+<p><code>49</code></p>
+<p><code>42</code></p>
+<p><code>61</code></p>
+<p><code>44</code></p>
+<p><code>147</code></p>
+<p><code>42</code></p>
+<p><code>72</code></p>
+<p><code>35</code></p>
+<p><code>46</code></p>
+<p>输出数据:</p>
+<p>输出一行，当月短信总资费，单位为元，精确到小数点后 1 位。</p>
+<p><code>1.3</code></p>
+<h4 id="参考答案-13"><a href="#参考答案-13" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> x,y,count=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;x);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;x ;i++)&#123;</span><br><span class="line">        <span class="type">int</span> t;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;t);</span><br><span class="line">        count = count + (t%<span class="number">70</span> == <span class="number">0</span> ? t/<span class="number">70</span> : t/<span class="number">70</span>+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.1f&quot;</span>, count * <span class="number">0.1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="15-图形输出"><a href="#15-图形输出" class="headerlink" title="15. 图形输出"></a>15. 图形输出</h3><h4 id="说明-14"><a href="#说明-14" class="headerlink" title="说明"></a>说明</h4><p>打印下面两种图形的其中一种：正方形、菱形。</p>
+<h4 id="输入输出格式及样例-14"><a href="#输入输出格式及样例-14" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:</p>
+<p>第一行一个大写字母，表示输出图形的类型，’Z’表示正方形，’L’表示菱形；</p>
+<p>第二行一个正整数x (1&lt;&#x3D;x&lt;&#x3D;100)，表示输出图形的边长。</p>
+<p><code>L</code></p>
+<p><code>4</code></p>
+<p>输出数据:</p>
+<p>参考样例，输出相应的图形。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   *</span><br><span class="line">  ***</span><br><span class="line"> *****</span><br><span class="line">*******</span><br><span class="line"> *****</span><br><span class="line">  ***</span><br><span class="line">   *</span><br></pre></td></tr></table></figure>
+<h4 id="参考答案-14"><a href="#参考答案-14" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">void</span> <span class="title function_">printZ</span><span class="params">(<span class="type">int</span> x)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;x; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;x; j++)&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">void</span> <span class="title function_">printL</span><span class="params">(<span class="type">int</span> x)</span>&#123;</span><br><span class="line">    	<span class="type">int</span> line = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(line &lt;= (<span class="number">2</span>*x - <span class="number">1</span>))&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="built_in">fabs</span>(x*<span class="number">1.0</span> -line);i++)&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">			&#125; </span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;(<span class="number">2</span>*x - <span class="number">1</span> - <span class="number">2</span>*<span class="built_in">fabs</span>(x*<span class="number">1.0</span> -line));j++)&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">			line++;</span><br><span class="line">		&#125; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">char</span> a;</span><br><span class="line">    <span class="type">int</span> b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%c%d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">    <span class="keyword">switch</span>(a)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;Z&#x27;</span>:</span><br><span class="line">            printZ(b);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;L&#x27;</span>:</span><br><span class="line">        	printL(b);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="16-分解质因数（factor）"><a href="#16-分解质因数（factor）" class="headerlink" title="16. 分解质因数（factor）"></a>16. 分解质因数（factor）</h3><h4 id="说明-15"><a href="#说明-15" class="headerlink" title="说明"></a>说明</h4><p>输入一个正整数N（N&gt;1），将它分解为质因数（质数即素数）。例如，输入90，输出90&#x3D;233*5。</p>
+<h4 id="输入输出格式及样例-15"><a href="#输入输出格式及样例-15" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:</p>
+<p>正整数N，（1&lt;N&lt;10^9）。</p>
+<p><code>90</code></p>
+<p>输出数据：</p>
+<p>质因数相乘形式。</p>
+<p><code>90=2*3*3*5</code></p>
+<h4 id="提示-3"><a href="#提示-3" class="headerlink" title="提示"></a>提示</h4><p>注意：1不是N的质因数；若N为质数，N是N的质因数。</p>
+<h4 id="参考答案-15"><a href="#参考答案-15" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">2</span>,x;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;x);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d=&quot;</span>, x);</span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(x%i==<span class="number">0</span>)&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%d*&quot;</span>, i);</span><br><span class="line">			x = x/i;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;<span class="keyword">while</span>(x!=i);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, x);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechat.png" alt="大同小異 WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="大同小異 Alipay">
+        <span>Alipay</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/11/21/c-shiyan-6/" rel="prev" title="C语言程序设计实验课参考答案(实验六：循环结构1)">
+                  <i class="fa fa-angle-left"></i> C语言程序设计实验课参考答案(实验六：循环结构1)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2012 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-star"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Bill Chou</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
