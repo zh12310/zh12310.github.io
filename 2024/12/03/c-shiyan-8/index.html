@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#495a80"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#495a80">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="/fonts/newKlee/result.css"/>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.dtxyz.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言程序设计实验课参考答案(实验八：数组程序设计1)">
+<meta property="og:url" content="https://blog.dtxyz.cn/2024/12/03/c-shiyan-8/index.html">
+<meta property="og:site_name" content="TongYi">
+<meta property="og:description" content="江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-12-03T07:59:01.141Z">
+<meta property="article:modified_time" content="2024-12-03T08:25:10.217Z">
+<meta property="article:author" content="大同小異">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.dtxyz.cn/2024/12/03/c-shiyan-8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.dtxyz.cn/2024/12/03/c-shiyan-8/","path":"2024/12/03/c-shiyan-8/","title":"C语言程序设计实验课参考答案(实验八：数组程序设计1)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>C语言程序设计实验课参考答案(实验八：数组程序设计1) | TongYi</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">TongYi</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">D T X Y Z . C N</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">10</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">9</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%85%AB-%E6%95%B0%E7%BB%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A11"><span class="nav-number">1.</span> <span class="nav-text">实验八  数组程序设计1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-double-%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84%E7%BB%83%E4%B9%A0"><span class="nav-number">1.1.</span> <span class="nav-text">1. double 类型数组练习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">1.1.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88"><span class="nav-number">1.1.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%BE%93%E5%87%BA%E6%9C%88%E4%BB%BD%E7%9A%84%E5%A4%A9%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">2.输出月份的天数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA"><span class="nav-number">1.2.3.</span> <span class="nav-text">提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%80%81%E9%B9%B0%E6%8D%89%E5%B0%8F%E9%B8%A1"><span class="nav-number">1.3.</span> <span class="nav-text">3. 老鹰捉小鸡</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%9C%80%E9%87%8D%E7%9A%84%E8%8B%B9%E6%9E%9C"><span class="nav-number">1.4.</span> <span class="nav-text">4. 最重的苹果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-3"><span class="nav-number">1.4.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-3"><span class="nav-number">1.4.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-3"><span class="nav-number">1.4.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%99%B6%E9%99%B6%E6%91%98%E8%8B%B9%E6%9E%9C"><span class="nav-number">1.5.</span> <span class="nav-text">5. 陶陶摘苹果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-4"><span class="nav-number">1.5.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-4"><span class="nav-number">1.5.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-4"><span class="nav-number">1.5.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F2"><span class="nav-number">1.6.</span> <span class="nav-text">6. 简单排序2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-5"><span class="nav-number">1.6.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-5"><span class="nav-number">1.6.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-5"><span class="nav-number">1.6.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E5%88%9D%E7%BA%A7%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F"><span class="nav-number">1.7.</span> <span class="nav-text">7. 初级计数排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-6"><span class="nav-number">1.7.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-6"><span class="nav-number">1.7.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-6"><span class="nav-number">1.7.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E6%A0%A1%E9%97%A8%E5%A4%96%E7%9A%84%E6%A0%91"><span class="nav-number">1.8.</span> <span class="nav-text">8. 校门外的树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-7"><span class="nav-number">1.8.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-7"><span class="nav-number">1.8.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-7"><span class="nav-number">1.8.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E6%95%B0%E5%88%97%E7%9A%84%E7%AC%AC-m-%E4%B8%AA%E6%95%B0"><span class="nav-number">1.9.</span> <span class="nav-text">9. 数列的第 m 个数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-8"><span class="nav-number">1.9.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-8"><span class="nav-number">1.9.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA-1"><span class="nav-number">1.9.3.</span> <span class="nav-text">提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-8"><span class="nav-number">1.9.4.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%E6%B3%95"><span class="nav-number">1.10.</span> <span class="nav-text">10.折半查找法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-9"><span class="nav-number">1.10.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-9"><span class="nav-number">1.10.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-9"><span class="nav-number">1.10.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E7%9F%A9%E9%98%B5%E4%BA%A4%E6%8D%A2%E8%A1%8C"><span class="nav-number">1.11.</span> <span class="nav-text">11. 矩阵交换行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-10"><span class="nav-number">1.11.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-10"><span class="nav-number">1.11.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-10"><span class="nav-number">1.11.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E8%AE%A1%E7%AE%97%E9%9E%8D%E7%82%B9"><span class="nav-number">1.12.</span> <span class="nav-text">12. 计算鞍点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-11"><span class="nav-number">1.12.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-11"><span class="nav-number">1.12.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-11"><span class="nav-number">1.12.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="大同小異"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">大同小異</p>
+  <div class="site-description" itemprop="description">噓···我還要不斷地學習</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:zh12310@qq.com" title="E-Mail → mailto:zh12310@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.dtxyz.cn/2024/12/03/c-shiyan-8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="大同小異">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TongYi">
+      <meta itemprop="description" content="噓···我還要不斷地學習">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C语言程序设计实验课参考答案(实验八：数组程序设计1) | TongYi">
+      <meta itemprop="description" content="江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言程序设计实验课参考答案(实验八：数组程序设计1)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-12-03 15:59:01 / Modified: 16:25:10" itemprop="dateCreated datePublished" datetime="2024-12-03T15:59:01+08:00">2024-12-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">C语言程序设计</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+            <div class="post-description">江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="实验八-数组程序设计1"><a href="#实验八-数组程序设计1" class="headerlink" title="实验八  数组程序设计1"></a>实验八  数组程序设计1</h2><h3 id="1-double-类型数组练习"><a href="#1-double-类型数组练习" class="headerlink" title="1. double 类型数组练习"></a>1. double 类型数组练习</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>输入 n(0&lt;n≤1000) 个小数，并将其依次输出。</p>
+<h4 id="输入输出格式及样例"><a href="#输入输出格式及样例" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>第一行一个正整数 n；<br>第二行连续输入n 个 double 型浮点数。</p>
+<p><code>5</code></p>
+<p><code>29.495762 83.042158 69.332532 11.874342 47.989582</code></p>
+<p>输出数据：</p>
+<p>输出一行，将这n 个浮点数按输入顺序输出，保留 3 位小数。</p>
+<p><code>29.496 83.042 69.333 11.874 47.990</code></p>
+<h4 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="type">double</span> num[<span class="number">1000</span>]; <span class="comment">//数组的长度一定是一个确定的、不能改变的值，不能是输入的n！</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>, &amp;num[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%.3f &quot;</span>, num[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-输出月份的天数"><a href="#2-输出月份的天数" class="headerlink" title="2.输出月份的天数"></a>2.输出月份的天数</h3><h4 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h4><p>通过对一维数组的初始化赋值，我们可以将一些诸如：素数、斐波那契数列、月份天数之类的常量事先存储进去，然后通过下标或结合循环进行访问。</p>
+<p>现在，请你编写一个小算法，输入一个年份及月份，输出对应的天数。</p>
+<h4 id="输入输出格式及样例-1"><a href="#输入输出格式及样例-1" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：两个整数 y,m(1600≤y≤10^4 ,1≤m≤12)，分别代表年份和月份。</p>
+<p>输出数据：输出对应的天数。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>数据1</th>
+<th>数据2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入数据</td>
+<td><code>1600 1</code></td>
+<td><code>1600 2</code></td>
+</tr>
+<tr>
+<td>输出数据</td>
+<td><code>31</code></td>
+<td><code>29</code></td>
+</tr>
+</tbody></table>
+<h4 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h4><p>闰年判断方法：</p>
+<ol>
+<li>非整百年：年数除以 4 余数为 0 通常是闰年，但年数除以 100 余数为 0 的年份通常不是闰年，即公元 4、8、12……年；</li>
+<li>整百年：年数除以 400 余数为 0 通常是闰年；年数除以 3200 余数为 0，通常不是闰年；年数除以 172800 余 0 又通常为闰年。</li>
+</ol>
+<p>注意！！！整除3200不是闰年！！！</p>
+<h4 id="参考答案-1"><a href="#参考答案-1" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> d[<span class="number">2</span>][<span class="number">12</span>] = &#123;&#123;<span class="number">31</span>,<span class="number">28</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>&#125;,&#123;<span class="number">31</span>,<span class="number">29</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>&#125;&#125;;</span><br><span class="line">    <span class="type">int</span> y, m;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;y, &amp;m);</span><br><span class="line">    <span class="type">int</span> leep = (y%<span class="number">400</span>==<span class="number">0</span> &amp;&amp; y%<span class="number">3200</span>!=<span class="number">0</span>) || (y%<span class="number">4</span>==<span class="number">0</span> &amp;&amp; y%<span class="number">100</span>!=<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, d[leep][m - <span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-老鹰捉小鸡"><a href="#3-老鹰捉小鸡" class="headerlink" title="3. 老鹰捉小鸡"></a>3. 老鹰捉小鸡</h3><h4 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h4><p>狐狸老师和格莱尔等5位小朋友玩老鹰捉小鸡的游戏，狐狸老师当老鹰，排在第一位的小朋友当“母鸡”，其他4位小朋友当“小鸡”。但是“母鸡”很辛苦，所以过一段时间“母鸡”需要排到队伍最后成为“小鸡”，让第二位小朋友当“母鸡”······试编一程序，模拟10次位置变化的过程。</p>
+<h4 id="输入输出格式及样例-2"><a href="#输入输出格式及样例-2" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：无</p>
+<p>输出数据：每行输出每一次的位置。注意每行尾没有空格！</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1: 1 2 3 4 5</span><br><span class="line">2: 2 3 4 5 1</span><br><span class="line">3: 3 4 5 1 2</span><br><span class="line">4: 4 5 1 2 3</span><br><span class="line">5: 5 1 2 3 4</span><br><span class="line">6: 1 2 3 4 5</span><br><span class="line">7: 2 3 4 5 1</span><br><span class="line">8: 3 4 5 1 2</span><br><span class="line">9: 4 5 1 2 3</span><br><span class="line">10: 5 1 2 3 4</span><br></pre></td></tr></table></figure>
+
+<h4 id="参考答案-2"><a href="#参考答案-2" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> a[<span class="number">5</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)&#123;</span><br><span class="line">        <span class="comment">//输出顺序</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d:&quot;</span>, i+<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;<span class="number">5</span>; j++)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot; %d&quot;</span>, a[j]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        <span class="comment">//调整顺序</span></span><br><span class="line">        <span class="type">int</span> k, t = a[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(k=<span class="number">0</span>; k&lt;<span class="number">4</span>; k++)&#123;</span><br><span class="line">            a[k] = a[k+<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        a[k] = t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-最重的苹果"><a href="#4-最重的苹果" class="headerlink" title="4. 最重的苹果"></a>4. 最重的苹果</h3><h4 id="说明-3"><a href="#说明-3" class="headerlink" title="说明"></a>说明</h4><p>小 y 有n 个苹果，他知道每个苹果的重量。希望你能帮他找出最重的那个苹果，苹果编号为1,2,⋯,n。</p>
+<h4 id="输入输出格式及样例-3"><a href="#输入输出格式及样例-3" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>第一行是一个正整数n，表示有n个苹果(1≤n≤1000)。</p>
+<p>第二行包含n个整数 。</p>
+<p><code>5</code></p>
+<p><code>67 43 90 78 32</code></p>
+<p>输出数据：一个整数，最重的苹果的编号。</p>
+<p><code>3</code></p>
+<h4 id="参考答案-3"><a href="#参考答案-3" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n;<span class="comment">//int apple[1000]; 没有使用数组</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="type">int</span> max=<span class="number">0</span>, index=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="type">int</span> t;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;t);</span><br><span class="line">        <span class="keyword">if</span>(t&gt; max)&#123;</span><br><span class="line">            max = t;</span><br><span class="line">            index = i+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, index);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-陶陶摘苹果"><a href="#5-陶陶摘苹果" class="headerlink" title="5. 陶陶摘苹果"></a>5. 陶陶摘苹果</h3><h4 id="说明-4"><a href="#说明-4" class="headerlink" title="说明"></a>说明</h4><p>陶陶家的院子里有一棵苹果树，每到秋天树上就会结出10个苹果。苹果成熟的时候，陶陶就会跑去摘苹果。陶陶有个30厘米高的板凳，当她不能直接用手摘到苹果的时候，就会踩到板凳上再试试。</p>
+<p>现在已知10个苹果到地面的高度，以及陶陶把手伸直的时候能够达到的最大高度，请帮陶陶算一下她能够摘到的苹果的数目。假设她碰到苹果，苹果就会掉下来。</p>
+<h4 id="输入输出格式及样例-4"><a href="#输入输出格式及样例-4" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:两行数据。第一行包含10个100到200之间（包括100和200）的整数（以厘米为单位）分别表示10个苹果到地面的高度，两个相邻的整数之间用一个空格隔开。第二行只包括一个100到120之间（包含100和120）的整数（以厘米为单位），表示陶陶把手伸直的时候能够达到的最大高度。</p>
+<p><code>100 200 150 140 129 134 167 198 200 111</code><br><code>110</code></p>
+<p>输出数据：一行，这一行只包含一个整数，表示陶陶能够摘到的苹果的数目。</p>
+<p><code>5</code></p>
+<h4 id="参考答案-4"><a href="#参考答案-4" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n, m=<span class="number">30</span>, count=<span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> apple[<span class="number">10</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;apple[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(apple[i]&lt;= m+n)&#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, count);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-简单排序2"><a href="#6-简单排序2" class="headerlink" title="6. 简单排序2"></a>6. 简单排序2</h3><h4 id="说明-5"><a href="#说明-5" class="headerlink" title="说明"></a>说明</h4><p>在上周的 HHXL 小学四年级1000米自由泳比赛中，共有n(0&lt;n≤100)名同学踊跃参赛，已知他们各自游完1000米的时间互不相同，请你算算小J能排第几名吧！</p>
+<h4 id="输入输出格式及样例-5"><a href="#输入输出格式及样例-5" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:</p>
+<p>第1行1个正整数n，表示参赛的人数。</p>
+<p>第2行连续输入n个正整数，表示各名队员游完1000米的秒数，均在[1,600]的范围内。</p>
+<p>第3行1个正整数m，表示小J游完1000米的秒数。</p>
+<p><code>5</code></p>
+<p><code>50 55 30 59 43</code></p>
+<p><code>43</code></p>
+<p>输出数据：输出1个正整数，表示小J的名次。</p>
+<p><code>2</code></p>
+<h4 id="参考答案-5"><a href="#参考答案-5" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n,m, count=<span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> s[<span class="number">100</span>];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;s[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(s[i]&lt;m)&#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, count);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7-初级计数排序"><a href="#7-初级计数排序" class="headerlink" title="7. 初级计数排序"></a>7. 初级计数排序</h3><h4 id="说明-6"><a href="#说明-6" class="headerlink" title="说明"></a>说明</h4><p>小 J 最近终于学到了数组，他知道使用数组就可以对一个数列进行排序了！</p>
+<p>今天，他小试牛刀，使用数组来对 n 个数字进行排序。你也会做吗？</p>
+<h4 id="输入输出格式及样例-6"><a href="#输入输出格式及样例-6" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>第一行一个正整数n(0&lt;n≤10^4 )</p>
+<p>第二行连续输入 n 个不大于 10^4  的非负整数。</p>
+<p>输出数据：</p>
+<p>一行，输出这 n 个数从小到大排序后的结果，中间用一个空格隔开。</p>
+<p>如果一个数出现了多次，在排序结果里只写一次即可。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>数据1</th>
+<th>数据2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入数据</td>
+<td><code>5</code><br/><code>3 7 0 2 4</code></td>
+<td><code>5</code><br/><code>1 2 1 2 1</code></td>
+</tr>
+<tr>
+<td>输出数据</td>
+<td><code>0 2 3 4 7</code></td>
+<td><code>1 2</code></td>
+</tr>
+</tbody></table>
+<h4 id="参考答案-6"><a href="#参考答案-6" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="type">int</span> num[<span class="number">10000</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;num[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//paixu </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>; j&lt;n; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(num[i]&gt;num[j])&#123;</span><br><span class="line">                <span class="type">int</span> t = num[i];</span><br><span class="line">                num[i] = num[j];</span><br><span class="line">                num[j] = t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//输出</span></span><br><span class="line">    <span class="type">int</span> t=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(t != num[i])&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, t=num[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-校门外的树"><a href="#8-校门外的树" class="headerlink" title="8. 校门外的树"></a>8. 校门外的树</h3><h4 id="说明-7"><a href="#说明-7" class="headerlink" title="说明"></a>说明</h4><p>某校大门外长度为L 的马路上有一排树，每两棵相邻的树之间的间隔都是1 米。我们可以把马路看成一个数轴，马路的一端在数轴 0 的位置，另一端在 L 的位置；数轴上的每个整数点，即 0,1,2,…,L，都种有一棵树。</p>
+<p>由于马路上有一些区域要用来建地铁。这些区域用它们在数轴上的起始点和终止点表示。已知任一区域的起始点和终止点的坐标都是整数，区域之间可能有重合的部分。现在要把这些区域中的树（包括区域端点处的两棵树）移走。你的任务是计算将这些树都移走后，马路上还有多少棵树。</p>
+<h4 id="输入输出格式及样例-7"><a href="#输入输出格式及样例-7" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>第一行有两个整数L(1≤L≤10000) 和 M(1≤M≤100)，L 代表马路的长度，M 代表区域的数目，<br>L 和 M 之间用一个空格隔开。接下来的 M 行每行包含两个不同的整数，用一个空格隔开，表示一个区域的起始点和终止点的坐标。<br>对于20% 的数据，区域之间没有重合的部分；<br>对于其它的数据，区域之间有重合的情况。</p>
+<p><code>500 3</code></p>
+<p><code>150 300</code></p>
+<p><code>100 200</code></p>
+<p><code>470 471</code></p>
+<p>输出数据：包括一行，这一行只包含一个整数，表示马路上剩余的树的数目。</p>
+<p><code>298</code></p>
+<h4 id="参考答案-7"><a href="#参考答案-7" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> L, M, count=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;L, &amp;M);</span><br><span class="line">    <span class="type">int</span> s[<span class="number">100</span>][<span class="number">2</span>]; <span class="comment">//修地铁的区域</span></span><br><span class="line">    <span class="type">int</span> t[<span class="number">10000</span>]=&#123;<span class="number">0</span>&#125;; <span class="comment">//总线路，默认0 为种树，</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;M; i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;s[i][<span class="number">0</span>], &amp;s[i][<span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 循环 修地铁的区间， 将对应点修改位 1，</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;M; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=s[i][<span class="number">0</span>]; j&lt;=s[i][<span class="number">1</span>]; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(t[j] == <span class="number">0</span>)&#123;</span><br><span class="line">                t[j] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="comment">//重新 循环 总路线， 统计为0的个数，即还有树的， 从[0-L]，包含L这个点，</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;=L; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(t[i] == <span class="number">0</span>)&#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, count);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="9-数列的第-m-个数"><a href="#9-数列的第-m-个数" class="headerlink" title="9. 数列的第 m 个数"></a>9. 数列的第 m 个数</h3><h4 id="说明-8"><a href="#说明-8" class="headerlink" title="说明"></a>说明</h4><p>已知一个数列从第k个数开始，有连续的n个数，不断地循环出现，求其中的第m(m≥k)个数是几？</p>
+<h4 id="输入输出格式及样例-8"><a href="#输入输出格式及样例-8" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>第一行两个整数，n,k(0&lt;k≤100,0&lt;n≤30)。</p>
+<p>第二行连续的n 个整数，中间用空格隔开，表示从第k 个数开始连续n 个数。</p>
+<p>第三行一个整数 m(k≤m≤10^9 )。</p>
+<p><code>5 7</code></p>
+<p><code>23 7 19 51 6</code></p>
+<p><code>13</code></p>
+<p>输出数据：输出一个整数，为所求的数字。</p>
+<p><code>7</code></p>
+<h4 id="提示-1"><a href="#提示-1" class="headerlink" title="提示"></a>提示</h4><p>23 是第 7 个数，数列开始进行 23, 7, 19, 51, 6, 23, 7, 19, 51, 6,…… 的循环，那么第 911 个数就是 6。</p>
+<h4 id="参考答案-8"><a href="#参考答案-8" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n,k,m;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;n, &amp;k);</span><br><span class="line">    <span class="type">int</span> num[<span class="number">30</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;num[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;m);</span><br><span class="line">    <span class="type">int</span> key = (m - k + <span class="number">1</span>)%n;</span><br><span class="line">    key = key==<span class="number">0</span> ? n <span class="number">-1</span> : key <span class="number">-1</span> ;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, num[key]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="10-折半查找法"><a href="#10-折半查找法" class="headerlink" title="10.折半查找法"></a>10.折半查找法</h3><h4 id="说明-9"><a href="#说明-9" class="headerlink" title="说明"></a>说明</h4><p>大魔导师培根曾经说过：“读史使人明智，读诗使人聪慧，演算使人精密，哲理使人深刻，伦理学使人有修养，逻辑修辞使人善辩。”由此可见书籍的重要性是不言而喻的。而与书籍天天打交道的图书管理员，更是夺天地之造化，吸日月之精华的“神之职业”。据史料记载，魔法世界从古至今诞生的众多不平凡的人物中，有不少人都曾经做过“图书管理员”，如道家学派创始人老子，威软公司创始人比耳、少林藏经阁的扫地神僧等等。所以，作为以马虎自负出名的楚继光，在魔法学院的社会实践活动中又怎么会放过这“天将降大任于斯人也”的必经锻炼呢。但想成为一个合格的图书管理员并不容易，他必须能够在一排（10000以内）已按编号大小排好序的图书中，快速地按编号查找到某本书所在的位置。</p>
+<h4 id="输入输出格式及样例-9"><a href="#输入输出格式及样例-9" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:输入文件第一行是N，表示有N个元素，第二行是N个按升序排好的数，第三行是M表示要查找的数。</p>
+<p><code>3</code></p>
+<p><code>2 4 6</code></p>
+<p><code>4</code></p>
+<p>输出数据:一个数，即如找到该数，则输出位置，否则输出-1</p>
+<p><code>2</code></p>
+<h4 id="参考答案-9"><a href="#参考答案-9" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n,m;</span><br><span class="line">    <span class="type">int</span> a[<span class="number">10000</span>];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;m);</span><br><span class="line">    <span class="type">int</span> top=<span class="number">0</span>, bot=n<span class="number">-1</span>, mid;</span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        mid = (top + bot) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(m == a[mid])&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, mid + <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(m &gt; a[mid])&#123;</span><br><span class="line">            top = mid + <span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            bot = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">while</span>(top&lt;=bot);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(top&gt;bot)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;-1&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="11-矩阵交换行"><a href="#11-矩阵交换行" class="headerlink" title="11. 矩阵交换行"></a>11. 矩阵交换行</h3><h4 id="说明-10"><a href="#说明-10" class="headerlink" title="说明"></a>说明</h4><p>给定一个 5×5 的矩阵（数学上，一个 r×c 的矩阵是一个由 r 行 c 列元素排列成的矩形阵列），将第 n 行和第 m 行交换，输出交换后的结果。</p>
+<h4 id="输入输出格式及样例-10"><a href="#输入输出格式及样例-10" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>输入共 6 行，前 5 行为矩阵的每一行元素，元素与元素之间以一个空格分开。<br>第 6 行包含两个整数 m,n，以一个空格分开。(1≤m,n≤5)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 2 2 1 2</span><br><span class="line">5 6 7 8 3</span><br><span class="line">9 3 0 5 3</span><br><span class="line">7 2 1 4 6</span><br><span class="line">3 0 8 2 4</span><br><span class="line">1 5</span><br></pre></td></tr></table></figure>
+
+<p>输出数据：输出交换之后的矩阵，矩阵的每一行元素占一行，元素之间以一个空格分开。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">3 0 8 2 4</span><br><span class="line">5 6 7 8 3</span><br><span class="line">9 3 0 5 3</span><br><span class="line">7 2 1 4 6</span><br><span class="line">1 2 2 1 2</span><br></pre></td></tr></table></figure>
+
+<h4 id="参考答案-10"><a href="#参考答案-10" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> a[<span class="number">5</span>][<span class="number">5</span>], m,n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;<span class="number">5</span>; j++)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i][j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;m, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)&#123;</span><br><span class="line">        <span class="type">int</span> t = a[m<span class="number">-1</span>][i];</span><br><span class="line">        a[m<span class="number">-1</span>][i] = a[n<span class="number">-1</span>][i];</span><br><span class="line">        a[n<span class="number">-1</span>][i] = t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;<span class="number">5</span>; j++)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i][j]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="12-计算鞍点"><a href="#12-计算鞍点" class="headerlink" title="12. 计算鞍点"></a>12. 计算鞍点</h3><h4 id="说明-11"><a href="#说明-11" class="headerlink" title="说明"></a>说明</h4><p>给定一个 5×5 的矩阵，每行只有一个最大值，每列只有一个最小值，寻找这个矩阵的鞍点。</p>
+<p>鞍点指的是矩阵中的一个元素，它是所在行的最大值，并且是所在列的最小值。</p>
+<pre><code>例如：在下面的例子中（第 4 行第 1 列的元素就是鞍点，值为 8）。
+11  3  5  6  9
+12  4  7  8 10
+10  5  6  9 11
+ 8  6  4  7  2
+15 10 11 20 25
+</code></pre>
+<h4 id="输入输出格式及样例-11"><a href="#输入输出格式及样例-11" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:输入包含一个 5 行 5 列的矩阵，均为非负整数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">11 3 5 6 9</span><br><span class="line">12 4 7 8 10</span><br><span class="line">10 5 6 9 11</span><br><span class="line">8  6 4 7 2</span><br><span class="line">15 10 11 20 25</span><br></pre></td></tr></table></figure>
+
+<p>输出数据:如果存在鞍点，输出鞍点所在的行、列及其值，如果不存在，输出 not found。</p>
+<p><code>4 1 8</code></p>
+<h4 id="参考答案-11"><a href="#参考答案-11" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> a[<span class="number">5</span>][<span class="number">5</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;<span class="number">5</span>; j++)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i][j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> max = a[<span class="number">0</span>][<span class="number">0</span>], row=<span class="number">0</span>, col=<span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;<span class="number">5</span>; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i][j] &gt; max)&#123;</span><br><span class="line">                max = a[i][j];</span><br><span class="line">                row = i;</span><br><span class="line">                col = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> k;</span><br><span class="line">        <span class="keyword">for</span>(k=<span class="number">0</span>; k&lt;<span class="number">5</span>; k++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[k][col]&lt;max)&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(k&gt;=<span class="number">5</span>)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d&quot;</span>, row+<span class="number">1</span>, col+<span class="number">1</span>, a[row][col]);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        row = i+<span class="number">1</span>;</span><br><span class="line">        col = <span class="number">0</span>;</span><br><span class="line">        max=a[row][col];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;=<span class="number">5</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;not found&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechat.png" alt="大同小異 WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="大同小異 Alipay">
+        <span>Alipay</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/12/03/c-shiyan-3/" rel="prev" title="C语言程序设计实验课参考答案(实验三：输入输出格式及控制)">
+                  <i class="fa fa-angle-left"></i> C语言程序设计实验课参考答案(实验三：输入输出格式及控制)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2012 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-star"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Bill Chou</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
