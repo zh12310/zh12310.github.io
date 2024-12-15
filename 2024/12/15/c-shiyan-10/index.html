@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#495a80"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#495a80">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="/fonts/newKlee/result.css"/>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.dtxyz.cn","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言程序设计实验课参考答案(实验十：函数、结构体、指针)">
+<meta property="og:url" content="https://blog.dtxyz.cn/2024/12/15/c-shiyan-10/index.html">
+<meta property="og:site_name" content="TongYi">
+<meta property="og:description" content="江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-12-15T12:59:31.006Z">
+<meta property="article:modified_time" content="2024-12-15T13:45:06.061Z">
+<meta property="article:author" content="大同小異">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.dtxyz.cn/2024/12/15/c-shiyan-10/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.dtxyz.cn/2024/12/15/c-shiyan-10/","path":"2024/12/15/c-shiyan-10/","title":"C语言程序设计实验课参考答案(实验十：函数、结构体、指针)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>C语言程序设计实验课参考答案(实验十：函数、结构体、指针) | TongYi</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">TongYi</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">D T X Y Z . C N</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">10</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">11</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%8D%81-%E5%87%BD%E6%95%B0%E3%80%81%E7%BB%93%E6%9E%84%E4%BD%93%E3%80%81%E6%8C%87%E9%92%88"><span class="nav-number">1.</span> <span class="nav-text">实验十  函数、结构体、指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%95%B0%E5%AD%97%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.1.</span> <span class="nav-text">1. 数字统计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">1.1.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88"><span class="nav-number">1.1.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="nav-number">1.2.</span> <span class="nav-text">2.转二进制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%85%AB%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%8D%81%E8%BF%9B%E5%88%B6"><span class="nav-number">1.3.</span> <span class="nav-text">3. 八进制转十进制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%B1%82%E5%92%8C"><span class="nav-number">1.4.</span> <span class="nav-text">4. 求和</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-3"><span class="nav-number">1.4.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-3"><span class="nav-number">1.4.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-3"><span class="nav-number">1.4.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%B1%82%E9%98%B6%E4%B9%98"><span class="nav-number">1.5.</span> <span class="nav-text">5. 求阶乘</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-4"><span class="nav-number">1.5.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-4"><span class="nav-number">1.5.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-4"><span class="nav-number">1.5.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"><span class="nav-number">1.6.</span> <span class="nav-text">6. 斐波那契数列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-5"><span class="nav-number">1.6.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-5"><span class="nav-number">1.6.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-5"><span class="nav-number">1.6.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%B1%82%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0-gcd"><span class="nav-number">1.7.</span> <span class="nav-text">7. 求最大公约数(gcd)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-6"><span class="nav-number">1.7.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-6"><span class="nav-number">1.7.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-6"><span class="nav-number">1.7.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E4%BA%A4%E6%8D%A2%E6%95%B0%E5%80%BC"><span class="nav-number">1.8.</span> <span class="nav-text">8. 交换数值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-7"><span class="nav-number">1.8.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-7"><span class="nav-number">1.8.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-7"><span class="nav-number">1.8.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%A5%87%E5%81%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">1.9.</span> <span class="nav-text">9. 奇偶排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-8"><span class="nav-number">1.9.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-8"><span class="nav-number">1.9.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-8"><span class="nav-number">1.9.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E5%9D%90%E6%A0%87%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.10.</span> <span class="nav-text">10.坐标统计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-9"><span class="nav-number">1.10.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-9"><span class="nav-number">1.10.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-9"><span class="nav-number">1.10.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E6%80%BB%E5%88%86%E6%8E%92%E5%90%8D"><span class="nav-number">1.11.</span> <span class="nav-text">11. 总分排名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-10"><span class="nav-number">1.11.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-10"><span class="nav-number">1.11.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-10"><span class="nav-number">1.11.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E4%BF%AE%E6%94%B9%E5%91%98%E5%B7%A5%E4%BF%A1%E6%81%AF"><span class="nav-number">1.12.</span> <span class="nav-text">12. 修改员工信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-11"><span class="nav-number">1.12.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E6%A0%B7%E4%BE%8B-11"><span class="nav-number">1.12.2.</span> <span class="nav-text">输入输出格式及样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88-11"><span class="nav-number">1.12.3.</span> <span class="nav-text">参考答案</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="大同小異"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">大同小異</p>
+  <div class="site-description" itemprop="description">噓···我還要不斷地學習</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:zh12310@qq.com" title="E-Mail → mailto:zh12310@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.dtxyz.cn/2024/12/15/c-shiyan-10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="大同小異">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TongYi">
+      <meta itemprop="description" content="噓···我還要不斷地學習">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C语言程序设计实验课参考答案(实验十：函数、结构体、指针) | TongYi">
+      <meta itemprop="description" content="江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言程序设计实验课参考答案(实验十：函数、结构体、指针)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-12-15 20:59:31 / Modified: 21:45:06" itemprop="dateCreated datePublished" datetime="2024-12-15T20:59:31+08:00">2024-12-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">C语言程序设计</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+            <div class="post-description">江苏师范大学科文学院2024秋季学期C语言程序设计课程实验课内容参考答案，整理各实验课题目及参考答案供学生学习使用。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="实验十-函数、结构体、指针"><a href="#实验十-函数、结构体、指针" class="headerlink" title="实验十  函数、结构体、指针"></a>实验十  函数、结构体、指针</h2><h3 id="1-数字统计"><a href="#1-数字统计" class="headerlink" title="1. 数字统计"></a>1. 数字统计</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>请统计某个给定范围 [L,R] 的所有整数中，数字 7 出现的次数。</p>
+<p>比如给定范围 [60,80] 中，7一共出现12次。分别是67,77的个位，以及 70∼79 的十位。</p>
+<h4 id="输入输出格式及样例"><a href="#输入输出格式及样例" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：一行两个数 L,R 表示范围，用空格分隔。 </p>
+<p><code>60 80</code></p>
+<p>输出数据：一个整数表示数字 7 出现的次数。</p>
+<p><code>12</code></p>
+<h4 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*解题思路： 定义一个自定义函数hasSeven(),通过前面学习过的循环提取个位数的数字来判断是否包含数字’7’，将’7‘个个数返回到主函数*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">hasSeven</span><span class="params">(<span class="type">int</span> x)</span>&#123;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(x&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(x%<span class="number">10</span> == <span class="number">7</span>)&#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">		x = x / <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> l, r, count=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;l, &amp;r);</span><br><span class="line">    <span class="keyword">for</span>(; l&lt;=r; l++)&#123;</span><br><span class="line">        count = count + hasSeven(l);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, count);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-转二进制"><a href="#2-转二进制" class="headerlink" title="2.转二进制"></a>2.转二进制</h3><h4 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h4><p>请你把一个整数n转化为二进制并从低位到高位输出。</p>
+<h4 id="输入输出格式及样例-1"><a href="#输入输出格式及样例-1" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：一行，仅含一个正整数 n (1≤n≤10^9)。</p>
+<p><code>11</code></p>
+<p>输出数据：从低位到高位输出一个二进制数，表示n的二进制形式，每位之间不需要空格。</p>
+<p><code>1101</code></p>
+<h4 id="参考答案-1"><a href="#参考答案-1" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*解题思路： 十进制转二进制的方法，每次除以2得到余数，就是二进制的地位至高位数字，直到商为1或0结束*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">while</span>(n&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, n%<span class="number">2</span>);</span><br><span class="line">        n = n / <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-八进制转十进制"><a href="#3-八进制转十进制" class="headerlink" title="3. 八进制转十进制"></a>3. 八进制转十进制</h3><h4 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h4><p>把一个八进制数转变为十进制数。</p>
+<h4 id="输入输出格式及样例-2"><a href="#输入输出格式及样例-2" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：一行，仅含一个八进制表示的正整数 n(1≤n≤10^9 )。</p>
+<p><code>11</code></p>
+<p>输出数据：一个整数，表示对应的十进制数。</p>
+<p><code>9</code></p>
+<h4 id="参考答案-2"><a href="#参考答案-2" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*解题思路： 八进制转十进制的方法，个位数字*8的0次方，十位数字*8的1次方，各位结果累加 */</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n, sum=<span class="number">0</span>, i=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">while</span>(n&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        sum = sum + n % <span class="number">10</span> * <span class="built_in">pow</span>(<span class="number">8</span>, i++);</span><br><span class="line">        n = n / <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-求和"><a href="#4-求和" class="headerlink" title="4. 求和"></a>4. 求和</h3><h4 id="说明-3"><a href="#说明-3" class="headerlink" title="说明"></a>说明</h4><p>使用递归函数，求1+2+3+4+···+n的和。<br>sum(n)&#x3D; n + sum(n-1) n&gt;1,sum(1)&#x3D;1。</p>
+<h4 id="输入输出格式及样例-3"><a href="#输入输出格式及样例-3" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：输入一个整数 n(1≤n≤10^4 )</p>
+<p><code>4</code></p>
+<p>输出数据：输出1+2+⋯+n 的和。</p>
+<p><code>10</code></p>
+<h4 id="参考答案-3"><a href="#参考答案-3" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*解题思路： 根据题目给的公式，可以确定递归函数重复执行的内容和结束条件，*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span> x)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x==<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x + sum(x - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, sum(n));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-求阶乘"><a href="#5-求阶乘" class="headerlink" title="5. 求阶乘"></a>5. 求阶乘</h3><h4 id="说明-4"><a href="#说明-4" class="headerlink" title="说明"></a>说明</h4><p>使用递归函数，求1×2×⋯×n 的乘积。</p>
+<h4 id="输入输出格式及样例-4"><a href="#输入输出格式及样例-4" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:输入一个整数n(1≤n≤20)。</p>
+<p><code>5</code></p>
+<p>输出数据：输出 1×2×⋯×n 的乘积。</p>
+<p><code>120</code></p>
+<h4 id="参考答案-4"><a href="#参考答案-4" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*解题思路，同上一题，找到递归函数的可重复执行的代码和结束条件，这一题要注意n的取值范围到20，阶乘结果会超出int的取值范围，结果不能使用int类型*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">double</span> <span class="title function_">fact</span><span class="params">(<span class="type">double</span> x)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x == <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x * fact(x - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">double</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.f&quot;</span>, fact(n));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-斐波那契数列"><a href="#6-斐波那契数列" class="headerlink" title="6. 斐波那契数列"></a>6. 斐波那契数列</h3><h4 id="说明-5"><a href="#说明-5" class="headerlink" title="说明"></a>说明</h4><p>请编写递归函数：输出斐波那契数列第n项。0，1，1，2，3，5，8，13……</p>
+<h4 id="输入输出格式及样例-5"><a href="#输入输出格式及样例-5" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:一个正整数n,表示第n项（n&lt;&#x3D;50）。</p>
+<p><code>4</code></p>
+<p>输出数据：第n项是多少。</p>
+<p><code>2</code></p>
+<h4 id="参考答案-5"><a href="#参考答案-5" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*解题思路： 同样的递归函数，两个条件。*/</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    此题要注意的是题目设置有运行时间要求，正常的运行会超时 n&gt;45时.</span></span><br><span class="line"><span class="comment">    每1次调用函数会再次调用2次本函数，其中有重复的计算。</span></span><br><span class="line"><span class="comment">    所以使用数组将已经计算过的结果保存下来，再次调用时先判断数组中是否已有结果，可直接使用，否在再进行调用。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">long</span> f[<span class="number">50</span>];</span><br><span class="line"><span class="type">long</span> <span class="type">long</span> <span class="title function_">fibo</span><span class="params">(<span class="type">int</span> x)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(f[x]) <span class="keyword">return</span> f[x];</span><br><span class="line">    <span class="keyword">if</span>(x==<span class="number">1</span> || x==<span class="number">2</span>) <span class="keyword">return</span> x<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> f[x] =  fibo(x<span class="number">-1</span>) + fibo(x<span class="number">-2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>, fibo(n));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7-求最大公约数-gcd"><a href="#7-求最大公约数-gcd" class="headerlink" title="7. 求最大公约数(gcd)"></a>7. 求最大公约数(gcd)</h3><h4 id="说明-6"><a href="#说明-6" class="headerlink" title="说明"></a>说明</h4><p>用递归方法求两个数的最大公约数。(m&gt;0，n&gt;0)<br>gcd(a,b) &#x3D; gcd(b, a%b) b不等于0时， gcd(a,b) &#x3D; a b等于0时</p>
+<h4 id="输入输出格式及样例-6"><a href="#输入输出格式及样例-6" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：输入两个数，即 m 和 n 的值。</p>
+<p><code>8 6</code></p>
+<p>输出数据：输出最大公约数。格式如样例，中间不含空格。</p>
+<p><code>gcd=2</code></p>
+<h4 id="参考答案-6"><a href="#参考答案-6" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    递归函数，两个条件，循环条件就是gcd(b, a%b)，结束条件就是 b=0，返回a</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">gcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">return</span> gcd(b, a%b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> m, n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;m, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;gcd=%d&quot;</span>, gcd(m, n));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-交换数值"><a href="#8-交换数值" class="headerlink" title="8. 交换数值"></a>8. 交换数值</h3><h4 id="说明-7"><a href="#说明-7" class="headerlink" title="说明"></a>说明</h4><p>输入两个整数 x和y，请你编写一个函数, 交换两个整数的数值并输出交换后的 x 和y。</p>
+<p>C中的格式为： void swap(int *x, int *y) 。</p>
+<h4 id="输入输出格式及样例-7"><a href="#输入输出格式及样例-7" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：共一行，包含两个整数 x 和 y。</p>
+<p><code>3 5</code></p>
+<p>输出数据：共一行，包含交换后的 x 和 y。</p>
+<p><code>5 3</code></p>
+<h4 id="参考答案-7"><a href="#参考答案-7" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*解题思路： 给定了指针作为形参的swap函数，注意实参传递值时，传递的是地址值 即可*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> *x, <span class="type">int</span> *y)</span>&#123;</span><br><span class="line">    <span class="type">int</span> z;</span><br><span class="line">    z = *x;</span><br><span class="line">    *x = *y;</span><br><span class="line">    *y = z;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> x, y;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;x, &amp;y);</span><br><span class="line">    swap(&amp;x, &amp;y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>, x, y);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="9-奇偶排序"><a href="#9-奇偶排序" class="headerlink" title="9. 奇偶排序"></a>9. 奇偶排序</h3><h4 id="说明-8"><a href="#说明-8" class="headerlink" title="说明"></a>说明</h4><p>请用数组做参数传址方式调用，在函数中排序：数组a中存放了n（1&lt;&#x3D;n&lt;&#x3D;1e4）个正整数，要求调用函数将数组a中的数重新排列：排列要求是：将偶数放在数组的左部，奇数放在数组的右部。</p>
+<p>特别注意：偶数按原顺序先输出，奇数按逆序输出。</p>
+<h4 id="输入输出格式及样例-8"><a href="#输入输出格式及样例-8" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p><code>10</code></p>
+<p><code>21 34 224 25 367 41 736 37 42 456</code></p>
+<p>输出数据：<code>34 224 736 42 456 37 41 367 25 21</code></p>
+<h4 id="参考答案-8"><a href="#参考答案-8" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    解题思路：排序要求，偶数顺序不动，奇数逆序，使用选择排序法，</span></span><br><span class="line"><span class="comment">    1.每次先判断当前数是奇偶数，</span></span><br><span class="line"><span class="comment">    2.是偶数不动，返回第1步，执行下一次循环； </span></span><br><span class="line"><span class="comment">    3.是奇数， 通过循环把奇数挪到最后一位，中间数字往前移动1位，同时n-1，下一个奇数放到此奇数前面</span></span><br><span class="line"><span class="comment">    4.交换之后，当前位置数字是一个新数字，需要再次判断其奇偶，返回第1步执行判断。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">sort</span><span class="params">(<span class="type">int</span> a[], <span class="type">int</span> n)</span>&#123;</span><br><span class="line">	<span class="type">int</span> i,k;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;n;)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] % <span class="number">2</span>)&#123;</span><br><span class="line">			<span class="type">int</span> t = a[i];</span><br><span class="line">        	<span class="keyword">for</span>(k=i; k&lt;n<span class="number">-1</span>; k++)&#123;</span><br><span class="line">			    a[k] = a[k+<span class="number">1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">			a[k] = t;</span><br><span class="line">			n--;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> i, n, a[<span class="number">10000</span>];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="type">int</span> t;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;t);</span><br><span class="line">        a[i] = t;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(a, n);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="10-坐标统计"><a href="#10-坐标统计" class="headerlink" title="10.坐标统计"></a>10.坐标统计</h3><h4 id="说明-9"><a href="#说明-9" class="headerlink" title="说明"></a>说明</h4><p>输入n个点在平面上的坐标(横纵坐标都是整数)，对于每个点可以控制所有位于它左下方的点(即横坐标x和纵坐标y都比它小)，它可以控制的点的数目称为“战斗力”。依次输出每个点的战斗力，最后输出战斗力最高的点的编号(如果若干个点的战斗力并列最高，输出其中最大的编号)。</p>
+<h4 id="输入输出格式及样例-9"><a href="#输入输出格式及样例-9" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:输入第一行包含一个正整数n (1≤n≤100);接下来的n行，每行描述一个点的坐标,第i+1行包含两个正整数x和y (1≤x,y≤1000)，表示编号为i的点的横坐标为x，纵坐标为y。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">4</span> <span class="number">2</span></span><br><span class="line"><span class="number">6</span> <span class="number">6</span></span><br><span class="line"><span class="number">4</span> <span class="number">8</span></span><br><span class="line"><span class="number">15</span> <span class="number">6</span></span><br><span class="line"><span class="number">11</span> <span class="number">9</span></span><br><span class="line"><span class="number">8</span> <span class="number">14</span></span><br></pre></td></tr></table></figure>
+
+<p>输出数据:输出共有n+1行，第1行到第n行，每行包含一个整数，第i行的整数表示编号为i的点的战斗力，第n+1行表示战斗力最高的点的编号。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">6</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="参考答案-9"><a href="#参考答案-9" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*解题思路： 使用结构体，通过循环判断当前坐标点的x，y值是否都大于其他点的x，y值，均大于战斗力+1*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">points</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="type">int</span> y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">points</span> <span class="title">p</span>[100];</span></span><br><span class="line">    <span class="type">int</span> n, i, j;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;x, &amp;y);</span><br><span class="line">        p[i].x = x;</span><br><span class="line">        p[i].y = y;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> max=<span class="number">0</span>, index=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>; j&lt;n; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(p[i].x&gt;p[j].x &amp;&amp; p[i].y&gt;p[j].y)&#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(max &lt;= count)&#123;</span><br><span class="line">            max = count;</span><br><span class="line">            index = i+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, count);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, index);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="11-总分排名"><a href="#11-总分排名" class="headerlink" title="11. 总分排名"></a>11. 总分排名</h3><h4 id="说明-10"><a href="#说明-10" class="headerlink" title="说明"></a>说明</h4><p>小明的班上一共有n名同学，已知他们的语文、数学、英语成绩，小明想知道自己的总分以及排第几，你来帮帮他吧！</p>
+<h4 id="输入输出格式及样例-10"><a href="#输入输出格式及样例-10" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据：</p>
+<p>第一行输入一个正整数n(1&lt;n≤1000)，代表班级人数，以及一个字符串（不含空白符，长度小于30），表示小明的英文名字。</p>
+<p>接下来 n行，每行输入一位同学的信息，按顺序输入字符串（不含空白符，长度小于30），表示同学姓名，以及 3 个正整数，分别表示该同学的语文、数学、外语成绩。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span> Jason</span><br><span class="line">Ada <span class="number">90</span> <span class="number">91</span> <span class="number">95</span></span><br><span class="line">Bob <span class="number">92</span> <span class="number">89</span> <span class="number">97</span></span><br><span class="line">Jason <span class="number">92</span> <span class="number">97</span> <span class="number">98</span></span><br></pre></td></tr></table></figure>
+
+<p>输出数据：2 个正整数，表示小明的总分以及在班级的排名（若总分相同，则并列），中间用一个空格隔开。</p>
+<p><code>287 1</code></p>
+<h4 id="参考答案-10"><a href="#参考答案-10" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*解题思路，结构体，每次录入学生3科成绩，并计算出总分，记录要计算排名学生的总成绩，再通过循环与每个人的总成绩进行比较，计算出排名*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ss</span>&#123;</span></span><br><span class="line">    <span class="type">char</span> name[<span class="number">30</span>];</span><br><span class="line">    <span class="type">int</span> chinese;</span><br><span class="line">    <span class="type">int</span> math;</span><br><span class="line">    <span class="type">int</span> english;</span><br><span class="line">    <span class="type">int</span> sum;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ss</span> <span class="title">s</span>[1000];</span></span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">30</span>];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %s&quot;</span>, &amp;n, name);</span><br><span class="line">	<span class="type">int</span> count = <span class="number">0</span>, sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s%d%d%d&quot;</span>, s[i].name, &amp;s[i].chinese, &amp;s[i].math, &amp;s[i].english);</span><br><span class="line">		s[i].sum = s[i].chinese + s[i].english + s[i].math;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">strcmp</span>(s[i].name, name)==<span class="number">0</span>)&#123;</span><br><span class="line">		    sum = s[i].sum;</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">strcmp</span>(s[i].name, name)!=<span class="number">0</span> &amp;&amp; sum &lt; s[i].sum)&#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>, sum, count+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="12-修改员工信息"><a href="#12-修改员工信息" class="headerlink" title="12. 修改员工信息"></a>12. 修改员工信息</h3><h4 id="说明-11"><a href="#说明-11" class="headerlink" title="说明"></a>说明</h4><p>小丁是阿里巴巴公司程序员，这天项目经理给他一个结构体定义:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="type">int</span> id;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125; worker;</span><br></pre></td></tr></table></figure>
+<p>小丁一看，这不是一个工人的定义吗，包括编号 id，姓名，年龄什么的。经理说，我需要你写一个函数，能更改数据区中某个id的工人姓名和年龄。函数声明是这样的：</p>
+<p><code>int modifyworker(worker *w, int n ,int id, char *name, int age);</code></p>
+<p>经理说，参数 w 是这批工人数据的首地址，这批数据是连续存放的，n 是工人的数目，id是要修改的工人编号，name和age是新的姓名和年龄。</p>
+<p>如果查到工人并完成修改工作，返回 1，如果查不到这个工人，返回 0。</p>
+<p>请你帮小丁完成这个函数.</p>
+<h4 id="输入输出格式及样例-11"><a href="#输入输出格式及样例-11" class="headerlink" title="输入输出格式及样例"></a>输入输出格式及样例</h4><p>输入数据:</p>
+<p>第一行一个整数 n</p>
+<p>第二行开始，连续输入 n 行，每行依次输入一个整数 id，一个字符串姓名，一个整数年龄。</p>
+<p>接着输入一行，依次输入一个整数 id，一个字符串姓名，一个整数年龄，为要修改的员工信息。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">1</span> Andy <span class="number">23</span></span><br><span class="line"><span class="number">3</span> Bob <span class="number">19</span></span><br><span class="line"><span class="number">4</span> Cindy <span class="number">20</span></span><br><span class="line"><span class="number">3</span> Bill <span class="number">23</span></span><br></pre></td></tr></table></figure>
+
+<p>输出数据:如果修改成功，输出 n 行，依次为每个员工的 id，姓名，年龄；否则，输出 error!</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> Andy <span class="number">23</span></span><br><span class="line"><span class="number">3</span> Bill <span class="number">23</span></span><br><span class="line"><span class="number">4</span> Cindy <span class="number">20</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="参考答案-11"><a href="#参考答案-11" class="headerlink" title="参考答案"></a>参考答案</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*程序补充完整即可，在注释代码中间完成，其他内容不需要修改，考查结构体成员的引用*/</span></span><br><span class="line"><span class="comment">/*通过循环判断id找到要找到的人员，然后替换姓名和年龄，*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">  <span class="type">int</span> id;</span><br><span class="line">  <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">  <span class="type">int</span> age;</span><br><span class="line">&#125;worker;</span><br><span class="line"><span class="type">int</span> <span class="title function_">modifyworker</span><span class="params">(worker *w, <span class="type">int</span> n, <span class="type">int</span> id, <span class="type">char</span> *name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">  <span class="comment">/*****在以下位置编写完善代码Program****/</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(w[i].id == id)&#123;</span><br><span class="line">            <span class="built_in">strcpy</span>(w[i].name,name);</span><br><span class="line">            w[i].age = age;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="comment">/*End*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">  <span class="type">int</span> n;</span><br><span class="line">  worker P[<span class="number">100</span>], pmodify;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%s%d&quot;</span>, &amp; P[i].id, P[i].name, &amp; P[i].age);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%d%s%d&quot;</span>, &amp; pmodify.id, pmodify.name, &amp; pmodify.age);</span><br><span class="line">  <span class="keyword">if</span> (modifyworker(P, n, pmodify.id, pmodify.name, pmodify.age) == <span class="number">0</span>)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;error!&quot;</span>);</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">&quot;\n%d %s %d&quot;</span>, P[i].id, P[i].name, P[i].age);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechat.png" alt="大同小異 WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="大同小異 Alipay">
+        <span>Alipay</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/12/05/c-shiyan-9/" rel="prev" title="C语言程序设计实验课参考答案(实验九：数组程序设计2)">
+                  <i class="fa fa-angle-left"></i> C语言程序设计实验课参考答案(实验九：数组程序设计2)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2012 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-star"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Bill Chou</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
